@@ -5,10 +5,21 @@
     xmlns:local="using:ST.WinIot.App"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:ST.WinIot.App"
+    xmlns:controls="using:ST.WinIot.App.Controls"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+    <Page.DataContext>
+        <vm:MainPageVM />
+    </Page.DataContext>
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="5*"/>
+
+        </Grid.ColumnDefinitions>
+        <controls:RadialMeter Value="{Binding EnvironementSensor.Humidity}"/>
+        <controls:RadialMeter Value="{Binding EnvironementSensor.Temperature}" Grid.Column="1"/>
 
     </Grid>
 </Page>
