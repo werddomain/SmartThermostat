@@ -14,14 +14,18 @@ namespace ST.WinIot.App
     public abstract class BaseModel: DependencyObject, INotifyPropertyChanged
     {
         public BaseModel() {
-            if (!InDesing) {
+            
+        }
+
+        internal void InitGPIO() {
+            if (!InDesing)
+            {
                 if (LightningProvider.IsLightningEnabled)
                 {
                     LowLevelDevicesController.DefaultProvider = LightningProvider.GetAggregateProvider();
                 }
             }
         }
-
         public bool InDesing { get => Windows.ApplicationModel.DesignMode.DesignModeEnabled; }
         #region INotifyPropertyChanged
         public event PropertyChangedEventHandler PropertyChanged;

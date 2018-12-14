@@ -49,6 +49,12 @@ void loop() {
 	}
 	humidity = h;
 	temperature = t;
+	Serial.print("H: ");
+	Serial.print(h);
+	Serial.print(" T: ");
+	Serial.println(t);
+
+
 	//  if (DataReceived)
 	//  {
 	//    if (ReceivedData[0] = 1)
