@@ -24,16 +24,16 @@ namespace ST.WinIot.App.Sensors
             }
         }
 
-        private string pTemperature;
-        public string Temperature
+        private float pTemperature;
+        public float Temperature
         {
             get { return pTemperature; }
             set { pTemperature = value; RaisePropertyChange("Temperature"); }
         }
 
 
-        private string pHumidity;
-        public string Humidity
+        private float pHumidity;
+        public float Humidity
         {
             get { return pHumidity; }
             set { pHumidity = value; RaisePropertyChange("Humidity"); }
@@ -55,38 +55,71 @@ namespace ST.WinIot.App.Sensors
             _device = await I2cDevice.FromIdAsync(dis[0].Id, settings);
             _periodicTimer = new Timer(TimerCallback, null, 0, 1000); // Create a timer
         }
+        private float GetFLOATUNION(byte[] r) {
+            return ToFloat(new byte[] {r[3], r[4], r[5], r[6] });
+        }
+        private string GetBytes(byte[] r) {
+            var i = r.Select(o => (int)o);
+            return String.Join("-", i);
 
+        }
+        private async Task ProceadResponse(byte[] response) {
+            await Dispatcher.RunAsync(
+                    Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
+                    {
+                        System.Diagnostics.Debug.WriteLine("Procead Response: " + GetBytes(response));
+                        if (response.Length == 14 && response[0] == 1)
+                        {
+                            switch (response[1])
+                            {
+                                case (byte)COMMANDS.Temperature: //Temperature
+                                    Temperature = GetFLOATUNION(response);
+                                    break;
+                                case (byte)COMMANDS.Humidity: //Humidity
+                                    Humidity = GetFLOATUNION(response);
+                                    break;
+                                default:
+                                    break;
+                            }
+                        }
+
+                    });
+            
+        }
+        enum COMMANDS {
+            Temperature = 10,
+            Humidity = 11
+        }
+       
+
+        const byte Type_Float = 100;
+
+        private Task Get(COMMANDS command) {
+            return Task.Run(async () => {
+                byte[] ReadBuf = new byte[14];
+
+                _device.WriteRead(new byte[] { 1, (byte)command }, ReadBuf);
+                await ProceadResponse(ReadBuf);
+                await Task.Delay(250);
+            });
+
+
+        }
         private async void TimerCallback(object state)
         {
             try
             {
-                byte[] ReadBuf = new byte[14];
-                
-                _device.Read(ReadBuf);
+
+
                 //Float communication in i2c : https://www.raspberrypi.org/forums/viewtopic.php?t=191208
                 //Parse 4 byte to a float : https://stackoverflow.com/questions/4301623/problem-converting-4-bytes-array-to-float-in-c-sharp
-                var humid = (int)ReadBuf[0];
-                var temp = (int)ReadBuf[1];
-                //var soil = (float)ReadBuf[2];
-
-                //if (temp < 30 && humid < 50 && soil < 50)
-                //{
-                //    _device.Write(new byte[] { I2cConstants.SET_PINSTATE, 3, I2cConstants.PINSTATE_HIGH });
-                //}
-                //else
-                //{
-                //    _device.Write(new byte[] { I2cConstants.SET_PINSTATE, 3, I2cConstants.PINSTATE_LOW });
-                //}
+                
+                await Get(COMMANDS.Temperature);
+                await Get(COMMANDS.Humidity);
 
 
 
-                await Dispatcher.RunAsync(
-                    Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
-                    {
 
-                        Temperature = temp.ToString();
-                        Humidity = humid.ToString();
-                    });
 
             }
             catch (Exception f)
@@ -95,6 +128,12 @@ namespace ST.WinIot.App.Sensors
             }
 
         }
+        static float ToFloat(byte[] input)
+        {
+            
+            return BitConverter.ToSingle(input, 0);
+        }
+
 
     }
 }
