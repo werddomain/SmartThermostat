@@ -9,8 +9,8 @@ namespace ST.WinIot.App
     public class MainPageVM:BaseModel
     {
         public MainPageVM() {
-            EnvironementSensor = new Sensors.Arduino();
+            //EnvironementSensor = new Sensors.Arduino();
         }
-        public Sensors.Arduino EnvironementSensor { get; set; }
+        //public Sensors.Arduino EnvironementSensor { get; set; }
     }
 }

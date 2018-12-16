@@ -10,6 +10,9 @@ using Windows.UI.Xaml;
 
 namespace ST.WinIot.App.Sensors
 {
+    /// <summary>
+    /// This class will handle communication with the arduino using i2c.
+    /// </summary>
     public class Arduino: BaseModel
     {
         private I2cDevice _device;

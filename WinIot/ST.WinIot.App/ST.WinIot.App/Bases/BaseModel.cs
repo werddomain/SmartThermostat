@@ -20,13 +20,19 @@ namespace ST.WinIot.App
         internal void InitGPIO() {
             if (!InDesing)
             {
+                //Add support if the Controller driver is "Direct Memory Mapped Driver". See https://docs.microsoft.com/en-us/windows/iot-core/develop-your-app/lightningproviders
                 if (LightningProvider.IsLightningEnabled)
                 {
                     LowLevelDevicesController.DefaultProvider = LightningProvider.GetAggregateProvider();
                 }
             }
         }
+        /// <summary>
+        /// Get if the current thread is inside visual studio designer or if it's normal app execution.
+        /// </summary>
         public bool InDesing { get => Windows.ApplicationModel.DesignMode.DesignModeEnabled; }
+
+        //INotifyPropertyChanged Implementation
         #region INotifyPropertyChanged
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName] string propertyName = "")

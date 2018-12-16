@@ -1,0 +1,5 @@
+﻿Microsoft.Toolkit.UWP : https://github.com/windows-toolkit/WindowsCommunityToolkit
+
+CompositionProToolkit: https://github.com/ratishphilip/CompositionProToolkit#7-progressring3d
+
+WinRTXamlToolkit: https://github.com/xyzzer/WinRTXamlToolkit

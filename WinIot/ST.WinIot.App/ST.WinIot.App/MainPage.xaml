@@ -8,7 +8,7 @@
     xmlns:vm="using:ST.WinIot.App"
     xmlns:controls="using:ST.WinIot.App.Controls"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="Black">
     <Page.DataContext>
         <vm:MainPageVM />
     </Page.DataContext>
@@ -18,8 +18,11 @@
             <ColumnDefinition Width="5*"/>
 
         </Grid.ColumnDefinitions>
-        <controls:RadialMeter Value="{Binding EnvironementSensor.Humidity}"/>
-        <controls:RadialMeter Value="{Binding EnvironementSensor.Temperature}" Grid.Column="1"/>
+        <!--<controls:RadialMeter Value="{Binding EnvironementSensor.Humidity}"/>
+        <controls:RadialMeter Value="{Binding EnvironementSensor.Temperature}" Grid.Column="1"/>-->
+        <Viewbox HorizontalAlignment="Stretch" Margin="0,0,0.4,444" VerticalAlignment="Stretch">
+            <controls:Dth22Display Height="300" Width="300" Margin="0,0,0,0"/>
+        </Viewbox>
 
     </Grid>
 </Page>

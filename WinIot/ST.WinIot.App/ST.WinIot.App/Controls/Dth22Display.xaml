@@ -1,0 +1,67 @@
+﻿<UserControl
+    x:Class="ST.WinIot.App.Controls.Dth22Display"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ST.WinIot.App.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:ST.WinIot.App.Controls"
+    xmlns:cpt="using:CompositionProToolkit.Controls"
+    xmlns:tk="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    mc:Ignorable="d"
+    d:DesignHeight="400"
+    d:DesignWidth="400"
+    >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+
+        </Grid.RowDefinitions>
+        <Ellipse Stroke="#FF3E4473" StrokeThickness="7" Grid.ColumnSpan="2" Margin="0,0,0,0" HorizontalAlignment="Stretch" Grid.RowSpan="2" VerticalAlignment="Stretch"  />
+        <TextBlock Text="23.4 °c" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="72" Grid.ColumnSpan="2" FontWeight="Bold" />
+        <TextBlock Text="30 %" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="72" Grid.ColumnSpan="2" Grid.Row="1" FontWeight="Bold" />
+
+        <!--<controls:RingSlice Margin="10" StartAngle="270" EndAngle="90" InnerRadius="75" Radius="100">
+            <controls:RingSlice.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </controls:RingSlice.Fill>
+        </controls:RingSlice>
+        <controls:RingSlice Margin="10" StartAngle="90" EndAngle="270" InnerRadius="75" Radius="100">
+            <controls:RingSlice.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF24AB7D"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </controls:RingSlice.Fill>
+        </controls:RingSlice>-->
+        <!--<tk:RadialGauge 
+                  x:Name="RadialGauge"
+                  Value="20"
+                  Minimum="0"
+                  Maximum="240"
+                  StepSize="5"
+                  IsInteractive="True"
+                  TickSpacing="30"
+                  ScaleWidth="4"
+                  MinAngle="270"
+                  MaxAngle="90"
+                  NeedleWidth="2"
+                  NeedleLength="88" 
+                  TickLength="12"
+                  TickWidth="3"
+                  ScalePadding="24"
+                  ScaleTickWidth="3" NeedleBrush="#FFEA1414" ScaleBrush="#667E827C" TickBrush="#FF203AFA" TrailBrush="#FF5AC522" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" UseSystemFocusVisuals="True" ValueStringFormat="" />-->
+
+
+    </Grid>
+
+</UserControl>
