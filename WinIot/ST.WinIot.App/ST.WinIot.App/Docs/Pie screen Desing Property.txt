@@ -1,0 +1,2 @@
+Copy the 604_iot_7_800x480.xml to this dirrectory :
+C:\Program Files (x86)\Windows Kits\10\DesignTime\UAP\Devices\1033

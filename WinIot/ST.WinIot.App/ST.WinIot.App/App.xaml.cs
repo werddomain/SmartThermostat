@@ -16,6 +16,9 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+
 
 namespace ST.WinIot.App
 {
@@ -28,10 +31,22 @@ namespace ST.WinIot.App
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
         /// </summary>
+        public static MainPageVM MainPageVM { get; set; }
+        public static MainPage MainPage { get; set; }
         public App()
         {
             this.InitializeComponent();
+            AppCenter.Start("3ceefaeb-05d3-48ee-9a44-c11c93462cdf", typeof(Analytics));
             this.Suspending += OnSuspending;
+            this.UnhandledException += App_UnhandledException;
+           
+            
+        }
+
+        private void App_UnhandledException(object sender, Windows.UI.Xaml.UnhandledExceptionEventArgs e)
+        {
+            MainPageVM.LogException(e.Exception, "App_UnhandledException");
+            e.Handled = true;
         }
 
         /// <summary>
@@ -72,6 +87,7 @@ namespace ST.WinIot.App
                 }
                 // Ensure the current window is active
                 Window.Current.Activate();
+                App.MainPageVM.Arduino.Resume();
             }
         }
 
@@ -97,6 +113,7 @@ namespace ST.WinIot.App
             var deferral = e.SuspendingOperation.GetDeferral();
             //TODO: Save application state and stop any background activity
             deferral.Complete();
+            App.MainPageVM.Arduino.Dispose();
         }
     }
 }

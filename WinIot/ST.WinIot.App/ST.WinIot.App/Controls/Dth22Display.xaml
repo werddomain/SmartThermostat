@@ -12,20 +12,32 @@
     d:DesignHeight="400"
     d:DesignWidth="400"
     >
-    <Grid>
+    <Grid x:Name="MainGrid">
+        <Grid.DataContext>
+            <controls:Dth22DisplayVM/>
+        </Grid.DataContext>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="27*"/>
+            <ColumnDefinition Width="73*"/>
+            <ColumnDefinition Width="73*"/>
+            <ColumnDefinition Width="27*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
 
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="77*"/>
+            <RowDefinition Height="74*"/>
+            <RowDefinition Height="26*"/>
 
         </Grid.RowDefinitions>
-        <Ellipse Stroke="#FF3E4473" StrokeThickness="7" Grid.ColumnSpan="2" Margin="0,0,0,0" HorizontalAlignment="Stretch" Grid.RowSpan="2" VerticalAlignment="Stretch"  />
-        <TextBlock Text="23.4 °c" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="72" Grid.ColumnSpan="2" FontWeight="Bold" />
-        <TextBlock Text="30 %" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="72" Grid.ColumnSpan="2" Grid.Row="1" FontWeight="Bold" />
+        <Ellipse Stroke="#FF3E4473" StrokeThickness="7" Grid.ColumnSpan="4" Margin="0,0,0,0" Grid.RowSpan="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  />
+        <Viewbox Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.ColumnSpan="2" Stretch="Uniform" Grid.Column="1">
+            <TextBlock Text="{Binding Temperature}" FontSize="72" FontWeight="Bold" HorizontalAlignment="Left" Height="96" Margin="0,0,0,0" VerticalAlignment="Stretch" />
+        </Viewbox>
+        <Viewbox HorizontalAlignment="Stretch" Grid.ColumnSpan="2" Grid.Row="2" Grid.Column="1"  Stretch="Uniform" VerticalAlignment="Stretch">
+            <TextBlock Text="{Binding Humidity}" FontSize="72" FontWeight="Bold" HorizontalAlignment="Left" Height="96" VerticalAlignment="Stretch"  />
+
+        </Viewbox>
 
         <!--<controls:RingSlice Margin="10" StartAngle="270" EndAngle="90" InnerRadius="75" Radius="100">
             <controls:RingSlice.Fill>

@@ -1,8 +1,10 @@
-﻿using Microsoft.IoT.Lightning.Providers;
+﻿using GalaSoft.MvvmLight.Command;
+using Microsoft.IoT.Lightning.Providers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +16,7 @@ namespace ST.WinIot.App
     public abstract class BaseModel: DependencyObject, INotifyPropertyChanged
     {
         public BaseModel() {
-            
+            CreateNavigateRelayCmd(); 
         }
 
         internal void InitGPIO() {
@@ -52,6 +54,44 @@ namespace ST.WinIot.App
             changed.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
         #endregion
+
+        #region Navigate 
+        public RelayCommand<string> NavigateCmd { get; set; }
+        public bool CanNavigate { get { return true; } }
+        private void CreateNavigateRelayCmd()
+        {
+            NavigateCmd = new RelayCommand<string>(OnNavigate, (o) => CanNavigate);
+        }
+        private void OnNavigate(string obj)
+        {
+            Navigate(obj);
+        }
+        #endregion
+        public void Navigate(string Uri) {
+            var ns = Uri.Replace("/", ".");
+            var s = ns.DirectSplit(".");
+            var type = s.Last();
+            if (s.Length > 1)
+            {
+                ns = string.Join('.', s.Take(s.Length - 1));
+            }
+            ns = "ST.WinIot.App." + ns;
+
+            var q = from t in Assembly.GetExecutingAssembly().GetTypes()
+                    where t.IsClass && t.Namespace == ns && t.Name == type
+                    select t;
+            if (q.HasValue())
+                Navigate(q.First());
+        }
+        public void Navigate(Type type)
+        {
+            App.MainPage.MainFrame.Navigate(type);
+
+        }
+
+        public void LogException(Exception ex, string where) {
+
+        }
 
     }
 }

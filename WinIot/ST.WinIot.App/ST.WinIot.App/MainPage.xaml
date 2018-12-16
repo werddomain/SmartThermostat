@@ -6,6 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vm="using:ST.WinIot.App"
+    xmlns:pages="using:ST.WinIot.App.Pages"
     xmlns:controls="using:ST.WinIot.App.Controls"
     mc:Ignorable="d"
     Background="Black">
@@ -13,16 +14,19 @@
         <vm:MainPageVM />
     </Page.DataContext>
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="5*"/>
-            <ColumnDefinition Width="5*"/>
-
-        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Spacing="10">
+            <Button Content="Home" Command="{Binding NavigateCmd}" CommandParameter="Pages/HomePage"/>
+            <Button Content="Test" Command="{Binding NavigateCmd}" CommandParameter="Pages/TestPage"/>
+        </StackPanel>
         <!--<controls:RadialMeter Value="{Binding EnvironementSensor.Humidity}"/>
         <controls:RadialMeter Value="{Binding EnvironementSensor.Temperature}" Grid.Column="1"/>-->
-        <Viewbox HorizontalAlignment="Stretch" Margin="0,0,0.4,444" VerticalAlignment="Stretch">
-            <controls:Dth22Display Height="300" Width="300" Margin="0,0,0,0"/>
-        </Viewbox>
+        <Frame x:Name="MainFrame" Grid.Row="1" x:FieldModifier="Public"/>
+        <!--<controls:Dth22Display Margin="0,0,76,128" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>-->
+
 
     </Grid>
 </Page>
