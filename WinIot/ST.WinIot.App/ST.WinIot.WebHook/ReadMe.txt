@@ -1,4 +1,10 @@
 ﻿[WebSite]
+
+Initialisation: (Make sure the default connection string is valid before calling these commands)
+dotnet ef database update --context ApplicationDbContext
+dotnet run /seed
+
+
 You will need a certificate to run the website, get one free here: https://www.mikesdotnetting.com/article/305/free-ssl-certificates-on-iis-with-letsencrypt
 You can alsow use this tool to create and manage Certificates : https://certifytheweb.com/ 
 

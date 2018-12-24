@@ -10,6 +10,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Hosting;
 using IdentityServer4;
+using ST.WinIot.WebHook.Data;
+using ST.WinIot.WebHook.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace ST.WinIot.WebHook
 {
@@ -26,6 +29,13 @@ namespace ST.WinIot.WebHook
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddDefaultTokenProviders();
+
             services.AddMvc().SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Version_2_1);
 
             services.Configure<IISOptions>(options =>
@@ -66,8 +76,8 @@ namespace ST.WinIot.WebHook
                     // register your IdentityServer with Google at https://console.developers.google.com
                     // enable the Google+ API
                     // set the redirect URI to http://localhost:5000/signin-google
-                    options.ClientId = "copy client ID from Google here";
-                    options.ClientSecret = "copy client secret from Google here";
+                    options.ClientId = Configuration["Authentication:Google:ClientId"];
+                    options.ClientSecret = Configuration["Authentication:Google:ClientSecret"];
                 });
 
             if (Environment.IsDevelopment())
@@ -76,7 +86,7 @@ namespace ST.WinIot.WebHook
             }
             else
             {
-                throw new Exception("need to configure key material");
+                identityServer.AddSigningCredential(Configuration["Security:CertificateCN"]);
             }
         }
 
