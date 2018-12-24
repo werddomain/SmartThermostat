@@ -1,6 +1,8 @@
-﻿using IdentityServer4;
+﻿using IdentityModel;
+using IdentityServer4;
 using IdentityServer4.Models;
 using IdentityServer4.Test;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +14,7 @@ namespace ST.WinIot.WebHook
     public class Startup_IdentityServerConfig
     {
         //https://github.com/IdentityServer/IdentityServer4.Samples/tree/dev/Quickstarts/6_AspNetIdentity
+        //https://www.youtube.com/watch?v=J5p72gTdx_M&t=5837s
 
         // scopes define the resources in your system
         public static IEnumerable<IdentityResource> GetIdentityResources()
@@ -20,6 +23,12 @@ namespace ST.WinIot.WebHook
             {
                 new IdentityResources.OpenId(),
                 new IdentityResources.Profile(),
+                new IdentityResource{
+                    Name = "GoogleSmartHome",
+                    DisplayName = "Smart Home Devices",
+                    Description = "Provide the hability to read and write state to smart devices.",
+                    UserClaims = { Const.Claims.SmartDevices }
+                }
             };
         }
 
@@ -27,33 +36,37 @@ namespace ST.WinIot.WebHook
         {
             return new List<ApiResource>
             {
-                new ApiResource("api1", "My API")
+                new ApiResource("SmartHome", "Smart Home Api")
             };
         }
 
         // clients want to access resources (aka scopes)
-        public static IEnumerable<Client> GetClients()
+        public static IEnumerable<Client> GetClients(IConfiguration Configuration)
         {
             // client credentials client
             return new List<Client>
             {
                 new Client
                 {
-                    ClientId = "client",
-                    AllowedGrantTypes = GrantTypes.ClientCredentials,
-
+                    ClientId = Configuration["Google:OurOpenId:ClientId"],
+                    AllowedGrantTypes = GrantTypes.CodeAndClientCredentials,
+                    RedirectUris = {"https://openidconnect.net/callback" },
                     ClientSecrets =
                     {
-                        new Secret("secret".Sha256())
+                        new Secret(Configuration["Google:OurOpenId:ClientSecret"].Sha256())
                     },
-                    AllowedScopes = { "api1" }
+                    AllowedScopes = {
+                        IdentityServerConstants.StandardScopes.OpenId,
+                        IdentityServerConstants.StandardScopes.Profile,
+                        "GoogleSmartHome"
+                    }
                 },
 
                 // resource owner password grant client
                 new Client
                 {
                     ClientId = "ro.client",
-                    AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
+                    AllowedGrantTypes = GrantTypes.Code,
 
                     ClientSecrets =
                     {
@@ -100,8 +113,9 @@ namespace ST.WinIot.WebHook
 
                     Claims = new List<Claim>
                     {
-                        new Claim("name", "Alice"),
-                        new Claim("website", "https://alice.com")
+                        new Claim(JwtClaimTypes.Name, "Alice"),
+                        new Claim(JwtClaimTypes.WebSite, "https://alice.com"),
+                        new Claim(Const.Claims.SmartDevices, Guid.NewGuid().ToString())
                     }
                 },
                 new TestUser
@@ -112,8 +126,9 @@ namespace ST.WinIot.WebHook
 
                     Claims = new List<Claim>
                     {
-                        new Claim("name", "Bob"),
-                        new Claim("website", "https://bob.com")
+                        new Claim(JwtClaimTypes.Name, "Bob"),
+                        new Claim(JwtClaimTypes.WebSite, "https://bob.com"),
+                        new Claim(Const.Claims.SmartDevices, Guid.NewGuid().ToString())
                     }
                 }
             };

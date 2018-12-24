@@ -1,0 +1,72 @@
+2018-12-23 18:26:56.940 -05:00 [INF] Using the default authentication scheme idsrv for IdentityServer
+2018-12-23 18:26:56.977 -05:00 [DBG] Using idsrv as default ASP.NET Core scheme for authentication
+2018-12-23 18:26:56.977 -05:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-in
+2018-12-23 18:26:56.977 -05:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-out
+2018-12-23 18:26:56.977 -05:00 [DBG] Using idsrv as default ASP.NET Core scheme for challenge
+2018-12-23 18:26:56.977 -05:00 [DBG] Using idsrv as default ASP.NET Core scheme for forbid
+2018-12-23 18:26:57.321 -05:00 [DBG] Starting grant removal
+2018-12-23 18:26:57.965 -05:00 [DBG] Login Url: /Account/Login
+2018-12-23 18:26:57.969 -05:00 [DBG] Login Return Url Parameter: ReturnUrl
+2018-12-23 18:26:57.969 -05:00 [DBG] Logout Url: /Account/Logout
+2018-12-23 18:26:57.969 -05:00 [DBG] ConsentUrl Url: /consent
+2018-12-23 18:26:57.969 -05:00 [DBG] Consent Return Url Parameter: returnUrl
+2018-12-23 18:26:57.969 -05:00 [DBG] Error Url: /home/error
+2018-12-23 18:26:57.970 -05:00 [DBG] Error Id Parameter: errorId
+2018-12-23 18:26:58.578 -05:00 [ERR] Request matched multiple actions resulting in ambiguity. Matching actions: IdentityServer4.Quickstart.UI.HomeController.Index (ST.WinIot.WebHook)
+ST.WinIot.WebHook.Controllers.HomeController.Index (ST.WinIot.WebHook)
+2018-12-23 18:26:58.586 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Mvc.Internal.AmbiguousActionException: Multiple actions matched. The following actions matched route data and had all constraints satisfied:
+
+IdentityServer4.Quickstart.UI.HomeController.Index (ST.WinIot.WebHook)
+ST.WinIot.WebHook.Controllers.HomeController.Index (ST.WinIot.WebHook)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionSelector.SelectBestCandidate(RouteContext context, IReadOnlyList`1 candidates)
+   at Microsoft.AspNetCore.Mvc.Internal.MvcRouteHandler.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.Route.OnRouteMatched(RouteContext context)
+   at Microsoft.AspNetCore.Routing.RouteBase.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.RouteCollection.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 72
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-12-23 18:36:34.307 -05:00 [INF] Using the default authentication scheme idsrv for IdentityServer
+2018-12-23 18:36:34.354 -05:00 [DBG] Using idsrv as default ASP.NET Core scheme for authentication
+2018-12-23 18:36:34.354 -05:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-in
+2018-12-23 18:36:34.354 -05:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-out
+2018-12-23 18:36:34.354 -05:00 [DBG] Using idsrv as default ASP.NET Core scheme for challenge
+2018-12-23 18:36:34.354 -05:00 [DBG] Using idsrv as default ASP.NET Core scheme for forbid
+2018-12-23 18:36:34.572 -05:00 [DBG] Starting grant removal
+2018-12-23 18:36:34.842 -05:00 [DBG] Login Url: /Account/Login
+2018-12-23 18:36:34.846 -05:00 [DBG] Login Return Url Parameter: ReturnUrl
+2018-12-23 18:36:34.846 -05:00 [DBG] Logout Url: /Account/Logout
+2018-12-23 18:36:34.846 -05:00 [DBG] ConsentUrl Url: /consent
+2018-12-23 18:36:34.846 -05:00 [DBG] Consent Return Url Parameter: returnUrl
+2018-12-23 18:36:34.846 -05:00 [DBG] Error Url: /home/error
+2018-12-23 18:36:34.846 -05:00 [DBG] Error Id Parameter: errorId
+2018-12-23 18:36:44.138 -05:00 [INF] AuthenticationScheme: idsrv was challenged.
+2018-12-23 18:37:04.647 -05:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2018-12-23 18:37:04.656 -05:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2018-12-23 18:37:04.656 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2018-12-23 18:37:04.660 -05:00 [DBG] Start discovery request
+2018-12-23 18:37:06.125 -05:00 [DBG] Found ["openid","profile","api1"] as all scopes in database
+2018-12-23 18:51:12.551 -05:00 [INF] Using the default authentication scheme idsrv for IdentityServer
+2018-12-23 18:51:12.582 -05:00 [DBG] Using idsrv as default ASP.NET Core scheme for authentication
+2018-12-23 18:51:12.583 -05:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-in
+2018-12-23 18:51:12.583 -05:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-out
+2018-12-23 18:51:12.583 -05:00 [DBG] Using idsrv as default ASP.NET Core scheme for challenge
+2018-12-23 18:51:12.583 -05:00 [DBG] Using idsrv as default ASP.NET Core scheme for forbid
+2018-12-23 18:51:12.787 -05:00 [DBG] Starting grant removal
+2018-12-23 18:51:13.034 -05:00 [DBG] Login Url: /Account/Login
+2018-12-23 18:51:13.037 -05:00 [DBG] Login Return Url Parameter: ReturnUrl
+2018-12-23 18:51:13.037 -05:00 [DBG] Logout Url: /Account/Logout
+2018-12-23 18:51:13.037 -05:00 [DBG] ConsentUrl Url: /consent
+2018-12-23 18:51:13.037 -05:00 [DBG] Consent Return Url Parameter: returnUrl
+2018-12-23 18:51:13.037 -05:00 [DBG] Error Url: /home/error
+2018-12-23 18:51:13.037 -05:00 [DBG] Error Id Parameter: errorId
+2018-12-23 19:12:05.174 -05:00 [DBG] Stopping grant removal
+2018-12-23 19:12:05.178 -05:00 [DBG] TaskCanceledException. Exiting.

@@ -1,61 +1,88 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿// Copyright (c) Brock Allen & Dominick Baier. All rights reserved.
+// Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
+
+
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using ST.WinIot.WebHook.Data;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System;
+using IdentityServer4.Quickstart.UI;
+using Microsoft.Extensions.Configuration;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Hosting;
+using IdentityServer4;
 
 namespace ST.WinIot.WebHook
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public IConfiguration Configuration { get; }
+        public IHostingEnvironment Environment { get; }
+
+        public Startup(IConfiguration config, IHostingEnvironment env)
         {
-            Configuration = configuration;
+            Configuration = config;
+            Environment = env;
         }
 
-        public IConfiguration Configuration { get; }
-
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Configure<CookiePolicyOptions>(options =>
+            services.AddMvc().SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Version_2_1);
+
+            services.Configure<IISOptions>(options =>
             {
-                // This lambda determines whether user consent for non-essential cookies is needed for a given request.
-                options.CheckConsentNeeded = context => true;
-                options.MinimumSameSitePolicy = SameSiteMode.None;
+                options.AutomaticAuthentication = false;
+                options.AuthenticationDisplayName = "Windows";
             });
 
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>()
-                .AddDefaultUI(UIFramework.Bootstrap4)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+            var connectionString = Configuration.GetConnectionString("DefaultConnection");
 
-            services.AddAuthentication().AddGoogle(googleOptions =>
+            var identityServer = services.AddIdentityServer(options =>
             {
-                googleOptions.ClientId = Configuration["Authentication:Google:ClientId"];
-                googleOptions.ClientSecret = Configuration["Authentication:Google:ClientSecret"];
-            });
+                options.Events.RaiseErrorEvents = true;
+                options.Events.RaiseInformationEvents = true;
+                options.Events.RaiseFailureEvents = true;
+                options.Events.RaiseSuccessEvents = true;
+            })
+                .AddTestUsers(TestUsers.Users)
+                // this adds the config data from DB (clients, resources, CORS)
+                .AddConfigurationStore(options =>
+                {
+                    options.ConfigureDbContext = builder => builder.UseSqlServer(connectionString);
+                })
+                // this adds the operational data from DB (codes, tokens, consents)
+                .AddOperationalStore(options =>
+                {
+                    options.ConfigureDbContext = builder => builder.UseSqlServer(connectionString);
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-            
+                    // this enables automatic token cleanup. this is optional.
+                    options.EnableTokenCleanup = true;
+                });
+
+            services.AddAuthentication()
+                .AddGoogle(options =>
+                {
+                    options.SignInScheme = IdentityServerConstants.ExternalCookieAuthenticationScheme;
+
+                    // register your IdentityServer with Google at https://console.developers.google.com
+                    // enable the Google+ API
+                    // set the redirect URI to http://localhost:5000/signin-google
+                    options.ClientId = "copy client ID from Google here";
+                    options.ClientSecret = "copy client secret from Google here";
+                });
+
+            if (Environment.IsDevelopment())
+            {
+                identityServer.AddDeveloperSigningCredential();
+            }
+            else
+            {
+                throw new Exception("need to configure key material");
+            }
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app)
         {
-            if (env.IsDevelopment())
+            if (Environment.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
                 app.UseDatabaseErrorPage();
@@ -63,16 +90,10 @@ namespace ST.WinIot.WebHook
             else
             {
                 app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+            app.UseIdentityServer();
             app.UseStaticFiles();
-            app.UseCookiePolicy();
-            
-            app.UseAuthentication();
-            
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

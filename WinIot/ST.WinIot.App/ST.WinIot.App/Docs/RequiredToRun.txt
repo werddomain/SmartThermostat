@@ -1,1 +1,4 @@
-﻿You will need a certificate to run the website, get one free here: https://www.mikesdotnetting.com/article/305/free-ssl-certificates-on-iis-with-letsencrypt 
+﻿
+The web project 'ST.WinIot.WebHook' require an https capatibility.
+You will alsow need to create a self signed certificate to encrypt the autentications using identity server 4 for communication with google and the raspberry pie.
+Read the readme in the web project to learn more.
