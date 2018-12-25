@@ -23,4 +23,8 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\ST.WinIot.App.Web.Config\ST.WinIot.App.Web.Config.csproj" />
+  </ItemGroup>
+
 </Project>
