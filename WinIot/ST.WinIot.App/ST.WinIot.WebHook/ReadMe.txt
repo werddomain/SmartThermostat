@@ -12,5 +12,6 @@ Setup Environement varriable in IIS : https://stackoverflow.com/questions/310491
 *Note : You can add IIS environement varriable by using this command line:
 appcmd.exe set config -section:system.applicationHost/applicationPools /+"[name='DefaultAppPool'].environmentVariables.[name='VAR',value='val']" /commit:apphost`
 
+in the IIS Website, create 2 application : Auth and API (UI is at the root if the website)
 
 self-signed certificate: Create a certificate (It can be the same as the one you created for iis) and put it's name in the environement varriable : "Security:CertificateCN" = "CN=MyCertificateName" 

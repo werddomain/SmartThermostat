@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace ST.WinIot.App.Web.OAuth
 {
-    public class Config
+    public class ConfigServerIdentity
     {
         // scopes define the resources in your system
         public static IEnumerable<IdentityResource> GetIdentityResources()
@@ -72,8 +72,8 @@ namespace ST.WinIot.App.Web.OAuth
                         new Secret("secret".Sha256())
                     },
 
-                    RedirectUris = { "http://localhost:5002/signin-oidc" },
-                    PostLogoutRedirectUris = { "http://localhost:5002/signout-callback-oidc" },
+                    RedirectUris = { $"{Config.Urls.UiUrl}/signin-oidc" },
+                    PostLogoutRedirectUris = { $"{Config.Urls.UiUrl}/signout-callback-oidc" },
 
                     AllowedScopes =
                     {

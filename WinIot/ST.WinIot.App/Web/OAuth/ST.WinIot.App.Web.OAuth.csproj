@@ -13,6 +13,8 @@
     <PackageReference Include="Microsoft.AspNetCore.All" />
     
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.0" PrivateAssets="All" />
+    
+    <PackageReference Include="NonFactors.Grid.Mvc6" Version="4.0.2" />
     <PackageReference Include="Serilog.AspNetCore" Version="2.1.1" />
     <PackageReference Include="Serilog.Sinks.Console" Version="3.1.1" />
     <PackageReference Include="Serilog.Sinks.File" Version="4.0.0" />
@@ -25,6 +27,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\ST.WinIot.App.Web.Config\ST.WinIot.App.Web.Config.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
   </ItemGroup>
 
 </Project>

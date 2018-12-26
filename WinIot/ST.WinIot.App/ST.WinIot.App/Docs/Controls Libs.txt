@@ -3,3 +3,6 @@
 CompositionProToolkit: https://github.com/ratishphilip/CompositionProToolkit#7-progressring3d
 
 WinRTXamlToolkit: https://github.com/xyzzer/WinRTXamlToolkit
+
+[WEB]
+http://mvc6-grid.azurewebsites.net/Home/Installation

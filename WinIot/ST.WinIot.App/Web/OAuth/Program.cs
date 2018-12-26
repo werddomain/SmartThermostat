@@ -12,6 +12,7 @@ namespace ST.WinIot.App.Web.OAuth
 {
     public class Program
     {
+
         public static void Main(string[] args)
         {
             Console.Title = "IdentityServerWithEfAndAspNetIdentity";
