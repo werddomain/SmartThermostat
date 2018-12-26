@@ -4,18 +4,19 @@ using System.Security.Claims;
 using IdentityModel;
 using IdentityServer4.EntityFramework.DbContexts;
 using IdentityServer4.EntityFramework.Mappers;
-using ST.WinIot.App.Web.OAuth;
-using ST.WinIot.App.Web.OAuth.Data;
-using ST.WinIot.App.Web.OAuth.Models;
+using ST.Web.OAuth;
+using ST.Web.OAuth.Data;
+using ST.Web.OAuth.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Configuration;
 
-namespace ST.WinIot.App.Web.OAuth
+namespace ST.Web.OAuth
 {
     public class SeedData
     {
-        public static void EnsureSeedData(IServiceProvider serviceProvider)
+        public static void EnsureSeedData(IConfiguration Configuration, IServiceProvider serviceProvider)
         {
             Console.WriteLine("Seeding database...");
 
@@ -26,7 +27,7 @@ namespace ST.WinIot.App.Web.OAuth
                 {
                     var context = scope.ServiceProvider.GetRequiredService<ConfigurationDbContext>();
                     context.Database.Migrate();
-                    EnsureSeedData(context);
+                    EnsureSeedData(Configuration, context);
                 }
 
                 {
@@ -107,12 +108,12 @@ namespace ST.WinIot.App.Web.OAuth
             Console.WriteLine();
         }
 
-        private static void EnsureSeedData(ConfigurationDbContext context)
+        private static void EnsureSeedData(IConfiguration Configuration, ConfigurationDbContext context)
         {
             if (!context.Clients.Any())
             {
                 Console.WriteLine("Clients being populated");
-                foreach (var client in ConfigServerIdentity.GetClients().ToList())
+                foreach (var client in ConfigServerIdentity.GetClients(Configuration).ToList())
                 {
                     context.Clients.Add(client.ToEntity());
                 }

@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using System.IdentityModel.Tokens.Jwt;
 
-namespace ST.WinIot.App.Web.UI
+namespace ST.Web.UI
 {
     public class Startup
     {

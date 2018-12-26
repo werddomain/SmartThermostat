@@ -9,7 +9,7 @@ using System.Reflection;
 using System.Text;
 using System.Web;
 
-namespace ST.WinIot.App.Web.Service.Services
+namespace ST.Web.Service.Services
 {
     public class JsGridResult<T>
     {
@@ -279,7 +279,7 @@ namespace ST.WinIot.App.Web.Service.Services
         }
         public static Dictionary<string, DbType> SqlDbTypes<T>(string GridName)
         {
-            var p = ST.WinIot.App.Web.Service.Services.JqGridUtils.JqGridParams<T>(GridName);
+            var p = ST.Web.Service.Services.JqGridUtils.JqGridParams<T>(GridName);
             var parameters = new Dictionary<string, DbType>();
             foreach (var item in p)
             {
@@ -469,7 +469,7 @@ FROM " + TableName + " p " + Join +
                     //var val = prop.GetValue(EntityItem);
                     var name = prop.Name;
                     var title = displayName != null ? ((System.ComponentModel.DisplayNameAttribute)displayName).DisplayName : name;
-                    var resVal = ST.WinIot.App.Web.Service.Config.NamesResourceManager.GetString(title);
+                    var resVal = ST.Web.Service.Config.NamesResourceManager.GetString(title);
                     if (resVal.HasValue())
                         title = resVal;
                     if (atribute.BdName.IsNullOrEmpty())

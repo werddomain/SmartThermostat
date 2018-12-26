@@ -12,7 +12,7 @@ namespace System
         public CSEmailAttribute()
             : base(DataType.EmailAddress)
         {
-            ErrorMessageResourceType = ST.WinIot.App.Web.Service.Config.ValidationResourceType;
+            ErrorMessageResourceType = ST.Web.Service.Config.ValidationResourceType;
             ErrorMessageResourceName = "BadEmailAddress";
             attr = new EmailAddressAttribute();
         }

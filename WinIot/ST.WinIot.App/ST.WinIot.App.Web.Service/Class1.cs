@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ST.WinIot.App.Web.Service
+namespace ST.Web.Service
 {
     public class Class1
     {

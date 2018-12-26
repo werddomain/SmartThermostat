@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace ST.WinIot.App.Web.Service
+namespace ST.Web.Service
 {
     
     public abstract class CSEntity : BaseModel

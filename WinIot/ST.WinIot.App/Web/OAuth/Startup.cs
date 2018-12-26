@@ -5,12 +5,12 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using ST.WinIot.App.Web.OAuth.Data;
-using ST.WinIot.App.Web.OAuth.Models;
+using ST.Web.OAuth.Data;
+using ST.Web.OAuth.Models;
 using System.Reflection;
 using Microsoft.IdentityModel.Tokens;
 
-namespace ST.WinIot.App.Web.OAuth
+namespace ST.Web.OAuth
 {
     public class Startup
     {

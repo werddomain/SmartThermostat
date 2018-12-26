@@ -1,4 +1,4 @@
-﻿using ST.WinIot.App.Web.Service;
+﻿using ST.Web.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -50,7 +50,7 @@ namespace System.Web
         //public void UpdateEntityFromResult(CSEntity entity)
         //{
         //    if (this.QueryResultMsgs.Any())
-        //        entity.Errors = ST.WinIot.App.Web.Service.Utility.LoadErrorsMessages(this.QueryResultMsgs, "|");
+        //        entity.Errors = ST.Web.Service.Utility.LoadErrorsMessages(this.QueryResultMsgs, "|");
         //    if (!this.Success) { entity.CSEntityState = CSEntityState.IsInError; }
 
         //}

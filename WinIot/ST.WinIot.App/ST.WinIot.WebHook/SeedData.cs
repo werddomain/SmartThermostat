@@ -10,12 +10,13 @@ using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Linq;
 using IdentityServer4.EntityFramework.Storage;
+using Microsoft.Extensions.Configuration;
 
 namespace ST.WinIot.WebHook
 {
     public class SeedData
     {
-        public static void EnsureSeedData(string connectionString)
+        public static void EnsureSeedData(IConfiguration Configuration, string connectionString)
         {
             var services = new ServiceCollection();
             services.AddOperationalDbContext(options =>
@@ -35,18 +36,18 @@ namespace ST.WinIot.WebHook
 
                 var context = scope.ServiceProvider.GetService<ConfigurationDbContext>();
                 context.Database.Migrate();
-                EnsureSeedData(context);
+                EnsureSeedData(Configuration, context);
             }
         }
 
-        private static void EnsureSeedData(IConfigurationDbContext context)
+        private static void EnsureSeedData(IConfiguration Configuration, IConfigurationDbContext context)
         {
             Console.WriteLine("Seeding database...");
 
             if (!context.Clients.Any())
             {
                 Console.WriteLine("Clients being populated");
-                foreach (var client in Config.GetClients().ToList())
+                foreach (var client in Config.GetClients(Configuration).ToList())
                 {
                     context.Clients.Add(client.ToEntity());
                 }

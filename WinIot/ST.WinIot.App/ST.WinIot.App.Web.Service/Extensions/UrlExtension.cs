@@ -6,7 +6,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace ST.WinIot.App.Web.Service
+namespace ST.Web.Service
 {
     public static class UrlExtension
     {

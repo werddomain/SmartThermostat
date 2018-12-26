@@ -1,4 +1,4 @@
-﻿using ST.WinIot.App.Web.Service;
+﻿using ST.Web.Service;
 
 using System;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ using System.Resources;
 using System.Threading;
 using System.Web;
 
-namespace ST.WinIot.App.Web.Service
+namespace ST.Web.Service
 {
     public class CSStringLengthAttribute : StringLengthAttribute
     {

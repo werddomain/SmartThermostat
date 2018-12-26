@@ -1,4 +1,4 @@
-﻿using ST.WinIot.App.Web.Service;
+﻿using ST.Web.Service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ST.WinIot.App.Web.Service
+namespace ST.Web.Service
 {
     public class CSMinimum: ValidationAttribute
     {
@@ -18,7 +18,7 @@ namespace ST.WinIot.App.Web.Service
         {
             _minValue = minValue;
             //this.ErrorMessageResourceName = "MinimumValidation";
-            //this.ErrorMessageResourceType = typeof(ST.WinIot.App.Web.Service.Ressources.Validation);
+            //this.ErrorMessageResourceType = typeof(ST.Web.Service.Ressources.Validation);
         }
         public CSMinimum(double minValue)
         {
@@ -54,14 +54,14 @@ namespace ST.WinIot.App.Web.Service
         {
             _maxValue = maxValue;
             //    this.ErrorMessageResourceName = "MaximumValidation";
-            //this.ErrorMessageResourceType = typeof(ST.WinIot.App.Web.Service.Ressources.Validation);
+            //this.ErrorMessageResourceType = typeof(ST.Web.Service.Ressources.Validation);
         }
         public CSMaximum(double maxValue)
         {
             _maxValueD = maxValue;
             isDouble = true;
             //    this.ErrorMessageResourceName = "MaximumValidation";
-            //this.ErrorMessageResourceType = typeof(ST.WinIot.App.Web.Service.Ressources.Validation);
+            //this.ErrorMessageResourceType = typeof(ST.Web.Service.Ressources.Validation);
         }
 
         public override bool IsValid(object value)

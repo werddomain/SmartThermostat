@@ -4,7 +4,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace ST.WinIot.App.Web.API
+namespace ST.Web.API
 {
     public class Startup
     {

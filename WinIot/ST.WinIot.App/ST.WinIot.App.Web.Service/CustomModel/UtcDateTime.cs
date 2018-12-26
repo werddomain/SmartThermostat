@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ST.WinIot.App.Web.Service.CustomModel
+namespace ST.Web.Service.CustomModel
 {
     [ModelBinder(BinderType = typeof(UtcDateTimeModelBinder))]
     public class UtcDateTime

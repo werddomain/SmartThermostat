@@ -1,14 +1,16 @@
 ﻿using System;
 using System.Linq;
-using ST.WinIot.App.Web.OAuth;
+using ST.Web.OAuth;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Logging;
 using Serilog;
 using Serilog.Events;
 using Serilog.Sinks.SystemConsole.Themes;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Configuration;
 
-namespace ST.WinIot.App.Web.OAuth
+namespace ST.Web.OAuth
 {
     public class Program
     {
@@ -37,7 +39,8 @@ namespace ST.WinIot.App.Web.OAuth
 
             if (seed)
             {
-                SeedData.EnsureSeedData(host.Services);
+                var config = host.Services.GetRequiredService<IConfiguration>();
+                SeedData.EnsureSeedData(config, host.Services);
                 return;
             }
 

@@ -4,6 +4,7 @@
 
 using IdentityServer4.Models;
 using System.Collections.Generic;
+using Microsoft.Extensions.Configuration;
 
 namespace ST.WinIot.WebHook
 {
@@ -26,7 +27,7 @@ namespace ST.WinIot.WebHook
             };
         }
 
-        public static IEnumerable<Client> GetClients()
+        public static IEnumerable<Client> GetClients(IConfiguration Configuration)
         {
             return new[]
             {

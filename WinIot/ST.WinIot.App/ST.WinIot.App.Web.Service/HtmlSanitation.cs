@@ -3,7 +3,7 @@ using System.IO;
 using System.Xml;
 using HtmlAgilityPack;
 
-namespace ST.WinIot.App.Web.Service.Helper
+namespace ST.Web.Service.Helper
 {
     public class HtmlSanitizer
     {

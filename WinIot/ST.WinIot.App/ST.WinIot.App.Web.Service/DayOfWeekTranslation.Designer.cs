@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ST.WinIot.App.Web.Service {
+namespace ST.Web.Service {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace ST.WinIot.App.Web.Service {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ST.WinIot.App.Web.Service.DayOfWeekTranslation", typeof(DayOfWeekTranslation).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ST.Web.Service.DayOfWeekTranslation", typeof(DayOfWeekTranslation).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

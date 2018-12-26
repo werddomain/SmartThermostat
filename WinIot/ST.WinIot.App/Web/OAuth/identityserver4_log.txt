@@ -17,7 +17,7 @@ System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'AspNetUser
    at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
 ClientConnectionId:811fd97b-34ec-413e-b106-ab241d9c69ad
 Error Number:208,State:1,Class:16
-2018-12-25 15:08:20.515 -05:00 [ERR] An exception occurred while iterating over the results of a query for context type 'ST.WinIot.App.Web.OAuth.Data.ApplicationDbContext'.
+2018-12-25 15:08:20.515 -05:00 [ERR] An exception occurred while iterating over the results of a query for context type 'ST.Web.OAuth.Data.ApplicationDbContext'.
 System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'AspNetUsers'.
    at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
    at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
@@ -54,7 +54,7 @@ System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'AspNetUser
    at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
 ClientConnectionId:811fd97b-34ec-413e-b106-ab241d9c69ad
 Error Number:208,State:1,Class:16
-2018-12-25 15:08:20.529 -05:00 [ERR] An exception occurred while iterating over the results of a query for context type 'ST.WinIot.App.Web.OAuth.Data.ApplicationDbContext'.
+2018-12-25 15:08:20.529 -05:00 [ERR] An exception occurred while iterating over the results of a query for context type 'ST.Web.OAuth.Data.ApplicationDbContext'.
 System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'AspNetUsers'.
    at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
    at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
@@ -109,7 +109,7 @@ System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'AspNetUser
    at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
 ClientConnectionId:59a68897-2831-4cf9-b3da-f91fd769c7b0
 Error Number:208,State:1,Class:16
-2018-12-25 15:10:59.594 -05:00 [ERR] An exception occurred while iterating over the results of a query for context type 'ST.WinIot.App.Web.OAuth.Data.ApplicationDbContext'.
+2018-12-25 15:10:59.594 -05:00 [ERR] An exception occurred while iterating over the results of a query for context type 'ST.Web.OAuth.Data.ApplicationDbContext'.
 System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'AspNetUsers'.
    at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
    at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
@@ -146,7 +146,7 @@ System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'AspNetUser
    at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
 ClientConnectionId:59a68897-2831-4cf9-b3da-f91fd769c7b0
 Error Number:208,State:1,Class:16
-2018-12-25 15:10:59.614 -05:00 [ERR] An exception occurred while iterating over the results of a query for context type 'ST.WinIot.App.Web.OAuth.Data.ApplicationDbContext'.
+2018-12-25 15:10:59.614 -05:00 [ERR] An exception occurred while iterating over the results of a query for context type 'ST.Web.OAuth.Data.ApplicationDbContext'.
 System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'AspNetUsers'.
    at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
    at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
@@ -224,7 +224,7 @@ Invalid column name 'IsPartener'.
    at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
 ClientConnectionId:6f8b951c-7c8d-4dc0-9373-963839f92dba
 Error Number:207,State:1,Class:16
-2018-12-25 15:35:18.830 -05:00 [ERR] An exception occurred while iterating over the results of a query for context type 'ST.WinIot.App.Web.OAuth.Data.ApplicationDbContext'.
+2018-12-25 15:35:18.830 -05:00 [ERR] An exception occurred while iterating over the results of a query for context type 'ST.Web.OAuth.Data.ApplicationDbContext'.
 System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'IsAdmin'.
 Invalid column name 'IsPartener'.
    at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
@@ -263,7 +263,7 @@ Invalid column name 'IsPartener'.
    at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
 ClientConnectionId:6f8b951c-7c8d-4dc0-9373-963839f92dba
 Error Number:207,State:1,Class:16
-2018-12-25 15:35:18.843 -05:00 [ERR] An exception occurred while iterating over the results of a query for context type 'ST.WinIot.App.Web.OAuth.Data.ApplicationDbContext'.
+2018-12-25 15:35:18.843 -05:00 [ERR] An exception occurred while iterating over the results of a query for context type 'ST.Web.OAuth.Data.ApplicationDbContext'.
 System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'IsAdmin'.
 Invalid column name 'IsPartener'.
    at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
@@ -326,7 +326,7 @@ The statement has been terminated.
    at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
 ClientConnectionId:60766749-f510-40a1-ac56-97e2f5edd0a9
 Error Number:515,State:2,Class:16
-2018-12-25 15:36:30.653 -05:00 [ERR] An exception occurred in the database while saving changes for context type 'ST.WinIot.App.Web.OAuth.Data.ApplicationDbContext'.
+2018-12-25 15:36:30.653 -05:00 [ERR] An exception occurred in the database while saving changes for context type 'ST.Web.OAuth.Data.ApplicationDbContext'.
 Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Cannot insert the value NULL into column 'Id', table 'Kazo.dbo.AspNetUserClaims'; column does not allow nulls. INSERT fails.
 The statement has been terminated.
    at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
@@ -398,7 +398,7 @@ The statement has been terminated.
    at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
 ClientConnectionId:8848514b-277c-4bfe-99b2-ac4faf4f2352
 Error Number:515,State:2,Class:16
-2018-12-25 15:51:44.254 -05:00 [ERR] An exception occurred in the database while saving changes for context type 'ST.WinIot.App.Web.OAuth.Data.ApplicationDbContext'.
+2018-12-25 15:51:44.254 -05:00 [ERR] An exception occurred in the database while saving changes for context type 'ST.Web.OAuth.Data.ApplicationDbContext'.
 Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Cannot insert the value NULL into column 'Id', table 'Kazo.dbo.AspNetUserClaims'; column does not allow nulls. INSERT fails.
 The statement has been terminated.
    at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
@@ -458,3 +458,7 @@ The statement has been terminated.
 2018-12-25 17:29:21.972 -05:00 [INF] Removing 0 grants
 2018-12-25 18:29:21.999 -05:00 [INF] Removing 0 grants
 2018-12-25 20:59:09.158 -05:00 [INF] Removing 0 grants
+2018-12-25 23:30:12.765 -05:00 [INF] Starting IdentityServer4 version 2.3.2.0
+2018-12-25 23:30:13.603 -05:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2018-12-25 23:30:14.660 -05:00 [INF] Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2018-12-25 23:30:14.690 -05:00 [INF] Identity.Application was not authenticated. Failure message: Unprotect ticket failed

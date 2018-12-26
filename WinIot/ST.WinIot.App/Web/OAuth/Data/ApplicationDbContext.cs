@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using ST.WinIot.App.Web.OAuth.Models;
+using ST.Web.OAuth.Models;
 
-namespace ST.WinIot.App.Web.OAuth.Data
+namespace ST.Web.OAuth.Data
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {

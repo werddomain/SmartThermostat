@@ -4,7 +4,7 @@
 
 using System;
 
-namespace ST.WinIot.App.Web.Service
+namespace ST.Web.Service
 {
     [Serializable]
     public abstract class BaseModel

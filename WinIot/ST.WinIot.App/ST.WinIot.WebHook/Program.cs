@@ -32,7 +32,7 @@ namespace ST.WinIot.WebHook
             {
                 var config = host.Services.GetRequiredService<IConfiguration>();
                 var connectionString = config.GetConnectionString("DefaultConnection");
-                SeedData.EnsureSeedData(connectionString);
+                SeedData.EnsureSeedData(config, connectionString);
                 return;
             }
 

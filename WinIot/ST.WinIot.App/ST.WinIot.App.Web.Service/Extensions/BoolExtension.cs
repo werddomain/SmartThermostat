@@ -12,7 +12,7 @@ namespace System
     {
         //public static string ToLocalisedString(this bool value)
         //{
-        //    return value ? ST.WinIot.App.Web.Service.Ressources.CSRess.Yes : ST.WinIot.App.Web.Service.Ressources.CSRess.No;
+        //    return value ? ST.Web.Service.Ressources.CSRess.Yes : ST.Web.Service.Ressources.CSRess.No;
         //}
         //public static HtmlString ToLocalisedHtmlString(this bool value, bool goodIsNegative = false, )
         //{

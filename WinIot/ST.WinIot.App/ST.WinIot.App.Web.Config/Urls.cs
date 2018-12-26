@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ST.WinIot.App.Web.Config
+namespace ST.Web.Config
 {
     public class Urls
     {
@@ -11,5 +11,7 @@ namespace ST.WinIot.App.Web.Config
         public const string UiUrl = HttpSheme + "://" + Host;
         public const string OAuthUrl = HttpSheme + "://" + Host + "/Auth";
         public const string SignalRUrl = HttpSheme + "://" + ApiUrl + "/Signalr";
+
+        public const string GoogleRedirectUrl = "https://oauth-redirect.googleusercontent.com/r/";  //https://oauth-redirect.googleusercontent.com/r/YOUR_PROJECT_ID (Google:GoogleProjectId)
     }
 }

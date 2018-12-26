@@ -1,4 +1,4 @@
-﻿using ST.WinIot.App.Web.Service;
+﻿using ST.Web.Service;
 using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Text;
 
-namespace ST.WinIot.App.Web.Service
+namespace ST.Web.Service
 {
     public static class SqlParameterExtensions
     {

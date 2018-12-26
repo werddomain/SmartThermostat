@@ -18,7 +18,7 @@ using IdentityModel;
 using System.Linq;
 using System;
 using System.Collections.Generic;
-using ST.WinIot.App.Web.OAuth.Models;
+using ST.Web.OAuth.Models;
 
 namespace IdentityServer4.Quickstart.UI
 {

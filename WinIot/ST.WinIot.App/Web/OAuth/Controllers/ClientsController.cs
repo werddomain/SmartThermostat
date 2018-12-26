@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ST.WinIot.App.Web.OAuth.Controllers
+namespace ST.Web.OAuth.Controllers
 {
     public class ClientsController : Controller
     {

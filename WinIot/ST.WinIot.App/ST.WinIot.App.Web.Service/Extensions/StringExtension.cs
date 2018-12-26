@@ -14,7 +14,7 @@ namespace System
 
         public static object NullToDbNull(this object value)
         {
-            return ST.WinIot.App.Web.Service.Utility.NullToDBNull(value);
+            return ST.Web.Service.Utility.NullToDBNull(value);
 
         }
         public static string ToClass(this string str)
@@ -27,7 +27,7 @@ namespace System
         //    if (String.IsNullOrEmpty(ConvertToCurrency))
         //        ConvertToCurrency = BaseController.CurrencyInfo.CurrentCurency(ses;
 
-        //    var Converted = await ST.WinIot.App.Web.Service.Helper.CurrencyHelper.GetConvertedCurrencyValue(model.Param.Shop.MoneyUnit, ConvertToCurrency, value, new ST.WinIot.App.Web.Service.Services.Service(Guid.Empty, "en"));
+        //    var Converted = await ST.Web.Service.Helper.CurrencyHelper.GetConvertedCurrencyValue(model.Param.Shop.MoneyUnit, ConvertToCurrency, value, new ST.Web.Service.Services.Service(Guid.Empty, "en"));
         //    return string.Format("{0:N2}", Math.Round(value, 2)) + " " + CurencyToUnit(ConvertToCurrency);
         //}
 
@@ -379,7 +379,7 @@ namespace System
         //    if (String.IsNullOrEmpty(ConvertToCurrency))
         //        ConvertToCurrency = BaseController.CurrencyInfo.CurrentCurency(ses;
 
-        //    var Converted = await ST.WinIot.App.Web.Service.Helper.CurrencyHelper.GetConvertedCurrencyValue(model.Param.Shop.MoneyUnit, ConvertToCurrency, value, new ST.WinIot.App.Web.Service.Services.Service(Guid.Empty, "en"));
+        //    var Converted = await ST.Web.Service.Helper.CurrencyHelper.GetConvertedCurrencyValue(model.Param.Shop.MoneyUnit, ConvertToCurrency, value, new ST.Web.Service.Services.Service(Guid.Empty, "en"));
         //    return string.Format("{0:N2}", Math.Round(value, 2)) + " " + CurencyToUnit(ConvertToCurrency);
         //}
 

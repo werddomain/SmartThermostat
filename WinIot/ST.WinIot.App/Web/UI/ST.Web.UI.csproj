@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\ST.WinIot.App.Web.Config\ST.WinIot.App.Web.Config.csproj" />
+    <ProjectReference Include="..\..\ST.WinIot.App.Web.Config\ST.Web.Config.csproj" />
   </ItemGroup>
 
 </Project>

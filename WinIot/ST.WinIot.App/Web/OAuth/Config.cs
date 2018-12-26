@@ -4,8 +4,9 @@
 using IdentityServer4;
 using IdentityServer4.Models;
 using System.Collections.Generic;
+using Microsoft.Extensions.Configuration;
 
-namespace ST.WinIot.App.Web.OAuth
+namespace ST.Web.OAuth
 {
     public class ConfigServerIdentity
     {
@@ -15,7 +16,7 @@ namespace ST.WinIot.App.Web.OAuth
             return new List<IdentityResource>
             {
                 new IdentityResources.OpenId(),
-                new IdentityResources.Profile(),
+                new IdentityResources.Profile()
             };
         }
 
@@ -23,16 +24,39 @@ namespace ST.WinIot.App.Web.OAuth
         {
             return new List<ApiResource>
             {
-                new ApiResource("api1", "My API")
+                new ApiResource(Config.General.SmartHomeApiScope_Id, Config.General.SmartHomeApiScope_Name){
+                    Description = Config.General.SmartHomeApiScope_Description
+                }
             };
         }
 
         // clients want to access resources (aka scopes)
-        public static IEnumerable<Client> GetClients()
+        public static IEnumerable<Client> GetClients(IConfiguration Configuration)
         {
             // client credentials client
             return new List<Client>
             {
+                new Client{
+                    ClientName = "Google",
+                    
+                    AllowedGrantTypes = GrantTypes.Hybrid,
+                    ClientId = Configuration["Google:OurOpenId:ClientId"],
+                    ClientSecrets =
+                    {
+                        new Secret(Configuration["Google:OurOpenId:ClientSecret"].Sha256())
+                    },
+                    RedirectUris = { Config.Urls.GoogleRedirectUrl + Configuration["Google:GoogleProjectId"] },
+                    AbsoluteRefreshTokenLifetime = 0,
+                    AllowOfflineAccess = true,
+                    RequireConsent = true,
+                    AllowRememberConsent = true,
+                    AllowedScopes =
+                    {
+                        IdentityServerConstants.StandardScopes.OpenId,
+                        IdentityServerConstants.StandardScopes.Profile,
+                        Config.General.SmartHomeApiScope_Id
+                    }
+                },
                 new Client
                 {
                     ClientId = "client",
@@ -42,7 +66,7 @@ namespace ST.WinIot.App.Web.OAuth
                     {
                         new Secret("secret".Sha256())
                     },
-                    AllowedScopes = { "api1" }
+                    AllowedScopes = { Config.General.SmartHomeApiScope_Id }
                 },
 
                 // resource owner password grant client
@@ -55,7 +79,7 @@ namespace ST.WinIot.App.Web.OAuth
                     {
                         new Secret("secret".Sha256())
                     },
-                    AllowedScopes = { "api1" }
+                    AllowedScopes = { Config.General.SmartHomeApiScope_Id }
                 },
 
                 // OpenID Connect hybrid flow and client credentials client (MVC)
@@ -79,7 +103,7 @@ namespace ST.WinIot.App.Web.OAuth
                     {
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile,
-                        "api1"
+                        Config.General.SmartHomeApiScope_Id
                     },
                     AllowOfflineAccess = true
                 }

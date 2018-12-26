@@ -207,11 +207,11 @@ namespace System
             // return
             return PageName;
         }
-        //public static ST.WinIot.App.Web.Service.UserAgent.UserAgent UserAgent(this HttpRequest Request) {
+        //public static ST.Web.Service.UserAgent.UserAgent UserAgent(this HttpRequest Request) {
         //    var userAgent = "";
         //    if (Request.Headers.ContainsKey("User-Agent"))
         //        userAgent = Request.Headers["User-Agent"].ToString();
-        //    ST.WinIot.App.Web.Service.UserAgent.UserAgent ua = new ST.WinIot.App.Web.Service.UserAgent.UserAgent(userAgent);
+        //    ST.Web.Service.UserAgent.UserAgent ua = new ST.Web.Service.UserAgent.UserAgent(userAgent);
         //    return ua;
         //}
         public static string RawUrl(this HttpRequest request)

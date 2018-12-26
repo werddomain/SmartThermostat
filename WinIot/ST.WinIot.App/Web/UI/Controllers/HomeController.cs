@@ -6,7 +6,7 @@ using System.Net.Http;
 using Newtonsoft.Json.Linq;
 using IdentityModel.Client;
 
-namespace ST.WinIot.App.Web.UI.Controllers
+namespace ST.Web.UI.Controllers
 {
     public class HomeController : Controller
     {

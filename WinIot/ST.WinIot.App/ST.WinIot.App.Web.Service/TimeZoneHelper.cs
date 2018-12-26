@@ -6,7 +6,7 @@ using System.Linq;
 using System.Resources;
 using System.Web;
 
-namespace ST.WinIot.App.Web.Service
+namespace ST.Web.Service
 {
     public class TimeZoneHelper
     {

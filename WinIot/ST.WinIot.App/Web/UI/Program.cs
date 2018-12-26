@@ -5,7 +5,7 @@ using System;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
-namespace ST.WinIot.App.Web.UI
+namespace ST.Web.UI
 {
     public class Program
     {

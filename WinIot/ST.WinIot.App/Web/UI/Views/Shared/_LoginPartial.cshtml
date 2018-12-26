@@ -1,6 +1,6 @@
 @using Microsoft.AspNetCore.Identity
-@using ST.WinIot.App.Web.UI
-@using ST.WinIot.App.Web
+@using ST.Web.UI
+@using ST.Web
 
 
 <ul class="navbar-nav">
@@ -18,7 +18,7 @@
     else
     {
         @*<li class="nav-item">
-                <a class="nav-link text-dark" href="@ST.WinIot.App.Web.Config.Urls.">Register</a>
+                <a class="nav-link text-dark" href="@ST.Web.Config.Urls.">Register</a>
             </li>*@
         <li class="nav-item">
             <a class="nav-link text-dark" asp-area="" asp-page="/Home/Login">Login</a>

@@ -5,7 +5,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 
-namespace ST.WinIot.App.Web.API.Controllers
+namespace ST.Web.API.Controllers
 {
     [Route("[controller]")]
     [Authorize]

@@ -9,7 +9,7 @@ using System.Resources;
 using System.Threading;
 using System.Web;
 
-namespace ST.WinIot.App.Web.Service
+namespace ST.Web.Service
 {
     public class CSRange:RangeAttribute
     {
