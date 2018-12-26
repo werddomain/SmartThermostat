@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using System.IdentityModel.Tokens.Jwt;
 
@@ -12,6 +14,20 @@ namespace ST.WinIot.App.Web.UI
             services.AddMvc();
 
             JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
+            services.Configure<CookiePolicyOptions>(options =>
+            {
+                // This lambda determines whether user consent for non-essential cookies 
+                // is needed for a given request.
+                // DOC : https://docs.microsoft.com/en-us/aspnet/core/security/gdpr?view=aspnetcore-2.2
+                options.CheckConsentNeeded = context => true;
+                options.MinimumSameSitePolicy = SameSiteMode.None;
+            });
+
+            // The Tempdata provider cookie is not essential. Make it essential
+            // so Tempdata is functional when tracking is disabled.
+            services.Configure<CookieTempDataProviderOptions>(options => {
+                options.Cookie.IsEssential = true;
+            });
 
             services.AddAuthentication(options =>
                 {
@@ -23,8 +39,8 @@ namespace ST.WinIot.App.Web.UI
                 {
                     options.SignInScheme = "Cookies";
 
-                    options.Authority = "http://localhost:5000";
-                    options.RequireHttpsMetadata = false;
+                    options.Authority = Config.Urls.OAuthUrl;
+                    //options.RequireHttpsMetadata = false;
 
                     options.ClientId = "mvc";
                     options.ClientSecret = "secret";
@@ -52,6 +68,7 @@ namespace ST.WinIot.App.Web.UI
             app.UseAuthentication();
 
             app.UseStaticFiles();
+            app.UseCookiePolicy();
             app.UseMvcWithDefaultRoute();
         }
     }

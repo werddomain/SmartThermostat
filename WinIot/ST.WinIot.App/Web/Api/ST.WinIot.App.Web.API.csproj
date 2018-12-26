@@ -9,4 +9,8 @@
     <PackageReference Include="IdentityServer4.AccessTokenValidation" Version="2.7.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\ST.WinIot.App.Web.Config\ST.WinIot.App.Web.Config.csproj" />
+  </ItemGroup>
+
 </Project>

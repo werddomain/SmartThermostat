@@ -7,10 +7,12 @@
   <ItemGroup>
     <PackageReference Include="IdentityModel" Version="3.10.4" />
     <PackageReference Include="Microsoft.AspNetCore.All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.0" />
+    <PackageReference Include="NonFactors.Grid.Mvc6" Version="4.0.2" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\" />
+    <ProjectReference Include="..\..\ST.WinIot.App.Web.Config\ST.WinIot.App.Web.Config.csproj" />
   </ItemGroup>
 
 </Project>

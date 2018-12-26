@@ -28,7 +28,9 @@ namespace ST.WinIot.App.Web.UI.Controllers
             await HttpContext.SignOutAsync("Cookies");
             await HttpContext.SignOutAsync("oidc");
         }
-
+        public IActionResult Login() {
+            return Challenge("oidc");
+        }
         public IActionResult Error()
         {
             return View();
@@ -37,13 +39,13 @@ namespace ST.WinIot.App.Web.UI.Controllers
         public async Task<IActionResult> CallApiUsingClientCredentials()
         {
             //The obselete warning seem ambigus : https://github.com/IdentityServer/IdentityServer4/issues/2885
-            var tokenClient = new TokenClient("http://localhost:5000/connect/token", "mvc", "secret");
+            var tokenClient = new TokenClient($"{Config.Urls.OAuthUrl}/connect/token", "mvc", "secret");
             var tokenResponse = await tokenClient.RequestClientCredentialsAsync("api1");
 
             var client = new HttpClient();
             
             client.SetBearerToken(tokenResponse.AccessToken);
-            var content = await client.GetStringAsync("http://localhost:5001/identity");
+            var content = await client.GetStringAsync($"{Config.Urls.ApiUrl}/identity");
 
             ViewBag.Json = JArray.Parse(content).ToString();
             return View("Json");
@@ -55,7 +57,7 @@ namespace ST.WinIot.App.Web.UI.Controllers
 
             var client = new HttpClient();
             client.SetBearerToken(accessToken);
-            var content = await client.GetStringAsync("http://localhost:5001/identity");
+            var content = await client.GetStringAsync($"{Config.Urls.ApiUrl}/identity");
 
             ViewBag.Json = JArray.Parse(content).ToString();
             return View("Json");

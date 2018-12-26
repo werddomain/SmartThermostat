@@ -112,7 +112,7 @@ namespace ST.WinIot.App.Web.OAuth
             if (!context.Clients.Any())
             {
                 Console.WriteLine("Clients being populated");
-                foreach (var client in Config.GetClients().ToList())
+                foreach (var client in ConfigServerIdentity.GetClients().ToList())
                 {
                     context.Clients.Add(client.ToEntity());
                 }
@@ -126,7 +126,7 @@ namespace ST.WinIot.App.Web.OAuth
             if (!context.IdentityResources.Any())
             {
                 Console.WriteLine("IdentityResources being populated");
-                foreach (var resource in Config.GetIdentityResources().ToList())
+                foreach (var resource in ConfigServerIdentity.GetIdentityResources().ToList())
                 {
                     context.IdentityResources.Add(resource.ToEntity());
                 }
@@ -140,7 +140,7 @@ namespace ST.WinIot.App.Web.OAuth
             if (!context.ApiResources.Any())
             {
                 Console.WriteLine("ApiResources being populated");
-                foreach (var resource in Config.GetApiResources().ToList())
+                foreach (var resource in ConfigServerIdentity.GetApiResources().ToList())
                 {
                     context.ApiResources.Add(resource.ToEntity());
                 }

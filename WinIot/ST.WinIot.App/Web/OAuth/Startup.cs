@@ -76,7 +76,7 @@ namespace ST.WinIot.App.Web.OAuth
             }
             else
             {
-                throw new Exception("need to configure key material");
+                builder.AddSigningCredential(Configuration["Security:CertificateCN"]);
             }
 
             services.AddAuthentication()
@@ -85,21 +85,21 @@ namespace ST.WinIot.App.Web.OAuth
                     // register your IdentityServer with Google at https://console.developers.google.com
                     // enable the Google+ API
                     // set the redirect URI to http://localhost:port/signin-google
-                    options.ClientId = "copy client ID from Google here";
-                    options.ClientSecret = "copy client secret from Google here";
-                })
-                .AddOpenIdConnect("oidc", "OpenID Connect", options =>
-                {
-                    options.Authority = "https://demo.identityserver.io/";
-                    options.ClientId = "implicit";
-                    options.SaveTokens = true;
-
-                    options.TokenValidationParameters = new TokenValidationParameters
-                    {
-                        NameClaimType = "name",
-                        RoleClaimType = "role"
-                    };
+                    options.ClientId = Configuration["Authentication:Google:ClientId"];
+                    options.ClientSecret = Configuration["Authentication:Google:ClientSecret"];
                 });
+                //.AddOpenIdConnect("oidc", "OpenID Connect", options =>
+                //{
+                //    options.Authority = "https://demo.identityserver.io/";
+                //    options.ClientId = "implicit";
+                //    options.SaveTokens = true;
+
+                //    options.TokenValidationParameters = new TokenValidationParameters
+                //    {
+                //        NameClaimType = "name",
+                //        RoleClaimType = "role"
+                //    };
+                //});
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
