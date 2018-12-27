@@ -121,7 +121,26 @@ namespace ST.Web.OAuth
             }
             else
             {
-                Console.WriteLine("Clients already populated");
+                Console.WriteLine("Clients being updated");
+                
+                foreach (var client in ConfigServerIdentity.GetClients(Configuration).ToList())
+                {
+                    if (context.Clients.Any(o => o.ClientId == client.ClientId))
+                    {
+                        var old = context.Clients.FirstOrDefault(o => o.ClientId == client.ClientId);
+                        context.Clients.Remove(old);
+                        context.Clients.Add(client.ToEntity());
+                        Console.WriteLine("Updated Client :" + (client.ClientName ?? client.ClientId));
+                    }
+                    else
+                    {
+                        context.Clients.Add(client.ToEntity());
+                        Console.WriteLine("Added Client :" + (client.ClientName ?? client.ClientId));
+
+                    }
+
+                }
+                context.SaveChanges();
             }
 
             if (!context.IdentityResources.Any())

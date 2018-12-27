@@ -14,7 +14,20 @@ namespace ST.Web.API.Controllers
         [HttpGet]
         public IActionResult Get()
         {
+            debug("get");
+
             return new JsonResult(from c in User.Claims select new { c.Type, c.Value });
+        }
+
+        [HttpPost]
+        public IActionResult Post()
+        {
+            debug("post");
+            return new JsonResult(from c in User.Claims select new { c.Type, c.Value });
+        }
+
+        void debug(string From) {
+
         }
     }
 }

@@ -2,3 +2,34 @@
 The web project 'ST.WinIot.WebHook' require an https capatibility.
 You will alsow need to create a self signed certificate to encrypt the autentications using identity server 4 for communication with google and the raspberry pie.
 Read the readme in the web project to learn more.
+
+Setup Online Services :
+
+
+1) Created the smart Home project on Google : https://console.actions.google.com/
+2) Created an OAuth ClientId/Secret on Google : (https://console.developers.google.com/apis/credentials)
+	Tipicaly a Google + API.
+	
+3) Account creation on Google Actions:
+   -Only allow accounts creation on my website
+   -Linking Type : (OAuth & Google Sign In) && (Authorixation Code)
+   -Client Information: (DOC: https://developers.google.com/actions/identity/oauth2?oauth=code)
+		+Client Id -> Configuration["Google:OurOpenId:ClientId"]
+		+Client Secret -> Configuration["Google:OurOpenId:ClientSecret"]
+		+Authorization URL -> https://{URL_TO_OAuth}/connect/authorize
+		+Token URL -> https://{URL_TO_OAuth}/connect/token
+	-Configure your client:
+		+Scopes -> "GoogleSmartHome" (Without ") or same value as this config : (Config.General.SmartHomeApiScope_Id)
+
+4)Filling Informations on the settings:
+	-Developpement -> (appsettings.json or User Secrets)
+	-Production OR IIS -> Environement Varriable (https://www.andrecarlucci.com/en/setting-environment-variables-for-asp-net-core-when-publishing-on-iis/)
+
+5)Publish the websites online.
+	In my case, the 3 websites are in the same IIS Website.
+	-> UI is the root of the website
+	-> Oauth is in an application named Auth (I can reach it by example.com/Auth)
+	-> API is in an application named API (I can reach it by example.com/API)
+
+6)Add the service on your google now app, like in the last steps in this website: 
+The web configuration is verry similar to what's described here : https://github.com/kakopappa/sinric/wiki/How-to-use-Google-Home

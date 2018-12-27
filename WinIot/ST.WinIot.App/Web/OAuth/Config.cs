@@ -36,10 +36,11 @@ namespace ST.Web.OAuth
             // client credentials client
             return new List<Client>
             {
+                
                 new Client{
                     ClientName = "Google",
                     
-                    AllowedGrantTypes = GrantTypes.Hybrid,
+                    AllowedGrantTypes = GrantTypes.Code,
                     ClientId = Configuration["Google:OurOpenId:ClientId"],
                     ClientSecrets =
                     {
