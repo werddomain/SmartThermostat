@@ -13,7 +13,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\ST.SmartDevices\ST.SmartDevices.csproj" />
     <ProjectReference Include="..\..\ST.WinIot.App.Web.Config\ST.Web.Config.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="GoogleSmartHomeModel\" />
   </ItemGroup>
 
 </Project>
