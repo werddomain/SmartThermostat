@@ -1,18 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace ST.SmartDevices.Devices
 {
     public class Piece
     {
-        public Guid Id { get; set; }
+        public Guid PieceId { get; set; }
         public Guid HomeId { get; set; }
+
+        public virtual Home Home { get; set; }
+
+        [Required]
         public string UserId { get; set; }
 
+        [Required]
         public string Name { get; set; }
         public TypeEnum Type { get; set; }
-        public string Floor { get; set; }
+        public int Floor { get; set; }
         public enum TypeEnum {
             Kitchen = 1,
             Master_Bedroom,
