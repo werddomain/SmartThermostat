@@ -159,6 +159,7 @@
     <Content Include="Docs\Controls Libs.txt" />
     <Content Include="Docs\RequiredToRun.txt" />
     <Content Include="Docs\rp2_pinout.png" />
+    <Content Include="Docs\Tools.txt" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

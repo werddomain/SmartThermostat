@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ST.SmartDevices.Devices
 {
-    public class Hub
+    public class Hub : IOwned
     {
         public Guid HubId { get; set; }
 

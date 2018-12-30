@@ -8,8 +8,16 @@ namespace ST.Web.API.Data
 {
     public class DeviceDataContext: DbContext
     {
-        public DeviceDataContext() {
+        public DeviceDataContext(DbContextOptions options) : base(options) { 
 
+        }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            foreach (var relationship in modelBuilder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys()))
+            {
+                relationship.DeleteBehavior = DeleteBehavior.Restrict;
+            }
+            base.OnModelCreating(modelBuilder);
         }
 
         public DbSet<ST.SmartDevices.Devices.Hub> Hubs { get; set; }

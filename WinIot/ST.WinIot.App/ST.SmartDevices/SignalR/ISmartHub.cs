@@ -8,6 +8,7 @@ namespace ST.SmartDevices.SignalR
     public interface ISmartHub
     {
         Task NewGoogleAction(Guid DeviceId, string Action);
-
+        Task DeviceChanged(Guid DeviceId);
+        
     }
 }

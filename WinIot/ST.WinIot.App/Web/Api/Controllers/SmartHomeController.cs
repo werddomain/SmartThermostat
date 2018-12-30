@@ -10,6 +10,7 @@ using PayLoads = ST.SmartDevices.Google.PayLoads;
 using ST.Web.API.Attributes;
 using ST.SmartDevices.Google;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.SignalR;
 
 namespace ST.Web.API.Controllers
 {
@@ -17,11 +18,13 @@ namespace ST.Web.API.Controllers
     [ApiController]
     [Authorize]
     //DOC: https://developers.google.com/actions/smarthome/create#request
-    public class SmartHomeController : ControllerBase
+    public class SmartHomeController : BaseApiController
     {
         Data.DeviceDataContext DataContext { get; set; }
-        public SmartHomeController(Data.DeviceDataContext DeviceDataContext) {
-            this.DataContext = DeviceDataContext;
+        IHubContext<signalR.SmartHub, SmartDevices.SignalR.ISmartHub> SmartHubContext;
+        public SmartHomeController(Data.DeviceDataContext deviceDataContext, IHubContext<signalR.SmartHub, SmartDevices.SignalR.ISmartHub> smartHubContext) {
+            DataContext = deviceDataContext;
+            SmartHubContext = smartHubContext;
         }
         [HttpGet]
         public IActionResult get() {
@@ -30,6 +33,7 @@ namespace ST.Web.API.Controllers
         }
 
         [HttpPost]
+        [Produces("application/json")]
         public async Task<IActionResult> Post(GoogleRequest request)
         {
             debug("post");
@@ -50,10 +54,12 @@ namespace ST.Web.API.Controllers
                     return NotFound();
             }
         }
-        string GetUserId() {
-            return User.Claims.FirstOrDefault(x => x.Type.Equals(JwtClaimTypes.Subject))?.Value;
-        }
+        
         const bool HomeGraphReportEnabled = false;
+        bool willReportState(SmartDevices.Devices.Device device) {
+            return HomeGraphReportEnabled && device.DeviceType.DeviceTypeId != SmartDevices.Google.action.devices.types.SCENE;
+        }
+
         async Task<IActionResult> SYNC(GoogleRequest request) {
             //https://developers.google.com/actions/smarthome/create#actiondevicessync
             var response = new GoogleResponse<PayLoads.DevicesSyncPayLoad>(request);
@@ -94,12 +100,12 @@ namespace ST.Web.API.Controllers
                                     roomHint = e.Piece.Name,
                                     traits = e.Traits.Select(o=>o.DeviceTraitId)?.ToArray(),
                                     type = e.DeviceType?.DeviceTypeId,
-                                    willReportState = HomeGraphReportEnabled
+                                    willReportState = willReportState(e)
 
                                 };
             response.payload.devices = googleDevices?.ToArray();
             response.payload.agentUserId = UserId;
-            return new JsonResult(response);
+            return Ok(response);
         }
         async Task<IActionResult> QUERY(GoogleRequest request)
         {
@@ -107,17 +113,22 @@ namespace ST.Web.API.Controllers
             var payload = request.inputs.First().payload as PayLoads.DevicesQueryInputPayload;
             var response = new GoogleResponse<PayLoads.DeviceQueryPayload>(request);
 
-
+            return Ok(response);
         }
         async Task<IActionResult> EXECUTE(GoogleRequest request)
         {
             //https://developers.google.com/actions/smarthome/create#actiondevicesexecute
-
+            var userId = GetUserId();
+            var userChannel = SmartHubContext.Clients.User(userId);
+            if (userChannel != null)
+            await userChannel.NewGoogleAction(Guid.Empty, "");
+            var response = new GoogleResponse<PayLoads.DeviceExecuteResponsePayload>(request);
+            return Ok(response);
         }
         async Task<IActionResult> DISCONNECT(GoogleRequest request)
         {
             //https://developers.google.com/actions/smarthome/create#actiondevicesdisconnect
-
+            return new JsonResult(new { });
         }
         void debug(string From)
         {

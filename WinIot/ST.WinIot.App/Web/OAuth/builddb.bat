@@ -14,3 +14,4 @@ dotnet ef migrations script -c ApplicationDbContext -o Data/Migrations/Users.sql
 dotnet ef database update -c ApplicationDbContext
 
 dotnet run /seed
+pause
