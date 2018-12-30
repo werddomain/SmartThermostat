@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ST.Web.API.GoogleSmartHomeModel
+namespace ST.SmartDevices.Google
 {
     public class GoogleResponse<T>: IGoogleRequestResponse
-        where T : PayLoadBase
+        where T : PayLoads.PayLoadBase
     {
         public GoogleResponse(string requestId)
         {

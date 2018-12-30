@@ -17,7 +17,7 @@ namespace ST.Web.OAuth
 
         public static void Main(string[] args)
         {
-            Console.Title = "IdentityServerWithEfAndAspNetIdentity";
+            Console.Title = "ST.Web.OAuth";
 
             Log.Logger = new LoggerConfiguration()
                 .MinimumLevel.Debug()

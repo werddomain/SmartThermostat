@@ -17,7 +17,12 @@ namespace ST.Web.API.Data
         public DbSet<ST.SmartDevices.Devices.Device> Devices { get; set; }
         public DbSet<ST.SmartDevices.Devices.Piece> Pieces { get; set; }
         public DbSet<ST.SmartDevices.Devices.Relay> Relays { get; set; }
-        
+
+        public DbSet<ST.SmartDevices.Devices.Google.DeviceTrait> DeviceTraits { get; set; }
+        public DbSet<ST.SmartDevices.Devices.Google.DeviceType> DeviceTypes { get; set; }
+        public DbSet<ST.SmartDevices.Devices.GoogleUser> GoogleUsers { get; set; }
+
+
 
 
     }

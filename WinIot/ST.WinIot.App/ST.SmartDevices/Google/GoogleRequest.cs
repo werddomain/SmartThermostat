@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ST.Web.API.GoogleSmartHomeModel
+namespace ST.SmartDevices.Google
 {
     public class GoogleRequest: IGoogleRequestResponse
     {

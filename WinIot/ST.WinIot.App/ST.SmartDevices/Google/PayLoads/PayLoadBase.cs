@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ST.SmartDevices.Google
+namespace ST.SmartDevices.Google.PayLoads
 {
-    public interface IGoogleRequestResponse
+    public abstract class PayLoadBase
     {
-        string requestId { get; set; }
+        
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ST.Web.API.GoogleSmartHomeModel
+namespace ST.SmartDevices.Google
 {
     public class action
     {
@@ -176,11 +176,6 @@ namespace ST.Web.API.GoogleSmartHomeModel
                 /// This trait represents any device that has an ongoing duration for its operation which can be queried. This includes, but is not limited to, devices that operate cyclically, such as washing machines, dryers, and dishwashers.
                 /// </summary>
                 public const string RunCycle = "action.devices.traits.RunCycle";
-
-                /// <summary>
-                /// 
-                /// </summary>
-                public const string DISCONNECT = "action.devices.traits.";
 
                 /// <summary>
                 /// In the case of scenes, the type maps 1:1 to the trait, as scenes don't combine with other traits to form composite devices.

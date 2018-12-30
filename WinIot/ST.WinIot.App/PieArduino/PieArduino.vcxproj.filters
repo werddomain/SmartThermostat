@@ -13,13 +13,36 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Tester">
+      <UniqueIdentifier>{771cb20d-205c-45bc-b848-aab762e86219}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="PieArduino.ino" />
+    <None Include="C:\Users\clefw\Documents\Arduino\libraries\DHT_sensor_library\examples\DHT_Unified_Sensor\DHT_Unified_Sensor.ino">
+      <Filter>Tester</Filter>
+    </None>
+    <None Include="C:\Users\clefw\Documents\Arduino\libraries\DHT_sensor_library\examples\DHTtester\DHTtester.ino">
+      <Filter>Tester</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="__vm\.PieArduino.vsarduino.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="C:\Users\clefw\Documents\Arduino\libraries\DHT_sensor_library\DHT.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\clefw\Documents\Arduino\libraries\DHT_sensor_library\DHT_U.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\clefw\Documents\Arduino\libraries\DHT_sensor_library\DHT.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\clefw\Documents\Arduino\libraries\DHT_sensor_library\DHT_U.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -77,5 +77,7 @@ typedef void *__builtin_va_list;
 #define pgm_read_ptr(address_short)   short()
 
 #include "PieArduino.ino"
+#include "C:\Users\clefw\Documents\Arduino\libraries\DHT_sensor_library\examples\DHT_Unified_Sensor\DHT_Unified_Sensor.ino"
+#include "C:\Users\clefw\Documents\Arduino\libraries\DHT_sensor_library\examples\DHTtester\DHTtester.ino"
 #endif
 #endif

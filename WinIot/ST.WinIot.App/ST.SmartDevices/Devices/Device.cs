@@ -8,7 +8,7 @@ namespace ST.SmartDevices.Devices
     public class Device
     {
         public Guid DeviceId { get; set; }
-        public Guid UserId { get; set; }
+        public string UserId { get; set; }
         public Guid? RelayId { get; set; }
         public Guid HubId { get; set; }
 
@@ -20,6 +20,9 @@ namespace ST.SmartDevices.Devices
         [Required]
         public int? ArduinoId { get; set; }
 
+        public Google.DeviceType DeviceType { get; set; }
+        public ICollection<Google.DeviceTrait> Traits { get; set; }
+        public ICollection<DeviceNickName> NickNames { get; set; }
         public Hub Hub { get; set; }
         public Relay Relay { get; set; }
         public Piece Piece { get; set; }
