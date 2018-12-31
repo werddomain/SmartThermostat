@@ -21,7 +21,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ST.Web.Config", "ST.WinIot.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ST.Web.Service", "ST.WinIot.App.Web.Service\ST.Web.Service.csproj", "{6986B3E3-F2CE-46EC-858E-434CD1D93700}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ST.SmartDevices", "ST.SmartDevices\ST.SmartDevices.csproj", "{A994CD8F-5903-45CC-9052-A021E537B2D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ST.SmartDevices", "ST.SmartDevices\ST.SmartDevices.csproj", "{A994CD8F-5903-45CC-9052-A021E537B2D4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{48036264-8F75-4465-B440-9829985F284C}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\clefw\Desktop\DHT_sensor_library.zip = ..\..\..\clefw\Desktop\DHT_sensor_library.zip
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
