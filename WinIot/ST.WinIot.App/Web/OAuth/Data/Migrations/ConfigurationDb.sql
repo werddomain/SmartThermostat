@@ -347,7 +347,7 @@ CREATE UNIQUE INDEX [IX_IdentityResources_Name] ON [IdentityResources] ([Name]);
 GO
 
 INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-VALUES (N'20181226053715_Config', N'2.2.0-rtm-35687');
+VALUES (N'20190102022027_Config', N'2.2.0-rtm-35687');
 
 GO
 

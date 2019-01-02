@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ST.WinIot.App", "ST.WinIot.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PieArduino", "PieArduino\PieArduino.vcxproj", "{C5F80730-F44F-4478-BDAE-6634EFC2CA88}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ST.WinIot.WebHook", "ST.WinIot.WebHook\ST.WinIot.WebHook.csproj", "{5C86A93A-E5E0-433C-B8CC-66CECF341580}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{1EAFAB21-B2BD-467E-ABE2-D88D4559D1BD}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ST.Web.API", "Web\Api\ST.Web.API.csproj", "{6A939B3F-73EF-44CB-B778-7851AA4ED0FC}"
@@ -22,11 +20,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ST.Web.Service", "ST.WinIot.App.Web.Service\ST.Web.Service.csproj", "{6986B3E3-F2CE-46EC-858E-434CD1D93700}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ST.SmartDevices", "ST.SmartDevices\ST.SmartDevices.csproj", "{A994CD8F-5903-45CC-9052-A021E537B2D4}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{48036264-8F75-4465-B440-9829985F284C}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\..\clefw\Desktop\DHT_sensor_library.zip = ..\..\..\clefw\Desktop\DHT_sensor_library.zip
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -80,26 +73,6 @@ Global
 		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Release|x64.ActiveCfg = Release|Win32
 		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Release|x86.ActiveCfg = Release|Win32
 		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Release|x86.Build.0 = Release|Win32
-		{5C86A93A-E5E0-433C-B8CC-66CECF341580}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5C86A93A-E5E0-433C-B8CC-66CECF341580}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5C86A93A-E5E0-433C-B8CC-66CECF341580}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{5C86A93A-E5E0-433C-B8CC-66CECF341580}.Debug|ARM.Build.0 = Debug|Any CPU
-		{5C86A93A-E5E0-433C-B8CC-66CECF341580}.Debug|ARM64.ActiveCfg = Debug|Any CPU
-		{5C86A93A-E5E0-433C-B8CC-66CECF341580}.Debug|ARM64.Build.0 = Debug|Any CPU
-		{5C86A93A-E5E0-433C-B8CC-66CECF341580}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{5C86A93A-E5E0-433C-B8CC-66CECF341580}.Debug|x64.Build.0 = Debug|Any CPU
-		{5C86A93A-E5E0-433C-B8CC-66CECF341580}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{5C86A93A-E5E0-433C-B8CC-66CECF341580}.Debug|x86.Build.0 = Debug|Any CPU
-		{5C86A93A-E5E0-433C-B8CC-66CECF341580}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5C86A93A-E5E0-433C-B8CC-66CECF341580}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5C86A93A-E5E0-433C-B8CC-66CECF341580}.Release|ARM.ActiveCfg = Release|Any CPU
-		{5C86A93A-E5E0-433C-B8CC-66CECF341580}.Release|ARM.Build.0 = Release|Any CPU
-		{5C86A93A-E5E0-433C-B8CC-66CECF341580}.Release|ARM64.ActiveCfg = Release|Any CPU
-		{5C86A93A-E5E0-433C-B8CC-66CECF341580}.Release|ARM64.Build.0 = Release|Any CPU
-		{5C86A93A-E5E0-433C-B8CC-66CECF341580}.Release|x64.ActiveCfg = Release|Any CPU
-		{5C86A93A-E5E0-433C-B8CC-66CECF341580}.Release|x64.Build.0 = Release|Any CPU
-		{5C86A93A-E5E0-433C-B8CC-66CECF341580}.Release|x86.ActiveCfg = Release|Any CPU
-		{5C86A93A-E5E0-433C-B8CC-66CECF341580}.Release|x86.Build.0 = Release|Any CPU
 		{6A939B3F-73EF-44CB-B778-7851AA4ED0FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6A939B3F-73EF-44CB-B778-7851AA4ED0FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A939B3F-73EF-44CB-B778-7851AA4ED0FC}.Debug|ARM.ActiveCfg = Debug|Any CPU
