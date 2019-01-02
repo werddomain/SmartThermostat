@@ -1,0 +1,26 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "provider": "cdnjs",
+      "library": "angular.js@1.7.5",
+      "destination": "wwwroot/lib/angular.js/"
+    },
+    {
+      "provider": "cdnjs",
+      "library": "angular-auth0@3.0.1",
+      "destination": "wwwroot/lib/angular.js/"
+    },
+    {
+      "provider": "cdnjs",
+      "library": "ng-bootstrap@4.0.1",
+      "destination": "wwwroot/lib/angular.js/"
+    },
+    {
+      "provider": "cdnjs",
+      "library": "restangular@1.6.1",
+      "destination": "wwwroot/lib/angular.js/"
+    }
+  ]
+}

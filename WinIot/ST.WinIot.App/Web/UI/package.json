@@ -1,0 +1,12 @@
+{
+  "name": "myproject",
+  "version": "1.0.0",
+  "devDependencies": {
+    "@types/angular": "^1.6.53"
+  },
+  "dependencies": {
+    "@types/angular": "^1.6.53",
+    "@types/angular-ui-bootstrap": "^0.13.47",
+    "@types/jquery": "^3.3.29"
+  }
+}
