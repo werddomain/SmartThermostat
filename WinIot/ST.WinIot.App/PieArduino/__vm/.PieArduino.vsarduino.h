@@ -16,7 +16,7 @@
 #define __AVR_ATmega328P__
 #define _VMDEBUG 1
 #define F_CPU 16000000L
-#define ARDUINO 10808
+#define ARDUINO 10805
 #define ARDUINO_AVR_UNO
 #define ARDUINO_ARCH_AVR
 #define __cplusplus 201103L
@@ -77,7 +77,5 @@ typedef void *__builtin_va_list;
 #define pgm_read_ptr(address_short)   short()
 
 #include "PieArduino.ino"
-#include "C:\Users\clefw\Documents\Arduino\libraries\DHT_sensor_library\examples\DHT_Unified_Sensor\DHT_Unified_Sensor.ino"
-#include "C:\Users\clefw\Documents\Arduino\libraries\DHT_sensor_library\examples\DHTtester\DHTtester.ino"
 #endif
 #endif

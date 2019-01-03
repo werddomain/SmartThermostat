@@ -2,8 +2,18 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
     <UserSecretsId>81b18d37-918a-4d41-a3dd-d2d578b53e50</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="node_modules\%40types\angular\package.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="node_modules\%40types\angular\LICENSE" />
+    <None Include="node_modules\%40types\angular\README.md" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="IdentityModel" Version="3.10.4" />
@@ -14,6 +24,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\ST.WinIot.App.Web.Config\ST.Web.Config.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="node_modules\%40types\angular\index.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40types\angular\jqlite.d.ts" />
   </ItemGroup>
 
 </Project>
