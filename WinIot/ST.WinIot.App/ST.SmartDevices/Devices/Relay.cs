@@ -5,6 +5,7 @@ using System.Text;
 
 namespace ST.SmartDevices.Devices
 {
+    [ApiModel]
     public class Relay : IOwned
     {
         public Guid RelayId { get; set; }
@@ -22,11 +23,7 @@ namespace ST.SmartDevices.Devices
 
         public ConnectionTypeEnum ConnectionType { get; set; }
 
-        public enum ConnectionTypeEnum
-        {
-            Wifi,
-            NRF24L01,
-            I2C
-        }
+        
     }
+   
 }

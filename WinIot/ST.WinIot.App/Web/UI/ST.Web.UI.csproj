@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Scripts\Angular\Manage\ManageController.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="node_modules\%40types\angular\package.json" />
   </ItemGroup>
 
@@ -23,12 +27,62 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\ST.SmartDevices\ST.SmartDevices.csproj" />
     <ProjectReference Include="..\..\ST.WinIot.App.Web.Config\ST.Web.Config.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <TypeScriptCompile Include="node_modules\%40types\angular\index.d.ts" />
     <TypeScriptCompile Include="node_modules\%40types\angular\jqlite.d.ts" />
+    <TypeScriptCompile Include="Scripts\Angular\Manage\ManageController.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="DeviceNickName.tsx">
+      <CustomToolNamespace>..\..\ST.SmartDevices\Devices\DeviceNickName.cs</CustomToolNamespace>
+    </None>
+    <None Update="DeviceType.tsx">
+      <CustomToolNamespace>..\..\ST.SmartDevices\Devices\Google\DeviceType.cs</CustomToolNamespace>
+    </None>
+    <None Update="Home.tsx">
+      <CustomToolNamespace>..\..\ST.SmartDevices\Devices\Home.cs</CustomToolNamespace>
+    </None>
+    <None Update="Piece.tsx">
+      <CustomToolNamespace>..\..\ST.SmartDevices\Devices\Piece.cs</CustomToolNamespace>
+    </None>
+    <None Update="Scripts\ApiModels\ConnectionTypeEnum.d.ts">
+      <CustomToolNamespace>..\..\ST.SmartDevices\Devices\ConnectionTypeEnum.cs</CustomToolNamespace>
+    </None>
+    <None Update="Scripts\ApiModels\Device.d.ts">
+      <CustomToolNamespace>..\..\ST.SmartDevices\Devices\Device.cs</CustomToolNamespace>
+    </None>
+    <None Update="Scripts\ApiModels\DeviceNickName.d.ts">
+      <CustomToolNamespace>..\..\ST.SmartDevices\Devices\DeviceNickName.cs</CustomToolNamespace>
+    </None>
+    <None Update="Scripts\ApiModels\DeviceTrait.d.ts">
+      <CustomToolNamespace>..\..\ST.SmartDevices\Devices\Google\DeviceTrait.cs</CustomToolNamespace>
+    </None>
+    <None Update="Scripts\ApiModels\DeviceType.d.ts">
+      <CustomToolNamespace>..\..\ST.SmartDevices\Devices\Google\DeviceType.cs</CustomToolNamespace>
+    </None>
+    <None Update="Scripts\ApiModels\GoogleUser.d.ts">
+      <CustomToolNamespace>..\..\ST.SmartDevices\Devices\GoogleUser.cs</CustomToolNamespace>
+    </None>
+    <None Update="Scripts\ApiModels\Home.d.ts">
+      <CustomToolNamespace>..\..\ST.SmartDevices\Devices\Home.cs</CustomToolNamespace>
+    </None>
+    <None Update="Scripts\ApiModels\Hub.d.ts">
+      <CustomToolNamespace>..\..\ST.SmartDevices\Devices\Hub.cs</CustomToolNamespace>
+    </None>
+    <None Update="Scripts\ApiModels\Piece.d.ts">
+      <CustomToolNamespace>..\..\ST.SmartDevices\Devices\Piece.cs</CustomToolNamespace>
+    </None>
+    <None Update="Scripts\ApiModels\PieceTypeEnum.d.ts">
+      <CustomToolNamespace>..\..\ST.SmartDevices\Devices\PieceTypeEnum.cs</CustomToolNamespace>
+    </None>
+    <None Update="Scripts\ApiModels\Relay.d.ts">
+      <CustomToolNamespace>..\..\ST.SmartDevices\Devices\Relay.cs</CustomToolNamespace>
+    </None>
   </ItemGroup>
 
 </Project>

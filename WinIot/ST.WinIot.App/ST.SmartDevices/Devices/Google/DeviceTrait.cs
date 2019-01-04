@@ -4,6 +4,7 @@ using System.Text;
 
 namespace ST.SmartDevices.Devices.Google
 {
+    [ApiModel]
     public class DeviceTrait
     {
         public string DeviceTraitId { get; set; }

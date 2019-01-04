@@ -4,6 +4,7 @@ using System.Text;
 
 namespace ST.SmartDevices.Devices
 {
+    [ApiModel]
     public class DeviceNickName
     {
         public Guid DeviceNickNameId { get; set; }

@@ -4,6 +4,7 @@ using System.Text;
 
 namespace ST.SmartDevices.Devices
 {
+    [ApiModel]
     public class GoogleUser : IOwned
     {
         public Guid GoogleUserId { get; set; }

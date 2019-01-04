@@ -5,6 +5,7 @@ using System.Text;
 
 namespace ST.SmartDevices.Devices
 {
+    [ApiModel]
     public class Home : IOwned
     {
         public Guid HomeId { get; set; }

@@ -5,6 +5,7 @@ using System.Text;
 
 namespace ST.SmartDevices.Devices
 {
+    [ApiModel]
     public class Piece : IOwned
     {
         public Guid PieceId { get; set; }
@@ -17,14 +18,9 @@ namespace ST.SmartDevices.Devices
 
         [Required]
         public string Name { get; set; }
-        public TypeEnum Type { get; set; }
+        public PieceTypeEnum Type { get; set; }
         public int Floor { get; set; }
-        public enum TypeEnum {
-            Kitchen = 1,
-            Master_Bedroom,
-            Bedroom,
-            Living_Room,
-            BathRoom
-        }
+        
     }
+    
 }

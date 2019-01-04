@@ -5,14 +5,14 @@
     "removeComments": false,
     "sourceMap": true,
     "target": "es5",
+    
     "outDir": "../wwwroot/scripts"
   },
   "exclude": [
     "wwwroot",
     "obj",
     "bin"
-  ],
-  "include": [
-    "../webroot/lib"
   ]
+  
+  
 }
