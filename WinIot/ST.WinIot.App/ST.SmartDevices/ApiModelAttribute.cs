@@ -14,4 +14,8 @@ namespace ST.SmartDevices
     public class ApiEnumAttribute : Attribute
     {
     }
+
+	public class GenerateApiAttribute : Attribute
+	{
+	}
 }

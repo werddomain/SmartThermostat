@@ -1,0 +1,3 @@
+Icons:
+-Font-Awsome (Using Css class)
+-Material-Icon (<mat-icon>location_off</mat-icon>) -> Icon List : https://material.io/tools/icons/?style=baseline

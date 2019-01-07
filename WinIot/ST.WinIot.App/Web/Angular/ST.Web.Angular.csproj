@@ -1,0 +1,81 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
+    <TypeScriptCompilerBlocked>true</TypeScriptCompilerBlocked>
+    <PostBuildEvent>ng build --aot</PostBuildEvent>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="compilerconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="compilerconfig.json" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\ST.SmartDevices\ST.SmartDevices.csproj" />
+    <ProjectReference Include="..\..\ST.WinIot.App.Web.Config\ST.Web.Config.csproj" />
+    <ProjectReference Include="..\Api\ST.Web.API.csproj" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="src\app\shared\config\" />
+    <Folder Include="wwwroot\ng\" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <None Update="src\app\shared\classes\AuthConfig.ts">
+      <CustomToolNamespace>AuthConfig.cs</CustomToolNamespace>
+    </None>
+    <None Update="src\app\shared\classes\ConnectionTypeEnum.ts">
+      <CustomToolNamespace>..\..\ST.SmartDevices\Devices\ConnectionTypeEnum.cs</CustomToolNamespace>
+    </None>
+    <None Update="src\app\shared\classes\Device.ts">
+      <CustomToolNamespace>..\..\ST.SmartDevices\Devices\Device.cs</CustomToolNamespace>
+    </None>
+    <None Update="src\app\shared\classes\DeviceNickName.ts">
+      <CustomToolNamespace>..\..\ST.SmartDevices\Devices\DeviceNickName.cs</CustomToolNamespace>
+    </None>
+    <None Update="src\app\shared\classes\DeviceTrait.ts">
+      <CustomToolNamespace>..\..\ST.SmartDevices\Devices\Google\DeviceTrait.cs</CustomToolNamespace>
+    </None>
+    <None Update="src\app\shared\classes\DeviceType.ts">
+      <CustomToolNamespace>..\..\ST.SmartDevices\Devices\Google\DeviceType.cs</CustomToolNamespace>
+    </None>
+    <None Update="src\app\shared\classes\GoogleUser.ts">
+      <CustomToolNamespace>..\..\ST.SmartDevices\Devices\GoogleUser.cs</CustomToolNamespace>
+    </None>
+    <None Update="src\app\shared\classes\Home.ts">
+      <CustomToolNamespace>..\..\ST.SmartDevices\Devices\Home.cs</CustomToolNamespace>
+    </None>
+    <None Update="src\app\shared\classes\Hub.ts">
+      <CustomToolNamespace>..\..\ST.SmartDevices\Devices\Hub.cs</CustomToolNamespace>
+    </None>
+    <None Update="src\app\shared\classes\Piece.ts">
+      <CustomToolNamespace>..\..\ST.SmartDevices\Devices\Piece.cs</CustomToolNamespace>
+    </None>
+    <None Update="src\app\shared\classes\PieceTypeEnum.ts">
+      <CustomToolNamespace>..\..\ST.SmartDevices\Devices\PieceTypeEnum.cs</CustomToolNamespace>
+    </None>
+    <None Update="src\app\shared\classes\Relay.ts">
+      <CustomToolNamespace>..\..\ST.SmartDevices\Devices\Relay.cs</CustomToolNamespace>
+    </None>
+    <None Update="src\app\shared\services\Homes.service.ts">
+      <CustomToolNamespace>..\Api\Controllers\Manage\HomesController.cs</CustomToolNamespace>
+    </None>
+  </ItemGroup>
+
+</Project>

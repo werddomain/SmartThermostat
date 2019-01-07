@@ -10,6 +10,8 @@ namespace ST.Web.OAuth
 {
     public class ConfigServerIdentity
     {
+        //https://aaronparecki.com/oauth-2-simplified/#other-app-types
+
         // scopes define the resources in your system
         public static IEnumerable<IdentityResource> GetIdentityResources()
         {

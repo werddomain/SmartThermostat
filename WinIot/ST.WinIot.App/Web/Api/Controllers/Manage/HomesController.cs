@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using ST.SmartDevices;
 using ST.SmartDevices.Devices;
 using ST.Web.API.Data;
 
@@ -15,6 +16,7 @@ namespace ST.Web.API.Controllers.Manage
     [Route("Manage/[controller]")]
     [ApiController]
     [Authorize]
+	[GenerateApi]
     public class HomesController : BaseApiController
     {
         private readonly DeviceDataContext _context;
