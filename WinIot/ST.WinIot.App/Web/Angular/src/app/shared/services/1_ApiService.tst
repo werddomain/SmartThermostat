@@ -3,6 +3,8 @@ ${
     using Typewriter.Extensions.WebApi;
     Template(Settings settings)
     {
+        
+        settings.IncludeProject("ST.Web.API");
         settings.OutputFilenameFactory = file => 
         {
             var FinalFileName = file.Name.Replace("Controller", "");
@@ -11,7 +13,7 @@ ${
         };
     }
     // Change ApiController to Service
-    string ServiceName(Class c) => c.Name.Replace("ApiController", "Service");
+    string ServiceName(Class c) => c.Name.Replace("Controller", "Service");
     // Turn IActionResult into void
 
     string RemoveActionResult(string type){
@@ -48,8 +50,7 @@ ${
     {
        return RemoveActionResult(objMethod.Type.Name);
     }
-    // Get the non primitive paramaters so we can create the Imports at the
-    // top of the service
+
     string EnsureTypeName(string type){
      switch (type)
         {
@@ -60,25 +61,62 @@ ${
             default: return type.First().ToString().ToUpper() + type.Substring(1);
         }
     }
+    bool isImported(List<String> imported, string type){
+        
+        var t = type.Replace("[]", "").ToLower();
+        if (t == "void")
+            return true;
+        if (imported.Any(o=> o == t))
+           return true;
+
+        imported.Add(t);
+        return false;
+
+       
+    }
+    // Get the non primitive paramaters so we can create the Imports at the
+    // top of the service
     string ImportsList(Class objClass)
     {
         var ImportsOutput = "";
         // Get the methods in the Class
         var objMethods = objClass.Methods;
         // Loop through the Methdos in the Class
+        var imports = new List<string>();
+        var imported = new List<string>();
+        var debug = "";
         foreach(Method objMethod in objMethods)
         {
+            if (objMethod.Type.IsPrimitive == false){
+                    ImportsOutput = RemoveActionResult(objMethod.Type.Name).Replace("[]", "");
+                    if (ImportsOutput != null && ImportsOutput != "") 
+                        if (!isImported(imported, ImportsOutput)) {
+                            imports.Add($"import {{ { EnsureTypeName(ImportsOutput) } }} from '../classes/{ImportsOutput}';");
+                            imported.Add(ImportsOutput);
+                            }
+                 }
             // Loop through each Parameter in each method
             foreach(Parameter objParameter in objMethod.Parameters)
             {
+                //var debugPrimitive = objParameter.Type.IsPrimitive ? "Primitive": "NonPrimitive";
+                //debug += $"{objParameter.Type.Name}({debugPrimitive}), ";
+                
                 // If the Paramater is not prmitive we need to add this to the Imports
                 if(!objParameter.Type.IsPrimitive){
-                    ImportsOutput = objParameter.Name;
+                    ImportsOutput = objParameter.Name.Replace("[]", "");
+                    if (ImportsOutput != null && ImportsOutput != "") 
+                    if (!isImported(imported, ImportsOutput)) {
+                        imports.Add($"import {{ { EnsureTypeName(ImportsOutput) } }} from '../classes/{ImportsOutput}';");
+                        imported.Add(ImportsOutput);
+                        }
                 }
+                //else imports.Add($"/*{objParameter.Name} IsPrimitive*/");
             }
+            //debug += Environment.NewLine;
         }
-        // Notice: As of now this will only return one import
-        return  $"import {{ { EnsureTypeName(ImportsOutput) } }} from '../classes/{ImportsOutput}';";
+        if (imports.Count > 0)
+        return string.Join(Environment.NewLine, imports) ;
+        return ""; //"/*Nothing to import*/" + Environment.NewLine + $"/*{debug}*/";
     }
     // Format the method based on the return type
     string MethodFormat(Method objMethod)
@@ -114,14 +152,17 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
-$Classes([GenerateApi])[$ImportsList
+//ST.Web.API
+$Classes(o=> o.Attributes.Any(i=> i.Name == "GenerateApi") && o.Namespace.StartsWith("ST.Web.API"))[$ImportsList
+import { GlobalService } from "../../global.service";
+//Remote Call
 @Injectable()
 export class $ServiceName {
-    constructor(private _httpClient: HttpClient) { }        
+    constructor(private _httpClient: HttpClient, private global: GlobalService) { }        
     $Methods[
     // $HttpMethod: $Url      
     $name($Parameters[$name: $Type][, ]): Observable<$ReturnType> {
-        var _Url = `$Url`;
+        var _Url = this.global.ApiConfig.ApiServer + `/$Url`;
             return this._httpClient.$HttpMethod$MethodFormat
                 .catch(this.handleError);
     }

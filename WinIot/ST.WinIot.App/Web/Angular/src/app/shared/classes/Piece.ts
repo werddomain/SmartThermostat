@@ -6,12 +6,12 @@
 import { PieceTypeEnum } from './PieceTypeEnum';
 
     export interface Piece {
-        pieceId: string;
-        homeId: string;
-        home: Home;
-        userId: string;
-        name: string;
-        type: PieceTypeEnum;
-        floor: number;
+        PieceId: string;
+        HomeId: string;
+        Home: Home;
+        UserId: string;
+        Name: string;
+        Type: PieceTypeEnum;
+        Floor: number;
     }
     

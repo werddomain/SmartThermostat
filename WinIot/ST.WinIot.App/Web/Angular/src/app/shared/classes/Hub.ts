@@ -7,13 +7,13 @@ import { Device } from './Device';
 import { Relay } from './Relay';
 
     export interface Hub {
-        hubId: string;
-        userId: string;
-        homeId: string;
-        hardware: string;
-        pieceId: string;
-        piece: Piece;
-        devices: Device[];
-        relays: Relay[];
+        HubId: string;
+        UserId: string;
+        HomeId: string;
+        Hardware: string;
+        PieceId: string;
+        Piece: Piece;
+        Devices: Device[];
+        Relays: Relay[];
     }
     

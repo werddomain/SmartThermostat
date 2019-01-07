@@ -4,8 +4,8 @@
     // More info: http://frhagn.github.io/Typewriter/
     
     export interface DeviceNickName {
-        deviceNickNameId: string;
-        deviceId: string;
-        nickName: string;
+        DeviceNickNameId: string;
+        DeviceId: string;
+        NickName: string;
     }
     

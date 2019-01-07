@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -11,8 +11,10 @@ import { AppComponent } from './app.component';
 import { AuthGuard, KazoAuthWrapper } from './shared';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
-import { OAuthService, OAuthModule, UrlHelperService, OAuthLogger} from 'angular-oauth2-oidc';
-
+import { OAuthService, OAuthModule, UrlHelperService, OAuthLogger } from 'angular-oauth2-oidc';
+import { GlobalService } from "./global.service";
+import { AngularConfigService } from "./shared/services/AngularConfig.service"
+import { JwtInterceptor } from "./shared/Interceptors/jwt-interceptor.service"
 // AoT requires an exported function for factories
 export const createTranslateLoader = (http: HttpClient) => {
   /* for development
@@ -43,7 +45,15 @@ export const createTranslateLoader = (http: HttpClient) => {
     OAuthModule.forRoot()
   ],
   declarations: [AppComponent],
-  providers: [AuthGuard, KazoAuthWrapper, OAuthService, UrlHelperService],
+    providers: [
+        GlobalService,
+        AngularConfigService,
+        AuthGuard,
+        KazoAuthWrapper,
+        OAuthService,
+        UrlHelperService,
+        { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

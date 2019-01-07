@@ -3,9 +3,10 @@
     // To modify this class, edit "1_ApiModels"
     // More info: http://frhagn.github.io/Typewriter/
     
-    export interface AuthConfig {
-        clientId: string;
-        authServer: string;
-        scope: string;
+    export interface MyAngularConfig {
+        ClientId: string;
+        AuthServer: string;
+        Scope: string;
+        ApiServer: string;
     }
     
