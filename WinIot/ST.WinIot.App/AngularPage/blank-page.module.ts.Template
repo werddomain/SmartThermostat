@@ -1,0 +1,11 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+import { $fileinputname$RoutingModule } from './$fileinputname$-routing.module';
+import { $fileinputname$Component } from './$fileinputname$.component';
+
+@NgModule({
+    imports: [CommonModule, $fileinputname$RoutingModule],
+    declarations: [$fileinputname$Component]
+})
+export class $fileinputname$Module {}

@@ -11,6 +11,7 @@ export class AppComponent implements OnInit {
     constructor(private oauthService: OAuthService, private configService: AngularConfigService, private global: GlobalService) {
         var config = configService.getAuth().subscribe(o => {
             global.ApiConfig = o;
+            //https://www.linkedin.com/pulse/implicit-flow-authentication-using-angular-ghanshyam-shukla
             this.oauthService.redirectUri = window.location.origin;
             this.oauthService.clientId = o.ClientId;
             this.oauthService.scope = o.Scope;

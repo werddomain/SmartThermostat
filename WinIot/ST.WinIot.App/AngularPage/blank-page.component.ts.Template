@@ -1,0 +1,12 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+    selector: 'app-$fileinputname$',
+    templateUrl: './$fileinputname$.component.html',
+    styleUrls: ['./$fileinputname$.component.less']
+})
+export class $fileinputname$Component implements OnInit {
+    constructor() {}
+
+    ngOnInit() {}
+}

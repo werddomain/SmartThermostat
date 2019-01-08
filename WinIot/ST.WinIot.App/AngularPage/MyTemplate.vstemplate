@@ -1,0 +1,25 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
+  <TemplateData>
+    <DefaultName>Blank-Page</DefaultName>
+    <Name>Angular Route Page Component</Name>
+    <Description>&lt;No description available&gt;</Description>
+    
+    <SortOrder>10</SortOrder>
+    <Icon>__TemplateIcon.ico</Icon>
+    <ProjectType>CSharp</ProjectType>
+    <TemplateGroupID>AspNetCore</TemplateGroupID>
+    <TemplateID>AspNetCore.AngularPage</TemplateID>
+    <NumberOfParentCategoriesToRollUp>2</NumberOfParentCategoriesToRollUp>
+  </TemplateData>
+  <TemplateContent>
+    <References />
+    <ProjectItem SubType="" TargetFileName="$fileinputname$\$fileinputname$.component.html" ReplaceParameters="true">blank-page.component.html</ProjectItem>
+	  <ProjectItem SubType="" TargetFileName="$fileinputname$\$fileinputname$.component.less" ReplaceParameters="true">blank-page.component.less</ProjectItem>
+	  <ProjectItem SubType="" TargetFileName="$fileinputname$\$fileinputname$.component.spec.ts" ReplaceParameters="true">blank-page.component.spec.ts.Template</ProjectItem>
+	  <ProjectItem SubType="" TargetFileName="$fileinputname$\$fileinputname$.component.ts" ReplaceParameters="true">blank-page.component.ts.Template</ProjectItem>
+	  <ProjectItem SubType="" TargetFileName="$fileinputname$\$fileinputname$.module.spec.ts" ReplaceParameters="true">blank-page.module.spec.ts.Template</ProjectItem>
+	  <ProjectItem SubType="" TargetFileName="$fileinputname$\$fileinputname$.module.ts" ReplaceParameters="true">blank-page.module.ts.Template</ProjectItem>
+	  <ProjectItem SubType="" TargetFileName="$fileinputname$\$fileinputname$-routing.module.ts" ReplaceParameters="true">blank-page-routing.module.ts.Template</ProjectItem>
+
+  </TemplateContent>
+</VSTemplate>

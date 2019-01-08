@@ -1,0 +1,13 @@
+import { $fileinputname$Module } from './$fileinputname$.module';
+
+describe('$fileinputname$Module', () => {
+    let _$fileinputname$Module: $fileinputname$Module;
+
+    beforeEach(() => {
+        _$fileinputname$Module = new $fileinputname$Module();
+    });
+
+    it('should create an instance', () => {
+        expect($fileinputname$Module).toBeTruthy();
+    });
+});

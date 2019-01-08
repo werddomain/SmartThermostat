@@ -1,0 +1,26 @@
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { $fileinputname$Component } from './$fileinputname$.component';
+
+describe('$fileinputname$Component', () => {
+	let component: $fileinputname$Component;
+	let fixture: ComponentFixture<$fileinputname$Component>;
+
+    beforeEach(
+        async(() => {
+            TestBed.configureTestingModule({
+				declarations: [$fileinputname$Component]
+            }).compileComponents();
+        })
+    );
+
+    beforeEach(() => {
+		fixture = TestBed.createComponent($fileinputname$Component);
+        component = fixture.componentInstance;
+        fixture.detectChanges();
+    });
+
+    it('should create', () => {
+        expect(component).toBeTruthy();
+    });
+});
