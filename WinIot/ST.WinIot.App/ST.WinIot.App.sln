@@ -23,7 +23,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ST.SmartDevices", "ST.Smart
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ST.Web.Angular", "Web\Angular\ST.Web.Angular.csproj", "{055EF6B6-383F-4F50-B81E-194C4EE3CE12}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularPage", "AngularPage\AngularPage.csproj", "{D85029EE-05DF-418C-BF47-DA4020D6D17E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularPageTemplate", "AngularPage\AngularPageTemplate.csproj", "{D85029EE-05DF-418C-BF47-DA4020D6D17E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
