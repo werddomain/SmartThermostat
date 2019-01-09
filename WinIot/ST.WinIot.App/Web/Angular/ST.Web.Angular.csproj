@@ -76,8 +76,26 @@
     <None Update="src\app\shared\services\AngularConfig.service.ts">
       <CustomToolNamespace>Controllers\AngularConfigController.cs</CustomToolNamespace>
     </None>
+    <None Update="src\app\shared\services\Devices.service.ts">
+      <CustomToolNamespace>..\Api\Controllers\Manage\DevicesController.cs</CustomToolNamespace>
+    </None>
+    <None Update="src\app\shared\services\DeviceTraits.service.ts">
+      <CustomToolNamespace>..\Api\Controllers\Manage\DeviceTraitsController.cs</CustomToolNamespace>
+    </None>
+    <None Update="src\app\shared\services\DeviceTypes.service.ts">
+      <CustomToolNamespace>..\Api\Controllers\Manage\DeviceTypesController.cs</CustomToolNamespace>
+    </None>
     <None Update="src\app\shared\services\Homes.service.ts">
       <CustomToolNamespace>..\Api\Controllers\Manage\HomesController.cs</CustomToolNamespace>
+    </None>
+    <None Update="src\app\shared\services\Hubs.service.ts">
+      <CustomToolNamespace>..\Api\Controllers\Manage\HubsController.cs</CustomToolNamespace>
+    </None>
+    <None Update="src\app\shared\services\Pieces.service.ts">
+      <CustomToolNamespace>..\Api\Controllers\Manage\PiecesController.cs</CustomToolNamespace>
+    </None>
+    <None Update="src\app\shared\services\Relays.service.ts">
+      <CustomToolNamespace>..\Api\Controllers\Manage\RelaysController.cs</CustomToolNamespace>
     </None>
   </ItemGroup>
 

@@ -66,6 +66,8 @@ namespace ST.Web.API.Controllers.Manage
                 return BadRequest();
             }
             var original = await _context.Homes.FindAsync(id);
+			if (original == null)
+				return NotFound();
             if (!Owned(original))
                 return Unauthorized();
 
@@ -96,6 +98,7 @@ namespace ST.Web.API.Controllers.Manage
         [ProducesResponseType((int)HttpStatusCode.Unauthorized)]
         public async Task<ActionResult<Home>> PostHome(Home home)
         {
+			home.HomeId = Guid.NewGuid();
             home.UserId = GetUserId();
             _context.Homes.Add(home);
             await _context.SaveChangesAsync();
