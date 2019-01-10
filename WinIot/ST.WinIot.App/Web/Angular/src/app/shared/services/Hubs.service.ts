@@ -22,35 +22,35 @@ export class HubsService {
     
     // get: Manage/Hubs      
     getHubs(): Observable<Hub[]> {
-        var _Url = this.global.ApiConfig.ApiServer + `/Manage/Hubs`;
+        var _Url = this.global.ApiConfig.apiServer + `/Manage/Hubs`;
             return this._httpClient.get<Hub[]>(_Url)
                 .catch(this.handleError);
     }
     
     // get: Manage/Hubs/${encodeURIComponent(id)}      
     getHub(id: string): Observable<Hub> {
-        var _Url = this.global.ApiConfig.ApiServer + `/Manage/Hubs/${encodeURIComponent(id)}`;
+        var _Url = this.global.ApiConfig.apiServer + `/Manage/Hubs/${encodeURIComponent(id)}`;
             return this._httpClient.get<Hub>(_Url)
                 .catch(this.handleError);
     }
     
     // put: Manage/Hubs/${encodeURIComponent(id)}      
     putHub(id: string, hub: Hub): Observable<void> {
-        var _Url = this.global.ApiConfig.ApiServer + `/Manage/Hubs/${encodeURIComponent(id)}`;
+        var _Url = this.global.ApiConfig.apiServer + `/Manage/Hubs/${encodeURIComponent(id)}`;
             return this._httpClient.put<void>(_Url, hub)
                 .catch(this.handleError);
     }
     
     // post: Manage/Hubs      
     postHub(hub: Hub): Observable<Hub> {
-        var _Url = this.global.ApiConfig.ApiServer + `/Manage/Hubs`;
+        var _Url = this.global.ApiConfig.apiServer + `/Manage/Hubs`;
             return this._httpClient.post<Hub>(_Url, hub)
                 .catch(this.handleError);
     }
     
     // delete: Manage/Hubs/${encodeURIComponent(id)}      
     deleteHub(id: string): Observable<Hub> {
-        var _Url = this.global.ApiConfig.ApiServer + `/Manage/Hubs/${encodeURIComponent(id)}`;
+        var _Url = this.global.ApiConfig.apiServer + `/Manage/Hubs/${encodeURIComponent(id)}`;
             return this._httpClient.delete<Hub>(_Url)
                 .catch(this.handleError);
     }

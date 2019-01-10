@@ -49,7 +49,9 @@ namespace ST.Web.OAuth
                     options.Events.RaiseInformationEvents = true;
                     options.Events.RaiseFailureEvents = true;
                     options.Events.RaiseSuccessEvents = true;
-                })
+					
+
+				})
                 .AddAspNetIdentity<ApplicationUser>()
                 // this adds the config data from DB (clients, resources)
                 .AddConfigurationStore(options =>
@@ -108,13 +110,15 @@ namespace ST.Web.OAuth
             //{
                 app.UseDeveloperExceptionPage();
                 app.UseDatabaseErrorPage();
-            //}
-            //else
-            //{
-            //    app.UseExceptionHandler("/Home/Error");
-            //}
+			//}
+			//else
+			//{
+			//    app.UseExceptionHandler("/Home/Error");
+			//}
+			app.UseHsts();
+			app.UseHttpsRedirection();
 
-            app.UseStaticFiles();
+			app.UseStaticFiles();
             app.UseIdentityServer();
             app.UseMvcWithDefaultRoute();
         }

@@ -22,7 +22,7 @@ export class DeviceTraitsService {
     
     // get: Manage/DeviceTraits      
     getDeviceTraits(): Observable<DeviceTrait[]> {
-        var _Url = this.global.ApiConfig.ApiServer + `/Manage/DeviceTraits`;
+        var _Url = this.global.ApiConfig.apiServer + `/Manage/DeviceTraits`;
             return this._httpClient.get<DeviceTrait[]>(_Url)
                 .catch(this.handleError);
     }

@@ -22,35 +22,35 @@ export class DevicesService {
     
     // get: Manage/Devices      
     getDevices(): Observable<Device[]> {
-        var _Url = this.global.ApiConfig.ApiServer + `/Manage/Devices`;
+        var _Url = this.global.ApiConfig.apiServer + `/Manage/Devices`;
             return this._httpClient.get<Device[]>(_Url)
                 .catch(this.handleError);
     }
     
     // get: Manage/Devices/${encodeURIComponent(id)}      
     getDevice(id: string): Observable<Device> {
-        var _Url = this.global.ApiConfig.ApiServer + `/Manage/Devices/${encodeURIComponent(id)}`;
+        var _Url = this.global.ApiConfig.apiServer + `/Manage/Devices/${encodeURIComponent(id)}`;
             return this._httpClient.get<Device>(_Url)
                 .catch(this.handleError);
     }
     
     // put: Manage/Devices/${encodeURIComponent(id)}      
     putDevice(id: string, device: Device): Observable<void> {
-        var _Url = this.global.ApiConfig.ApiServer + `/Manage/Devices/${encodeURIComponent(id)}`;
+        var _Url = this.global.ApiConfig.apiServer + `/Manage/Devices/${encodeURIComponent(id)}`;
             return this._httpClient.put<void>(_Url, device)
                 .catch(this.handleError);
     }
     
     // post: Manage/Devices      
     postDevice(device: Device): Observable<Device> {
-        var _Url = this.global.ApiConfig.ApiServer + `/Manage/Devices`;
+        var _Url = this.global.ApiConfig.apiServer + `/Manage/Devices`;
             return this._httpClient.post<Device>(_Url, device)
                 .catch(this.handleError);
     }
     
     // delete: Manage/Devices/${encodeURIComponent(id)}      
     deleteDevice(id: string): Observable<Device> {
-        var _Url = this.global.ApiConfig.ApiServer + `/Manage/Devices/${encodeURIComponent(id)}`;
+        var _Url = this.global.ApiConfig.apiServer + `/Manage/Devices/${encodeURIComponent(id)}`;
             return this._httpClient.delete<Device>(_Url)
                 .catch(this.handleError);
     }

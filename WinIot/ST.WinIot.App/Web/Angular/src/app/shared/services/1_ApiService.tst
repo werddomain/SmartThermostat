@@ -139,6 +139,7 @@ ${
     }
 }
 ${
+// #ApiService
 //The do not modify block below is intended for the outputed typescript files... }
 //*************************DO NOT MODIFY**************************
 //
@@ -162,7 +163,7 @@ export class $ServiceName {
     $Methods[
     // $HttpMethod: $Url      
     $name($Parameters[$name: $Type][, ]): Observable<$ReturnType> {
-        var _Url = this.global.ApiConfig.ApiServer + `/$Url`;
+        var _Url = this.global.ApiConfig.apiServer + `/$Url`;
             return this._httpClient.$HttpMethod$MethodFormat
                 .catch(this.handleError);
     }

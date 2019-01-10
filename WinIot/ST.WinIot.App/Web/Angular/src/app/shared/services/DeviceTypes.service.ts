@@ -22,7 +22,7 @@ export class DeviceTypesService {
     
     // get: Manage/DeviceTypes      
     getDeviceTypes(): Observable<DeviceType[]> {
-        var _Url = this.global.ApiConfig.ApiServer + `/Manage/DeviceTypes`;
+        var _Url = this.global.ApiConfig.apiServer + `/Manage/DeviceTypes`;
             return this._httpClient.get<DeviceType[]>(_Url)
                 .catch(this.handleError);
     }

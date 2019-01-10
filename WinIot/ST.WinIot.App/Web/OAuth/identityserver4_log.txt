@@ -817,3 +817,27 @@ Invalid column name 'UserSsoLifetime'.
 2018-12-27 00:05:10.879 -05:00 [INF] {"ClientId":"AIzaSyBB-VLshfTmwKkOrcKlIZiBNdTVO2kLAGM.api.kazo.ca","ClientName":"Google","RedirectUri":null,"Endpoint":"Token","SubjectId":null,"Scopes":"GoogleSmartHome","GrantType":"authorization_code","Tokens":[{"TokenType":"access_token","TokenValue":"****rZIw","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HLJBN3FID23R:00000002","TimeStamp":"2018-12-27T05:05:10.0000000Z","ProcessId":17572,"LocalIpAddress":"127.0.0.1:19080","RemoteIpAddress":"66.102.8.55","$type":"TokenIssuedSuccessEvent"}
 2018-12-27 00:05:13.952 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
 2018-12-27 00:05:14.150 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-09 22:36:50.093 -05:00 [INF] Starting IdentityServer4 version 2.3.2.0
+2019-01-09 22:36:50.682 -05:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-01-09 22:41:36.279 -05:00 [INF] Starting IdentityServer4 version 2.3.2.0
+2019-01-09 22:41:36.556 -05:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-01-10 00:05:49.686 -05:00 [INF] Starting IdentityServer4 version 2.3.2.0
+2019-01-10 00:05:49.790 -05:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-01-10 00:05:50.288 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-10 00:15:03.496 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-10 00:24:22.803 -05:00 [INF] Starting IdentityServer4 version 2.3.2.0
+2019-01-10 00:24:22.925 -05:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-01-10 00:24:23.427 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-10 00:43:29.609 -05:00 [WRN] CorsPolicyService did not allow origin: https://localhost:44318
+2019-01-10 00:43:29.611 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-10 00:53:57.114 -05:00 [WRN] CorsPolicyService did not allow origin: https://localhost:44318
+2019-01-10 00:53:57.114 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-10 01:06:56.431 -05:00 [INF] Starting IdentityServer4 version 2.3.2.0
+2019-01-10 01:06:56.725 -05:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-01-10 01:17:32.190 -05:00 [INF] Starting IdentityServer4 version 2.3.2.0
+2019-01-10 01:17:32.318 -05:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-01-10 01:17:32.715 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-10 01:22:29.163 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-10 01:22:29.209 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-10 01:26:10.769 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-10 01:26:10.804 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks

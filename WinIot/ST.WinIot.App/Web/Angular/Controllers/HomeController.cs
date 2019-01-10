@@ -12,7 +12,7 @@ namespace ST.Web.Angular.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return Redirect("/ng");
         }
 
         public IActionResult Privacy()

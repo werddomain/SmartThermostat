@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
-import { NgModule } from '@angular/core';
+import { NgModule, APP_INITIALIZER } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
@@ -13,8 +13,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { OAuthService, OAuthModule, UrlHelperService, OAuthLogger } from 'angular-oauth2-oidc';
 import { GlobalService } from "./global.service";
-import { AngularConfigService } from "./shared/services/AngularConfig.service"
+import { AngularService } from "./shared/services/AngularConfig.service"
 import { JwtInterceptor } from "./shared/Interceptors/jwt-interceptor.service"
+import { AppLoadService } from "./app-load.service"
 // AoT requires an exported function for factories
 export const createTranslateLoader = (http: HttpClient) => {
   /* for development
@@ -25,7 +26,9 @@ export const createTranslateLoader = (http: HttpClient) => {
   ); */
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 };
-
+export function load_settings(appLoadService: AppLoadService) {
+    return () => appLoadService.loadSettings();
+}
 @NgModule({
   imports: [
     MatIconModule,
@@ -47,10 +50,12 @@ export const createTranslateLoader = (http: HttpClient) => {
   declarations: [AppComponent],
     providers: [
         GlobalService,
-        AngularConfigService,
+        AngularService,
         AuthGuard,
         KazoAuthWrapper,
         OAuthService,
+        AppLoadService,
+        { provide: APP_INITIALIZER, useFactory: load_settings, deps: [AppLoadService], multi: true },
         UrlHelperService,
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }
     ],

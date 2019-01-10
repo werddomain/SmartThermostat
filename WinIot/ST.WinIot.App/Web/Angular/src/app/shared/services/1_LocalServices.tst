@@ -159,7 +159,7 @@ export class $ServiceName {
     $Methods[
     // $HttpMethod: $Url      
     $name($Parameters[$name: $Type][, ]): Observable<$ReturnType> {
-        var _Url = `$Url`;
+        var _Url = `/$Url`;
             return this._httpClient.$HttpMethod$MethodFormat
                 .catch(this.handleError);
     }

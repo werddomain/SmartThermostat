@@ -22,35 +22,35 @@ export class RelaysService {
     
     // get: Manage/Relays      
     getRelays(): Observable<Relay[]> {
-        var _Url = this.global.ApiConfig.ApiServer + `/Manage/Relays`;
+        var _Url = this.global.ApiConfig.apiServer + `/Manage/Relays`;
             return this._httpClient.get<Relay[]>(_Url)
                 .catch(this.handleError);
     }
     
     // get: Manage/Relays/${encodeURIComponent(id)}      
     getRelay(id: string): Observable<Relay> {
-        var _Url = this.global.ApiConfig.ApiServer + `/Manage/Relays/${encodeURIComponent(id)}`;
+        var _Url = this.global.ApiConfig.apiServer + `/Manage/Relays/${encodeURIComponent(id)}`;
             return this._httpClient.get<Relay>(_Url)
                 .catch(this.handleError);
     }
     
     // put: Manage/Relays/${encodeURIComponent(id)}      
     putRelay(id: string, relay: Relay): Observable<void> {
-        var _Url = this.global.ApiConfig.ApiServer + `/Manage/Relays/${encodeURIComponent(id)}`;
+        var _Url = this.global.ApiConfig.apiServer + `/Manage/Relays/${encodeURIComponent(id)}`;
             return this._httpClient.put<void>(_Url, relay)
                 .catch(this.handleError);
     }
     
     // post: Manage/Relays      
     postRelay(relay: Relay): Observable<Relay> {
-        var _Url = this.global.ApiConfig.ApiServer + `/Manage/Relays`;
+        var _Url = this.global.ApiConfig.apiServer + `/Manage/Relays`;
             return this._httpClient.post<Relay>(_Url, relay)
                 .catch(this.handleError);
     }
     
     // delete: Manage/Relays/${encodeURIComponent(id)}      
     deleteRelay(id: string): Observable<Relay> {
-        var _Url = this.global.ApiConfig.ApiServer + `/Manage/Relays/${encodeURIComponent(id)}`;
+        var _Url = this.global.ApiConfig.apiServer + `/Manage/Relays/${encodeURIComponent(id)}`;
             return this._httpClient.delete<Relay>(_Url)
                 .catch(this.handleError);
     }

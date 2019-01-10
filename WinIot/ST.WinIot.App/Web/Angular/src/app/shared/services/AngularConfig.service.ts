@@ -1,4 +1,4 @@
-
+﻿
 
 //*************************DO NOT MODIFY**************************
 //
@@ -13,15 +13,14 @@ import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
 import { MyAngularConfig } from '../classes/MyAngularConfig';
-import { GlobalService } from "../../global.service";
 //LocalCall
 @Injectable()
-export class AngularConfigService {
-    constructor(private _httpClient: HttpClient, private global: GlobalService) { }        
+export class AngularService {
+    constructor(private _httpClient: HttpClient) { }        
     
-    // get: api/AngularConfig/GetAuth      
+    // get: config/Angular/GetAuth      
     getAuth(): Observable<MyAngularConfig> {
-        var _Url = this.global.ApiConfig.ApiServer + `/api/AngularConfig/GetAuth`;
+        var _Url = `/config/Angular/GetAuth`;
             return this._httpClient.get<MyAngularConfig>(_Url)
                 .catch(this.handleError);
     }

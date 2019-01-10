@@ -4,9 +4,9 @@
     // More info: http://frhagn.github.io/Typewriter/
     
     export interface MyAngularConfig {
-        ClientId: string;
-        AuthServer: string;
-        Scope: string;
-        ApiServer: string;
+        clientId: string;
+        authServer: string;
+        scope: string;
+        apiServer: string;
     }
     

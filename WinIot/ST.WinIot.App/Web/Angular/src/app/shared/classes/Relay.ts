@@ -6,12 +6,12 @@
 import { ConnectionTypeEnum } from './ConnectionTypeEnum';
 
     export interface Relay {
-        RelayId: string;
-        HubId: string;
-        Hub: Hub;
-        UserId: string;
-        Name: string;
-        HardWare: string;
-        ConnectionType: ConnectionTypeEnum;
+        relayId: string;
+        hubId: string;
+        hub: Hub;
+        userId: string;
+        name: string;
+        hardWare: string;
+        connectionType: ConnectionTypeEnum;
     }
     

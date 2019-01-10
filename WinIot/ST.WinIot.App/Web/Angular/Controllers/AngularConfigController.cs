@@ -7,10 +7,10 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ST.Web.Angular.Controllers
 {
-  [Route("api/[controller]")]
+  [Route("config/[controller]")]
   [ApiController]
   [ST.SmartDevices.GenerateApi]
-  public class AngularConfigController : ControllerBase
+  public class AngularController : ControllerBase
   {
     [HttpGet]
     [Route("GetAuth")]

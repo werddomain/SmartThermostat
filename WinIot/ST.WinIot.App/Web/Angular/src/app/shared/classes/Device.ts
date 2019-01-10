@@ -10,18 +10,18 @@ import { Relay } from './Relay';
 import { Piece } from './Piece';
 
     export interface Device {
-        DeviceId: string;
-        UserId: string;
-        RelayId?: string;
-        HubId: string;
-        PieceId: string;
-        Name: string;
-        ArduinoId: number;
-        DeviceType: DeviceType;
-        Traits: DeviceTrait[];
-        NickNames: DeviceNickName[];
-        Hub: Hub;
-        Relay: Relay;
-        Piece: Piece;
+        deviceId: string;
+        userId: string;
+        relayId?: string;
+        hubId: string;
+        pieceId: string;
+        name: string;
+        arduinoId: number;
+        deviceType: DeviceType;
+        traits: DeviceTrait[];
+        nickNames: DeviceNickName[];
+        hub: Hub;
+        relay: Relay;
+        piece: Piece;
     }
     

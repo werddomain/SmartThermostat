@@ -22,35 +22,35 @@ export class PiecesService {
     
     // get: Manage/Pieces      
     getPieces(): Observable<Piece[]> {
-        var _Url = this.global.ApiConfig.ApiServer + `/Manage/Pieces`;
+        var _Url = this.global.ApiConfig.apiServer + `/Manage/Pieces`;
             return this._httpClient.get<Piece[]>(_Url)
                 .catch(this.handleError);
     }
     
     // get: Manage/Pieces/${encodeURIComponent(id)}      
     getPiece(id: string): Observable<Piece> {
-        var _Url = this.global.ApiConfig.ApiServer + `/Manage/Pieces/${encodeURIComponent(id)}`;
+        var _Url = this.global.ApiConfig.apiServer + `/Manage/Pieces/${encodeURIComponent(id)}`;
             return this._httpClient.get<Piece>(_Url)
                 .catch(this.handleError);
     }
     
     // put: Manage/Pieces/${encodeURIComponent(id)}      
     putPiece(id: string, piece: Piece): Observable<void> {
-        var _Url = this.global.ApiConfig.ApiServer + `/Manage/Pieces/${encodeURIComponent(id)}`;
+        var _Url = this.global.ApiConfig.apiServer + `/Manage/Pieces/${encodeURIComponent(id)}`;
             return this._httpClient.put<void>(_Url, piece)
                 .catch(this.handleError);
     }
     
     // post: Manage/Pieces      
     postPiece(piece: Piece): Observable<Piece> {
-        var _Url = this.global.ApiConfig.ApiServer + `/Manage/Pieces`;
+        var _Url = this.global.ApiConfig.apiServer + `/Manage/Pieces`;
             return this._httpClient.post<Piece>(_Url, piece)
                 .catch(this.handleError);
     }
     
     // delete: Manage/Pieces/${encodeURIComponent(id)}      
     deletePiece(id: string): Observable<Piece> {
-        var _Url = this.global.ApiConfig.ApiServer + `/Manage/Pieces/${encodeURIComponent(id)}`;
+        var _Url = this.global.ApiConfig.apiServer + `/Manage/Pieces/${encodeURIComponent(id)}`;
             return this._httpClient.delete<Piece>(_Url)
                 .catch(this.handleError);
     }

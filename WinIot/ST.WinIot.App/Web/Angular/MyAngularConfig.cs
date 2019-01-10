@@ -10,9 +10,9 @@ namespace ST.Web.Angular
     public class MyAngularConfig
     {
         public string ClientId { get => Program.Configuration["AngularConfig:AuthClientId"]; }
-        public string AuthServer { get => Config.Urls.OAuthUrl; }
+        public string AuthServer { get => Config.Urls.OAuthUrl.ToLower(); }
         public string Scope { get { return $"openid profile {Config.General.SmartHomeApiScope_Id}"; } }
-        public string ApiServer { get => Config.Urls.ApiUrl; }
+        public string ApiServer { get => Config.Urls.ApiUrl.ToLower(); }
 
     }
 }
