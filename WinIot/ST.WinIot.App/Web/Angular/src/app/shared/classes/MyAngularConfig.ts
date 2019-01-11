@@ -8,5 +8,7 @@
         authServer: string;
         scope: string;
         apiServer: string;
+        websiteName: string;
+        websiteShortName: string;
     }
     

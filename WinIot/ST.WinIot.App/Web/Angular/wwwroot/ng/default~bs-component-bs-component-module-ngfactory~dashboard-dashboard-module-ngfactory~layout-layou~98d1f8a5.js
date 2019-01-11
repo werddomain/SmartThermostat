@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["default~bs-component-bs-component-module~dashboard-dashboard-module~layout-layout-module"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["default~bs-component-bs-component-module-ngfactory~dashboard-dashboard-module-ngfactory~layout-layou~98d1f8a5"],{
 
 /***/ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js":
 /*!***********************************************************************!*\
@@ -11200,4 +11200,4 @@ var NgbModule = /** @class */ (function () {
 /***/ })
 
 }]);
-//# sourceMappingURL=default~bs-component-bs-component-module~dashboard-dashboard-module~layout-layout-module.js.map
+//# sourceMappingURL=default~bs-component-bs-component-module-ngfactory~dashboard-dashboard-module-ngfactory~layout-layou~98d1f8a5.js.map

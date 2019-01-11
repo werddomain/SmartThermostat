@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["charts-charts-module"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["charts-charts-module-ngfactory"],{
 
 /***/ "./node_modules/chart.js/src/chart.js":
 /*!********************************************!*\
@@ -32597,23 +32597,6 @@ exports.ChartsModule = ChartsModule;
 
 /***/ }),
 
-/***/ "./node_modules/ng2-charts/index.js":
-/*!******************************************!*\
-  !*** ./node_modules/ng2-charts/index.js ***!
-  \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(/*! ./charts/charts */ "./node_modules/ng2-charts/charts/charts.js"));
-
-
-/***/ }),
-
 /***/ "./node_modules/webpack/buildin/module.js":
 /*!***********************************!*\
   !*** (webpack)/buildin/module.js ***!
@@ -32657,29 +32640,19 @@ module.exports = function(module) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChartsRoutingModule", function() { return ChartsRoutingModule; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _charts_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./charts.component */ "./src/app/layout/charts/charts.component.ts");
-
-
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _charts_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./charts.component */ "./src/app/layout/charts/charts.component.ts");
 
 
 var routes = [
     {
         path: '',
-        component: _charts_component__WEBPACK_IMPORTED_MODULE_3__["ChartsComponent"]
+        component: _charts_component__WEBPACK_IMPORTED_MODULE_1__["ChartsComponent"]
     }
 ];
 var ChartsRoutingModule = /** @class */ (function () {
     function ChartsRoutingModule() {
     }
-    ChartsRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forChild(routes)],
-            exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
-        })
-    ], ChartsRoutingModule);
     return ChartsRoutingModule;
 }());
 
@@ -32687,25 +32660,107 @@ var ChartsRoutingModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/layout/charts/charts.component.html":
-/*!*****************************************************!*\
-  !*** ./src/app/layout/charts/charts.component.html ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./src/app/layout/charts/charts.component.less.shim.ngstyle.js":
+/*!*********************************************************************!*\
+  !*** ./src/app/layout/charts/charts.component.less.shim.ngstyle.js ***!
+  \*********************************************************************/
+/*! exports provided: styles */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = "<div [@routerTransition]>\n    <app-page-header [heading]=\"'Charts'\" [icon]=\"'fa-bar-chart-o'\"></app-page-header>\n    <div class=\"row\">\n        <div class=\"col col-sm-6\">\n            <div class=\"card mb-3\">\n                <div class=\"card-header\">\n                    Bar Chart\n                </div>\n                <div class=\"card-body\">\n                    <canvas baseChart [datasets]=\"barChartData\" [labels]=\"barChartLabels\" [options]=\"barChartOptions\" [legend]=\"barChartLegend\" [chartType]=\"barChartType\" (chartHover)=\"chartHovered($event)\" (chartClick)=\"chartClicked($event)\">\n                    </canvas>\n                </div>\n                <div class=\"card-footer\">\n                    <button class=\"btn btn-info btn-sm\" (click)=\"randomize()\">Update</button>\n                </div>\n            </div>\n        </div>\n        <div class=\"col col-sm-6\">\n            <div class=\"card mb-3\">\n                <div class=\"card-header\">\n                    Doughnut Chart\n                </div>\n                <div class=\"card-body\">\n                    <canvas baseChart height=\"180px\" [data]=\"doughnutChartData\" [labels]=\"doughnutChartLabels\" [chartType]=\"doughnutChartType\" (chartHover)=\"chartHovered($event)\" (chartClick)=\"chartClicked($event)\">\n                    </canvas>\n                </div>\n            </div>\n        </div>\n    </div>\n    <div class=\"row\">\n        <div class=\"col col-sm-6\">\n            <div class=\"card mb-3\">\n                <div class=\"card-header\">\n                    Radar Chart\n                </div>\n                <div class=\"card-body\">\n                    <canvas baseChart height=\"150px\" [datasets]=\"radarChartData\" [labels]=\"radarChartLabels\" [chartType]=\"radarChartType\" (chartHover)=\"chartHovered($event)\" (chartClick)=\"chartClicked($event)\">\n                    </canvas>\n                </div>\n            </div>\n        </div>\n        <div class=\"col col-sm-6\">\n            <div class=\"card mb-3\">\n                <div class=\"card-header\">\n                    Pie Chart\n                </div>\n                <div class=\"card-body\">\n                    <canvas baseChart height=\"150px\" [data]=\"pieChartData\" [labels]=\"pieChartLabels\" [chartType]=\"pieChartType\" (chartHover)=\"chartHovered($event)\" (chartClick)=\"chartClicked($event)\">\n                    </canvas>\n                </div>\n            </div>\n        </div>\n    </div>\n    <div class=\"row\">\n        <div class=\"col col-sm-6\">\n            <div class=\"card mb-3\">\n                <div class=\"card-header\">\n                    Polar Area Chart\n                </div>\n                <div class=\"card-body\">\n                    <canvas baseChart height=\"130px\" [data]=\"polarAreaChartData\" [labels]=\"polarAreaChartLabels\" [legend]=\"polarAreaLegend\" [chartType]=\"polarAreaChartType\" (chartHover)=\"chartHovered($event)\" (chartClick)=\"chartClicked($event)\">\n                    </canvas>\n                </div>\n            </div>\n        </div>\n        <div class=\"col col-sm-6\">\n            <div class=\"card mb-3\">\n                <div class=\"card-header\">\n                    Line Chart\n                </div>\n                <div class=\"card-body\">\n                    <canvas baseChart height=\"130\" [datasets]=\"lineChartData\" [labels]=\"lineChartLabels\" [options]=\"lineChartOptions\" [colors]=\"lineChartColors\" [legend]=\"lineChartLegend\" [chartType]=\"lineChartType\" (chartHover)=\"chartHovered($event)\" (chartClick)=\"chartClicked($event)\">\n                    </canvas>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "styles", function() { return styles; });
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+var styles = ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi8uLi8uLi9zcmMvYXBwL2xheW91dC9jaGFydHMvY2hhcnRzLmNvbXBvbmVudC5sZXNzIn0= */"];
+
+
 
 /***/ }),
 
-/***/ "./src/app/layout/charts/charts.component.less":
-/*!*****************************************************!*\
-  !*** ./src/app/layout/charts/charts.component.less ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./src/app/layout/charts/charts.component.ngfactory.js":
+/*!*************************************************************!*\
+  !*** ./src/app/layout/charts/charts.component.ngfactory.js ***!
+  \*************************************************************/
+/*! exports provided: RenderType_ChartsComponent, View_ChartsComponent_0, View_ChartsComponent_Host_0, ChartsComponentNgFactory */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2xheW91dC9jaGFydHMvY2hhcnRzLmNvbXBvbmVudC5sZXNzIn0= */"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RenderType_ChartsComponent", function() { return RenderType_ChartsComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "View_ChartsComponent_0", function() { return View_ChartsComponent_0; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "View_ChartsComponent_Host_0", function() { return View_ChartsComponent_Host_0; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChartsComponentNgFactory", function() { return ChartsComponentNgFactory; });
+/* harmony import */ var _charts_component_less_shim_ngstyle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./charts.component.less.shim.ngstyle */ "./src/app/layout/charts/charts.component.less.shim.ngstyle.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _shared_modules_page_header_page_header_component_ngfactory__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/modules/page-header/page-header.component.ngfactory */ "./src/app/shared/modules/page-header/page-header.component.ngfactory.js");
+/* harmony import */ var _shared_modules_page_header_page_header_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../shared/modules/page-header/page-header.component */ "./src/app/shared/modules/page-header/page-header.component.ts");
+/* harmony import */ var ng2_charts_charts_charts__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ng2-charts/charts/charts */ "./node_modules/ng2-charts/charts/charts.js");
+/* harmony import */ var ng2_charts_charts_charts__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(ng2_charts_charts_charts__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _charts_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./charts.component */ "./src/app/layout/charts/charts.component.ts");
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+
+
+
+
+
+
+var styles_ChartsComponent = [_charts_component_less_shim_ngstyle__WEBPACK_IMPORTED_MODULE_0__["styles"]];
+var RenderType_ChartsComponent = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵcrt"]({ encapsulation: 0, styles: styles_ChartsComponent, data: { "animation": [{ type: 7, name: "routerTransition", definitions: [], options: {} }] } });
+
+function View_ChartsComponent_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 50, "div", [], [[24, "@routerTransition", 0]], null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 1, "app-page-header", [], null, null, null, _shared_modules_page_header_page_header_component_ngfactory__WEBPACK_IMPORTED_MODULE_2__["View_PageHeaderComponent_0"], _shared_modules_page_header_page_header_component_ngfactory__WEBPACK_IMPORTED_MODULE_2__["RenderType_PageHeaderComponent"])), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](2, 114688, null, 0, _shared_modules_page_header_page_header_component__WEBPACK_IMPORTED_MODULE_3__["PageHeaderComponent"], [], { heading: [0, "heading"], icon: [1, "icon"] }, null), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 17, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 9, "div", [["class", "col col-sm-6"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 8, "div", [["class", "card mb-3"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](6, 0, null, null, 1, "div", [["class", "card-header"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, [" Bar Chart "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](8, 0, null, null, 2, "div", [["class", "card-body"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](9, 0, null, null, 1, "canvas", [["baseChart", ""]], null, [[null, "chartHover"], [null, "chartClick"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("chartHover" === en)) {
+        var pd_0 = (_co.chartHovered($event) !== false);
+        ad = (pd_0 && ad);
+    } if (("chartClick" === en)) {
+        var pd_1 = (_co.chartClicked($event) !== false);
+        ad = (pd_1 && ad);
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](10, 737280, null, 0, ng2_charts_charts_charts__WEBPACK_IMPORTED_MODULE_4__["BaseChartDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]], { datasets: [0, "datasets"], labels: [1, "labels"], options: [2, "options"], chartType: [3, "chartType"], legend: [4, "legend"] }, { chartClick: "chartClick", chartHover: "chartHover" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](11, 0, null, null, 2, "div", [["class", "card-footer"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](12, 0, null, null, 1, "button", [["class", "btn btn-info btn-sm"]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (_co.randomize() !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Update"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](14, 0, null, null, 6, "div", [["class", "col col-sm-6"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](15, 0, null, null, 5, "div", [["class", "card mb-3"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](16, 0, null, null, 1, "div", [["class", "card-header"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, [" Doughnut Chart "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](18, 0, null, null, 2, "div", [["class", "card-body"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](19, 0, null, null, 1, "canvas", [["baseChart", ""], ["height", "180px"]], null, [[null, "chartHover"], [null, "chartClick"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("chartHover" === en)) {
+        var pd_0 = (_co.chartHovered($event) !== false);
+        ad = (pd_0 && ad);
+    } if (("chartClick" === en)) {
+        var pd_1 = (_co.chartClicked($event) !== false);
+        ad = (pd_1 && ad);
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](20, 737280, null, 0, ng2_charts_charts_charts__WEBPACK_IMPORTED_MODULE_4__["BaseChartDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]], { data: [0, "data"], labels: [1, "labels"], chartType: [2, "chartType"] }, { chartClick: "chartClick", chartHover: "chartHover" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](21, 0, null, null, 14, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](22, 0, null, null, 6, "div", [["class", "col col-sm-6"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](23, 0, null, null, 5, "div", [["class", "card mb-3"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](24, 0, null, null, 1, "div", [["class", "card-header"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, [" Radar Chart "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](26, 0, null, null, 2, "div", [["class", "card-body"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](27, 0, null, null, 1, "canvas", [["baseChart", ""], ["height", "150px"]], null, [[null, "chartHover"], [null, "chartClick"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("chartHover" === en)) {
+        var pd_0 = (_co.chartHovered($event) !== false);
+        ad = (pd_0 && ad);
+    } if (("chartClick" === en)) {
+        var pd_1 = (_co.chartClicked($event) !== false);
+        ad = (pd_1 && ad);
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](28, 737280, null, 0, ng2_charts_charts_charts__WEBPACK_IMPORTED_MODULE_4__["BaseChartDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]], { datasets: [0, "datasets"], labels: [1, "labels"], chartType: [2, "chartType"] }, { chartClick: "chartClick", chartHover: "chartHover" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](29, 0, null, null, 6, "div", [["class", "col col-sm-6"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](30, 0, null, null, 5, "div", [["class", "card mb-3"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](31, 0, null, null, 1, "div", [["class", "card-header"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, [" Pie Chart "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](33, 0, null, null, 2, "div", [["class", "card-body"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](34, 0, null, null, 1, "canvas", [["baseChart", ""], ["height", "150px"]], null, [[null, "chartHover"], [null, "chartClick"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("chartHover" === en)) {
+        var pd_0 = (_co.chartHovered($event) !== false);
+        ad = (pd_0 && ad);
+    } if (("chartClick" === en)) {
+        var pd_1 = (_co.chartClicked($event) !== false);
+        ad = (pd_1 && ad);
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](35, 737280, null, 0, ng2_charts_charts_charts__WEBPACK_IMPORTED_MODULE_4__["BaseChartDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]], { data: [0, "data"], labels: [1, "labels"], chartType: [2, "chartType"] }, { chartClick: "chartClick", chartHover: "chartHover" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](36, 0, null, null, 14, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](37, 0, null, null, 6, "div", [["class", "col col-sm-6"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](38, 0, null, null, 5, "div", [["class", "card mb-3"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](39, 0, null, null, 1, "div", [["class", "card-header"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, [" Polar Area Chart "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](41, 0, null, null, 2, "div", [["class", "card-body"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](42, 0, null, null, 1, "canvas", [["baseChart", ""], ["height", "130px"]], null, [[null, "chartHover"], [null, "chartClick"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("chartHover" === en)) {
+        var pd_0 = (_co.chartHovered($event) !== false);
+        ad = (pd_0 && ad);
+    } if (("chartClick" === en)) {
+        var pd_1 = (_co.chartClicked($event) !== false);
+        ad = (pd_1 && ad);
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](43, 737280, null, 0, ng2_charts_charts_charts__WEBPACK_IMPORTED_MODULE_4__["BaseChartDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]], { data: [0, "data"], labels: [1, "labels"], chartType: [2, "chartType"], legend: [3, "legend"] }, { chartClick: "chartClick", chartHover: "chartHover" }), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](44, 0, null, null, 6, "div", [["class", "col col-sm-6"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](45, 0, null, null, 5, "div", [["class", "card mb-3"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](46, 0, null, null, 1, "div", [["class", "card-header"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, [" Line Chart "])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](48, 0, null, null, 2, "div", [["class", "card-body"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](49, 0, null, null, 1, "canvas", [["baseChart", ""], ["height", "130"]], null, [[null, "chartHover"], [null, "chartClick"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("chartHover" === en)) {
+        var pd_0 = (_co.chartHovered($event) !== false);
+        ad = (pd_0 && ad);
+    } if (("chartClick" === en)) {
+        var pd_1 = (_co.chartClicked($event) !== false);
+        ad = (pd_1 && ad);
+    } return ad; }, null, null)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](50, 737280, null, 0, ng2_charts_charts_charts__WEBPACK_IMPORTED_MODULE_4__["BaseChartDirective"], [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]], { datasets: [0, "datasets"], labels: [1, "labels"], options: [2, "options"], chartType: [3, "chartType"], colors: [4, "colors"], legend: [5, "legend"] }, { chartClick: "chartClick", chartHover: "chartHover" })], function (_ck, _v) { var _co = _v.component; var currVal_1 = "Charts"; var currVal_2 = "fa-bar-chart-o"; _ck(_v, 2, 0, currVal_1, currVal_2); var currVal_3 = _co.barChartData; var currVal_4 = _co.barChartLabels; var currVal_5 = _co.barChartOptions; var currVal_6 = _co.barChartType; var currVal_7 = _co.barChartLegend; _ck(_v, 10, 0, currVal_3, currVal_4, currVal_5, currVal_6, currVal_7); var currVal_8 = _co.doughnutChartData; var currVal_9 = _co.doughnutChartLabels; var currVal_10 = _co.doughnutChartType; _ck(_v, 20, 0, currVal_8, currVal_9, currVal_10); var currVal_11 = _co.radarChartData; var currVal_12 = _co.radarChartLabels; var currVal_13 = _co.radarChartType; _ck(_v, 28, 0, currVal_11, currVal_12, currVal_13); var currVal_14 = _co.pieChartData; var currVal_15 = _co.pieChartLabels; var currVal_16 = _co.pieChartType; _ck(_v, 35, 0, currVal_14, currVal_15, currVal_16); var currVal_17 = _co.polarAreaChartData; var currVal_18 = _co.polarAreaChartLabels; var currVal_19 = _co.polarAreaChartType; var currVal_20 = _co.polarAreaLegend; _ck(_v, 43, 0, currVal_17, currVal_18, currVal_19, currVal_20); var currVal_21 = _co.lineChartData; var currVal_22 = _co.lineChartLabels; var currVal_23 = _co.lineChartOptions; var currVal_24 = _co.lineChartType; var currVal_25 = _co.lineChartColors; var currVal_26 = _co.lineChartLegend; _ck(_v, 50, 0, currVal_21, currVal_22, currVal_23, currVal_24, currVal_25, currVal_26); }, function (_ck, _v) { var currVal_0 = undefined; _ck(_v, 0, 0, currVal_0); }); }
+function View_ChartsComponent_Host_0(_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "app-charts", [], null, null, null, View_ChartsComponent_0, RenderType_ChartsComponent)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](1, 114688, null, 0, _charts_component__WEBPACK_IMPORTED_MODULE_5__["ChartsComponent"], [], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+var ChartsComponentNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵccf"]("app-charts", _charts_component__WEBPACK_IMPORTED_MODULE_5__["ChartsComponent"], View_ChartsComponent_Host_0, {}, {}, []);
+
+
 
 /***/ }),
 
@@ -32719,11 +32774,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChartsComponent", function() { return ChartsComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _router_animations__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../router.animations */ "./src/app/router.animations.ts");
-
-
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 
 var ChartsComponent = /** @class */ (function () {
     function ChartsComponent() {
@@ -32869,17 +32920,51 @@ var ChartsComponent = /** @class */ (function () {
         this.lineChartLegend = true;
         this.lineChartType = 'line';
     };
-    ChartsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-charts',
-            template: __webpack_require__(/*! ./charts.component.html */ "./src/app/layout/charts/charts.component.html"),
-            animations: [Object(_router_animations__WEBPACK_IMPORTED_MODULE_2__["routerTransition"])()],
-            styles: [__webpack_require__(/*! ./charts.component.less */ "./src/app/layout/charts/charts.component.less")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
-    ], ChartsComponent);
     return ChartsComponent;
 }());
+
+
+
+/***/ }),
+
+/***/ "./src/app/layout/charts/charts.module.ngfactory.js":
+/*!**********************************************************!*\
+  !*** ./src/app/layout/charts/charts.module.ngfactory.js ***!
+  \**********************************************************/
+/*! exports provided: ChartsModuleNgFactory */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChartsModuleNgFactory", function() { return ChartsModuleNgFactory; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _charts_module__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./charts.module */ "./src/app/layout/charts/charts.module.ts");
+/* harmony import */ var _node_modules_angular_router_router_ngfactory__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/@angular/router/router.ngfactory */ "./node_modules/@angular/router/router.ngfactory.js");
+/* harmony import */ var _charts_component_ngfactory__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./charts.component.ngfactory */ "./src/app/layout/charts/charts.component.ngfactory.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var ng2_charts_charts_charts__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ng2-charts/charts/charts */ "./node_modules/ng2-charts/charts/charts.js");
+/* harmony import */ var ng2_charts_charts_charts__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(ng2_charts_charts_charts__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _charts_routing_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./charts-routing.module */ "./src/app/layout/charts/charts-routing.module.ts");
+/* harmony import */ var _shared_modules_page_header_page_header_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../shared/modules/page-header/page-header.module */ "./src/app/shared/modules/page-header/page-header.module.ts");
+/* harmony import */ var _charts_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./charts.component */ "./src/app/layout/charts/charts.component.ts");
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+
+
+
+
+
+
+
+
+
+
+var ChartsModuleNgFactory = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵcmf"](_charts_module__WEBPACK_IMPORTED_MODULE_1__["ChartsModule"], [], function (_l) { return _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmod"]([_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](512, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ComponentFactoryResolver"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵCodegenComponentFactoryResolver"], [[8, [_node_modules_angular_router_router_ngfactory__WEBPACK_IMPORTED_MODULE_2__["ɵEmptyOutletComponentNgFactory"], _charts_component_ngfactory__WEBPACK_IMPORTED_MODULE_3__["ChartsComponentNgFactory"]]], [3, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ComponentFactoryResolver"]], _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModuleRef"]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](4608, _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgLocalization"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgLocaleLocalization"], [_angular_core__WEBPACK_IMPORTED_MODULE_0__["LOCALE_ID"], [2, _angular_common__WEBPACK_IMPORTED_MODULE_4__["ɵangular_packages_common_common_a"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_common__WEBPACK_IMPORTED_MODULE_4__["CommonModule"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["CommonModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, ng2_charts_charts_charts__WEBPACK_IMPORTED_MODULE_5__["ChartsModule"], ng2_charts_charts_charts__WEBPACK_IMPORTED_MODULE_5__["ChartsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _angular_router__WEBPACK_IMPORTED_MODULE_6__["RouterModule"], _angular_router__WEBPACK_IMPORTED_MODULE_6__["RouterModule"], [[2, _angular_router__WEBPACK_IMPORTED_MODULE_6__["ɵangular_packages_router_router_a"]], [2, _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _charts_routing_module__WEBPACK_IMPORTED_MODULE_7__["ChartsRoutingModule"], _charts_routing_module__WEBPACK_IMPORTED_MODULE_7__["ChartsRoutingModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _shared_modules_page_header_page_header_module__WEBPACK_IMPORTED_MODULE_8__["PageHeaderModule"], _shared_modules_page_header_page_header_module__WEBPACK_IMPORTED_MODULE_8__["PageHeaderModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1073742336, _charts_module__WEBPACK_IMPORTED_MODULE_1__["ChartsModule"], _charts_module__WEBPACK_IMPORTED_MODULE_1__["ChartsModule"], []), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵmpd"](1024, _angular_router__WEBPACK_IMPORTED_MODULE_6__["ROUTES"], function () { return [[{ path: "", component: _charts_component__WEBPACK_IMPORTED_MODULE_9__["ChartsComponent"] }]]; }, [])]); });
 
 
 
@@ -32895,30 +32980,9 @@ var ChartsComponent = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChartsModule", function() { return ChartsModule; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
-/* harmony import */ var ng2_charts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ng2-charts */ "./node_modules/ng2-charts/index.js");
-/* harmony import */ var ng2_charts__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(ng2_charts__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _charts_routing_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./charts-routing.module */ "./src/app/layout/charts/charts-routing.module.ts");
-/* harmony import */ var _charts_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./charts.component */ "./src/app/layout/charts/charts.component.ts");
-/* harmony import */ var _shared__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../shared */ "./src/app/shared/index.ts");
-
-
-
-
-
-
-
 var ChartsModule = /** @class */ (function () {
     function ChartsModule() {
     }
-    ChartsModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-            imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], ng2_charts__WEBPACK_IMPORTED_MODULE_3__["ChartsModule"], _charts_routing_module__WEBPACK_IMPORTED_MODULE_4__["ChartsRoutingModule"], _shared__WEBPACK_IMPORTED_MODULE_6__["PageHeaderModule"]],
-            declarations: [_charts_component__WEBPACK_IMPORTED_MODULE_5__["ChartsComponent"]]
-        })
-    ], ChartsModule);
     return ChartsModule;
 }());
 
@@ -32927,4 +32991,4 @@ var ChartsModule = /** @class */ (function () {
 /***/ })
 
 }]);
-//# sourceMappingURL=charts-charts-module.js.map
+//# sourceMappingURL=charts-charts-module-ngfactory.js.map

@@ -5,9 +5,9 @@ import { HomeRoutingModule } from './Home-routing.module';
 import { HomeComponent } from './Home.component';
 
 import { HomesService } from "../../shared/services/Homes.service";
-
+import { PageHeaderModule } from './../../shared';
 @NgModule({
-    imports: [CommonModule, HomeRoutingModule],
+    imports: [CommonModule, HomeRoutingModule, PageHeaderModule],
     declarations: [HomeComponent],
     providers: [HomesService]
 })

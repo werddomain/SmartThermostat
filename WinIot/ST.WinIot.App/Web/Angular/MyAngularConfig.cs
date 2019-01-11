@@ -13,6 +13,7 @@ namespace ST.Web.Angular
         public string AuthServer { get => Config.Urls.OAuthUrl.ToLower(); }
         public string Scope { get { return $"openid profile {Config.General.SmartHomeApiScope_Id}"; } }
         public string ApiServer { get => Config.Urls.ApiUrl.ToLower(); }
-
+        public string WebsiteName => Config.General.WebsiteName;
+        public string WebsiteShortName => Config.General.WebsiteShortName;
     }
 }

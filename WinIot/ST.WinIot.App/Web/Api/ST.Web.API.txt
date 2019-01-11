@@ -38,3 +38,4 @@ System.ArgumentException: The OpenAPI/Swagger document 'v1' registered multiple 
 2019-01-10 01:07:16.718 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
 2019-01-10 01:11:03.747 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
 2019-01-10 01:11:18.377 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-01-10 23:06:19.345 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
