@@ -1,6 +1,6 @@
 # PieArduino
 This project is the RaspBerry Pie Arduino compagnon.
-It's connected using i2C to the Raspberry Pie project (WinIot.App).
+It's connected using i2C to the Raspberry Pie project ([WinIot.App](https://github.com/werddomain/SmartThermostat/tree/master/WinIot/ST.WinIot.App/ST.WinIot.App)).
 
 ## Configuration
 
