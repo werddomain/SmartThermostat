@@ -67,3 +67,7 @@ E --> F
 - [Angular 7](https://angular.io/) (Framework)
 - [SignalR](https://www.asp.net/signalr) (Library)
 
+
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTM3MjgxMjI4MF19
+-->
