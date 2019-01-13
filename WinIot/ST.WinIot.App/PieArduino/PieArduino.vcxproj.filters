@@ -25,6 +25,7 @@
     <None Include="C:\Users\clefw\Documents\Arduino\libraries\DHT_sensor_library\examples\DHTtester\DHTtester.ino">
       <Filter>Tester</Filter>
     </None>
+    <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="__vm\.PieArduino.vsarduino.h">

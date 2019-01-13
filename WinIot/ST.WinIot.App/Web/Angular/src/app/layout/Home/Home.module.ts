@@ -11,4 +11,6 @@ import { PageHeaderModule } from './../../shared';
     declarations: [HomeComponent],
     providers: [HomesService]
 })
-export class HomeModule {}
+export class HomeModule {
+
+}

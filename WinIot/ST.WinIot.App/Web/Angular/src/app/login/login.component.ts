@@ -31,7 +31,11 @@ export class LoginComponent implements OnInit {
     webSiteName: string;
     ngOnInit() { }
     loginOnAuthWebsite() {
-        this.kazoAuthWrapper.login();
+        this.oauthService.loadDiscoveryDocument().then(() => {
+            
+            this.kazoAuthWrapper.login();
+        });
+        
     }
     loginWithPassword() {
         //localStorage.setItem('isLoggedin', 'true');

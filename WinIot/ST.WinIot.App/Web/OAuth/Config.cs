@@ -63,9 +63,15 @@ namespace ST.Web.OAuth
 				},
 				new Client{
 					ClientName = "AngularPassword",
-					AllowedGrantTypes = GrantTypes.HybridAndClientCredentials,
-					ClientId = "",
-					RedirectUris = { },
+					AllowedGrantTypes = GrantTypes.Implicit,
+					ClientId = Configuration["AngularConfig:AuthClientId"],
+					AllowAccessTokensViaBrowser = true,
+					RedirectUris = {
+						Config.Urls.UiUrl,
+						$"{Config.Urls.UiUrl}/",
+						$"{Config.Urls.UiUrl}/ng",
+						$"{Config.Urls.UiUrl}/ng/",
+						$"{Config.Urls.UiUrl}/ng/index.html"},
 
 					AlwaysIncludeUserClaimsInIdToken = true,
 					 AllowedScopes =

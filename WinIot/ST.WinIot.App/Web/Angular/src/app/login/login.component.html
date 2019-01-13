@@ -16,7 +16,7 @@
             &nbsp;
             <a class="btn rounded-btn" [routerLink]="['/signup']">{{ 'Register' | translate }}</a>
             &nbsp;
-            <a class="btn rounded-btn" (click)="loginOnAuthWebsite()">{{ 'Social' | translate }}</a>
+            <a class="btn rounded-btn" (click)="loginOnAuthWebsite()">Social</a>
         </form>
         <p class="alert alert-error" *ngIf="loginFailed">
           Login wasn't successful.
