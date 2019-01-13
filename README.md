@@ -28,7 +28,7 @@ To configure all online stuff, read the Setup Readme
 
 ## Projects
 ![Project Diagram](https://github.com/werddomain/SmartThermostat/blob/master/Projects%20Diagram.svg)
-
+[Diagram](https://mermaidjs.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggTFJcbkEoKEdvb2dsZSBIb21lKSlcbkJ7U1QuV2ViLk9BdXRofVxuQyhTVC5XZWIuQW5ndWxhcilcbkR7U1QuV2ViLkFQSX1cbkV7U1QuV2luSW90LkFwcH1cbkZ7UGllQXJkdWlub31cbkEgLS0gQ29ubmVjdCAtLT4gQlxuQSAtLT4gRFxuQyAtLT4gRFxuRSAtLSBTaWduYWxSLS0-IERcbkMgLS0-IEJcbkUgLS0-IEJcbkUgLS0-IEZcbiIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In19)
 |Project                   | Description                                               |
 |--------------------------|-----------------------------------------------------------|
 | PieArduino               | Arduino project who talk with Raspberry pie by I2C        |
@@ -54,5 +54,5 @@ To configure all online stuff, read the Setup Readme
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU3NDMxNDI1MSwxMzcyODEyMjgwXX0=
+eyJoaXN0b3J5IjpbMjA5OTE0ODU3MCwxMzcyODEyMjgwXX0=
 -->
