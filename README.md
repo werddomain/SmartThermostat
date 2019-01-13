@@ -33,9 +33,9 @@ To configure all online stuff, read the Setup Readme
 
 |Project                   | Description                                               |
 |--------------------------|-----------------------------------------------------------|
-| PieArduino               | Arduino project who talk with Raspberry pie by I2C        |
-| ST.SmartDevices          | Object For calls with the API                             |
-| ST.WinIot.App            | Win 10 IOT Core for the raspberry pie                     |
+| [PieArduino](https://github.com/werddomain/SmartThermostat/tree/master/WinIot/ST.WinIot.App/PieArduino)               | Arduino project who talk with Raspberry pie by I2C        |
+| [ST.SmartDevices](https://github.com/werddomain/SmartThermostat/tree/master/WinIot/ST.WinIot.App/ST.SmartDevices)          | Object For calls with the API                             |
+| [ST.WinIot.App](https://github.com/werddomain/SmartThermostat/tree/master/WinIot/ST.WinIot.App/ST.WinIot.App)            | Win 10 IOT Core for the raspberry pie                     |
 | ST.WinIot.App.Web.Config | Static configuration for urls, names and api scoope       |
 | ST.Web.API               | Asp .net Core 2.2 for API and SignalR                     |
 | ST.Web.OAuth             | Asp .net Core 2.2 for OAuth with IdentityServer4          |
@@ -56,6 +56,6 @@ To configure all online stuff, read the Setup Readme
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxODA0MTE5MSwyMDk5MTQ4NTcwLDEzNz
-I4MTIyODBdfQ==
+eyJoaXN0b3J5IjpbOTkwNjIwMjU1LC02MTgwNDExOTEsMjA5OT
+E0ODU3MCwxMzcyODEyMjgwXX0=
 -->
