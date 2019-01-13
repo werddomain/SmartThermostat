@@ -1,4 +1,4 @@
-﻿# Web.OAuth
+# Web.OAuth
 Using identity server 4 this project is only in charge of authentication. 
 
 
