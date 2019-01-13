@@ -31,15 +31,15 @@ To configure all online stuff, read the Setup Readme
 [Diagram](https://mermaidjs.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggTFJcbkEoKEdvb2dsZSBIb21lKSlcbkJ7U1QuV2ViLk9BdXRofVxuQyhTVC5XZWIuQW5ndWxhcilcbkR7U1QuV2ViLkFQSX1cbkV7U1QuV2luSW90LkFwcH1cbkZ7UGllQXJkdWlub31cbkEgLS0gQ29ubmVjdCAtLT4gQlxuQSAtLT4gRFxuQyAtLT4gRFxuRSAtLSBTaWduYWxSLS0-IERcbkMgLS0-IEJcbkUgLS0-IEJcbkUgLS0-IEZcbiIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In19)
 
 
-|Project                   | Description                                               |
+|Projects                   | Description                                               |
 |--------------------------|-----------------------------------------------------------|
 | [PieArduino](https://github.com/werddomain/SmartThermostat/tree/master/WinIot/ST.WinIot.App/PieArduino)               | Arduino project who talk with Raspberry pie by I2C        |
 | [ST.SmartDevices](https://github.com/werddomain/SmartThermostat/tree/master/WinIot/ST.WinIot.App/ST.SmartDevices)          | Object For calls with the API                             |
 | [ST.WinIot.App](https://github.com/werddomain/SmartThermostat/tree/master/WinIot/ST.WinIot.App/ST.WinIot.App)            | Win 10 IOT Core for the raspberry pie                     |
-| ST.WinIot.App.Web.Config | Static configuration for urls, names and api scoope       |
-| ST.Web.API               | Asp .net Core 2.2 for API and SignalR                     |
-| ST.Web.OAuth             | Asp .net Core 2.2 for OAuth with IdentityServer4          |
-| ST.Web.Angular           | Asp .net Core 2.2 with Angular 7 to interact with the API |
+| [ST.WinIot.App.Web.Config](https://github.com/werddomain/SmartThermostat/tree/master/WinIot/ST.WinIot.App/ST.WinIot.App.Web.Config) | Static configuration for urls, names and api scoope       |
+| [ST.Web.API](https://github.com/werddomain/SmartThermostat/tree/master/WinIot/ST.WinIot.App/Web/Api)               | Asp .net Core 2.2 for API and SignalR                     |
+| [ST.Web.OAuth](https://github.com/werddomain/SmartThermostat/tree/master/WinIot/ST.WinIot.App/Web/OAuth)             | Asp .net Core 2.2 for OAuth with IdentityServer4          |
+| [ST.Web.Angular](https://github.com/werddomain/SmartThermostat/tree/master/WinIot/ST.WinIot.App/Web/Angular)           | Asp .net Core 2.2 with Angular 7 to interact with the API |
 |  |  |
 
 ### Technologies utilised
@@ -56,6 +56,6 @@ To configure all online stuff, read the Setup Readme
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTkwNjIwMjU1LC02MTgwNDExOTEsMjA5OT
-E0ODU3MCwxMzcyODEyMjgwXX0=
+eyJoaXN0b3J5IjpbLTY2MTkwMDk2MCwtNjE4MDQxMTkxLDIwOT
+kxNDg1NzAsMTM3MjgxMjI4MF19
 -->
