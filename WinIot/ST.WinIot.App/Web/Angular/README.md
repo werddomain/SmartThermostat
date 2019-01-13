@@ -4,8 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 This project is to show UI to be able to manage devices ans scenes.
 
-Authentication come from Web.OAuth
-Data comme from Web.API
+Authentication come from [Web.OAuth](https://github.com/werddomain/SmartThermostat/tree/master/WinIot/ST.WinIot.App/Web/OAuth)
+Data comme from [Web.API](https://github.com/werddomain/SmartThermostat/tree/master/WinIot/ST.WinIot.App/Web/Api)
 
 ## Required Extensions
 |Name| Why |
