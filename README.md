@@ -27,22 +27,7 @@ To configure all online stuff, read the Setup Readme
  - [ ] Arduino base projects for different uses
 
 ## Projects
-```mermaid
-graph LR
-A((Google Home))
-B{ST.Web.OAuth}
-C(ST.Web.Angular)
-D{ST.Web.API}
-E{ST.WinIot.App}
-F{PieArduino}
-A -- Connect --> B
-A --> D
-C --> D
-E -- SignalR--> D
-C --> B
-E --> B
-E --> F
-```
+![enter image description here](https://mermaidjs.github.io/mermaid-live-editor/#/view/eyJjb2RlIjoiZ3JhcGggTFJcbkEoKEdvb2dsZSBIb21lKSlcbkJ7U1QuV2ViLk9BdXRofVxuQyhTVC5XZWIuQW5ndWxhcilcbkR7U1QuV2ViLkFQSX1cbkV7U1QuV2luSW90LkFwcH1cbkZ7UGllQXJkdWlub31cbkEgLS0gQ29ubmVjdCAtLT4gQlxuQSAtLT4gRFxuQyAtLT4gRFxuRSAtLSBTaWduYWxSLS0-IERcbkMgLS0-IEJcbkUgLS0-IEJcbkUgLS0-IEZcbiIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In19)
 
 |Project                   | Description                                               |
 |--------------------------|-----------------------------------------------------------|
@@ -69,5 +54,5 @@ E --> F
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3MjgxMjI4MF19
+eyJoaXN0b3J5IjpbMzk5NDcxMzgzLDEzNzI4MTIyODBdfQ==
 -->
