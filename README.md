@@ -11,7 +11,7 @@ Each arduino will receive commands and send sensor info to the Raspberry pie usi
 - We will modify devices and Raspberry Pie screen with a web project using Angular. (Later maybe a mobile app using xamarin)
 - I did not figure how devices will be syncronised or connected with the hub for now.
 
-To configure all online stuff, read the Setup Readme
+To configure all online stuff, read the [Setup Readme](https://github.com/werddomain/SmartThermostat/blob/master/Setup.md)
 
 ## RoadMap
 
@@ -56,6 +56,6 @@ To configure all online stuff, read the Setup Readme
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2MTkwMDk2MCwtNjE4MDQxMTkxLDIwOT
+eyJoaXN0b3J5IjpbMTkyNDM4OTkwMiwtNjE4MDQxMTkxLDIwOT
 kxNDg1NzAsMTM3MjgxMjI4MF19
 -->
