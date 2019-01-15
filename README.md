@@ -21,7 +21,7 @@ To configure all online stuff, read the [Setup Readme](https://github.com/werddo
  - [x] SignalR setup to talk to Win IOT when google send commands
  - [x] SignalR authentication
  - [x] Base projects setup
- - [ ] Angular webproject authentication
+ - [x] Angular webproject authentication
  - [ ] Angular Pages to manage devices and scenes
  - [ ] Win 10 Iot Api/Autentication/SignalR
  - [ ] Arduino base projects for different uses
@@ -56,6 +56,6 @@ To configure all online stuff, read the [Setup Readme](https://github.com/werddo
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyNDM4OTkwMiwtNjE4MDQxMTkxLDIwOT
-kxNDg1NzAsMTM3MjgxMjI4MF19
+eyJoaXN0b3J5IjpbLTE0MDQ2NDM2NTgsMTkyNDM4OTkwMiwtNj
+E4MDQxMTkxLDIwOTkxNDg1NzAsMTM3MjgxMjI4MF19
 -->
