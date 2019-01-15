@@ -34,7 +34,8 @@ namespace ST.Web.OAuth
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
-
+			services.AddCors();
+			
             services.AddMvc();
 
             services.Configure<IISOptions>(iis =>
@@ -117,7 +118,7 @@ namespace ST.Web.OAuth
 			//}
 			app.UseHsts();
 			app.UseHttpsRedirection();
-
+			app.UseCors(e => e.WithOrigins("http://localhost:4200", "https://localhost:4200").AllowAnyHeader().AllowAnyMethod());//angular ng serv
 			app.UseStaticFiles();
             app.UseIdentityServer();
             app.UseMvcWithDefaultRoute();

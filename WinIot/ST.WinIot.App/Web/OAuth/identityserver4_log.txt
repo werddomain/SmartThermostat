@@ -1107,3 +1107,373 @@ Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updatin
 2019-01-12 23:17:54.208 -05:00 [INF] AuthenticationScheme: Identity.Application signed in.
 2019-01-12 23:17:55.266 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
 2019-01-12 23:17:55.288 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 16:05:07.549 -05:00 [INF] Starting IdentityServer4 version 2.3.2.0
+2019-01-13 16:05:07.694 -05:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-01-13 16:05:08.585 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 16:05:08.653 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 16:13:15.444 -05:00 [INF] Starting IdentityServer4 version 2.3.2.0
+2019-01-13 16:13:15.584 -05:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-01-13 16:13:16.423 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 16:13:16.488 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 16:13:17.333 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 16:13:17.335 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 16:17:00.378 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 16:17:00.379 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 16:17:00.485 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 16:17:00.486 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 16:17:10.635 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 16:17:10.636 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 16:17:10.657 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 16:17:10.657 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 16:17:21.110 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2019-01-13 16:17:21.668 -05:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"Jsd8sd7Sd6sdnsdf8sdf6jKJdsf784f45sf7SDf98sdfSdfnsdfjsdf7sdf8s7dfsdf","ClientName":"AngularPassword","RedirectUri":"http://localhost:4200/index.html","AllowedRedirectUris":["https://dev.kazo.ca/ng/","https://dev.kazo.ca/ng","https://dev.kazo.ca/","https://dev.kazo.ca","https://dev.kazo.ca/ng/index.html","http://localhost:4200/index.html"],"SubjectId":"61ece361-db42-4159-88eb-c4dc6fadc408","ResponseType":"id_token token","ResponseMode":"fragment","GrantType":"implicit","RequestedScopes":"openid profile GoogleSmartHome","State":"nWIDNNaSjKyTFc8JzJ4o42SXQjXDtzcmjH5xxY0t","UiLocales":null,"Nonce":"nWIDNNaSjKyTFc8JzJ4o42SXQjXDtzcmjH5xxY0t","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"8bd418550894990ebe0b429e6a12c1cd","Raw":{"response_type":"id_token token","client_id":"Jsd8sd7Sd6sdnsdf8sdf6jKJdsf784f45sf7SDf98sdfSdfnsdfjsdf7sdf8s7dfsdf","state":"nWIDNNaSjKyTFc8JzJ4o42SXQjXDtzcmjH5xxY0t","redirect_uri":"http://localhost:4200/index.html","scope":"openid profile GoogleSmartHome","nonce":"nWIDNNaSjKyTFc8JzJ4o42SXQjXDtzcmjH5xxY0t"},"$type":"AuthorizeRequestValidationLog"}
+2019-01-13 16:17:21.946 -05:00 [INF] {"ClientId":"Jsd8sd7Sd6sdnsdf8sdf6jKJdsf784f45sf7SDf98sdfSdfnsdfjsdf7sdf8s7dfsdf","ClientName":"AngularPassword","RedirectUri":"http://localhost:4200/index.html","Endpoint":"Authorize","SubjectId":"61ece361-db42-4159-88eb-c4dc6fadc408","Scopes":"openid profile GoogleSmartHome","GrantType":"implicit","Tokens":[{"TokenType":"id_token","TokenValue":"****gk_Q","$type":"Token"},{"TokenType":"access_token","TokenValue":"****7ctg","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HLJPJFNI93SV:00000005","TimeStamp":"2019-01-13T21:17:21.0000000Z","ProcessId":1132,"LocalIpAddress":"127.0.0.1:43364","RemoteIpAddress":"192.168.1.1","$type":"TokenIssuedSuccessEvent"}
+2019-01-13 16:17:21.948 -05:00 [INF] Authorize endpoint response
+{"SubjectId":"61ece361-db42-4159-88eb-c4dc6fadc408","ClientId":"Jsd8sd7Sd6sdnsdf8sdf6jKJdsf784f45sf7SDf98sdfSdfnsdfjsdf7sdf8s7dfsdf","RedirectUri":"http://localhost:4200/index.html","State":"nWIDNNaSjKyTFc8JzJ4o42SXQjXDtzcmjH5xxY0t","Scope":"openid profile GoogleSmartHome","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2019-01-13 16:17:23.585 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 16:17:23.586 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 16:17:23.642 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 16:17:23.642 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 16:22:53.333 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 16:22:53.334 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 16:22:53.477 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 16:22:53.478 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 16:22:56.788 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 16:22:56.789 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 16:22:56.815 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 16:22:56.816 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 16:22:56.887 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2019-01-13 16:22:57.111 -05:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"Jsd8sd7Sd6sdnsdf8sdf6jKJdsf784f45sf7SDf98sdfSdfnsdfjsdf7sdf8s7dfsdf","ClientName":"AngularPassword","RedirectUri":"http://localhost:4200/index.html","AllowedRedirectUris":["https://dev.kazo.ca/ng/","https://dev.kazo.ca/ng","https://dev.kazo.ca/","https://dev.kazo.ca","https://dev.kazo.ca/ng/index.html","http://localhost:4200/index.html"],"SubjectId":"61ece361-db42-4159-88eb-c4dc6fadc408","ResponseType":"id_token token","ResponseMode":"fragment","GrantType":"implicit","RequestedScopes":"openid profile GoogleSmartHome","State":"mZtrHy6ewrIOolwTirznN4jvbvqKFmsZhSIXCtKE","UiLocales":null,"Nonce":"mZtrHy6ewrIOolwTirznN4jvbvqKFmsZhSIXCtKE","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"8bd418550894990ebe0b429e6a12c1cd","Raw":{"response_type":"id_token token","client_id":"Jsd8sd7Sd6sdnsdf8sdf6jKJdsf784f45sf7SDf98sdfSdfnsdfjsdf7sdf8s7dfsdf","state":"mZtrHy6ewrIOolwTirznN4jvbvqKFmsZhSIXCtKE","redirect_uri":"http://localhost:4200/index.html","scope":"openid profile GoogleSmartHome","nonce":"mZtrHy6ewrIOolwTirznN4jvbvqKFmsZhSIXCtKE"},"$type":"AuthorizeRequestValidationLog"}
+2019-01-13 16:22:57.144 -05:00 [INF] {"ClientId":"Jsd8sd7Sd6sdnsdf8sdf6jKJdsf784f45sf7SDf98sdfSdfnsdfjsdf7sdf8s7dfsdf","ClientName":"AngularPassword","RedirectUri":"http://localhost:4200/index.html","Endpoint":"Authorize","SubjectId":"61ece361-db42-4159-88eb-c4dc6fadc408","Scopes":"openid profile GoogleSmartHome","GrantType":"implicit","Tokens":[{"TokenType":"id_token","TokenValue":"****Hxfw","$type":"Token"},{"TokenType":"access_token","TokenValue":"****XVSw","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HLJPJFNI93T0:00000007","TimeStamp":"2019-01-13T21:22:57.0000000Z","ProcessId":1132,"LocalIpAddress":"127.0.0.1:43364","RemoteIpAddress":"192.168.1.1","$type":"TokenIssuedSuccessEvent"}
+2019-01-13 16:22:57.144 -05:00 [INF] Authorize endpoint response
+{"SubjectId":"61ece361-db42-4159-88eb-c4dc6fadc408","ClientId":"Jsd8sd7Sd6sdnsdf8sdf6jKJdsf784f45sf7SDf98sdfSdfnsdfjsdf7sdf8s7dfsdf","RedirectUri":"http://localhost:4200/index.html","State":"mZtrHy6ewrIOolwTirznN4jvbvqKFmsZhSIXCtKE","Scope":"openid profile GoogleSmartHome","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2019-01-13 16:22:58.561 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 16:22:58.561 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 16:22:58.691 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 16:22:58.691 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 16:27:14.441 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 16:27:14.442 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 16:27:14.504 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 16:27:14.505 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 16:35:39.872 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 16:35:39.873 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 16:35:39.928 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 16:35:39.929 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 16:57:11.367 -05:00 [INF] Starting IdentityServer4 version 2.3.2.0
+2019-01-13 16:57:11.519 -05:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-01-13 16:57:12.565 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 16:57:12.637 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 16:57:13.434 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 16:57:13.436 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 16:59:12.312 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 16:59:12.313 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 16:59:12.417 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 16:59:12.418 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 16:59:22.470 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 16:59:22.470 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 16:59:22.591 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 16:59:22.592 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 17:00:21.768 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:00:21.769 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 17:00:21.885 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:00:21.886 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 17:00:28.336 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:00:28.337 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 17:00:28.462 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:00:28.463 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 17:01:25.603 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:01:25.605 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 17:01:25.742 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:01:25.743 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 17:05:40.237 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:05:40.238 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 17:05:40.311 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:05:40.312 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 17:05:45.439 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:05:45.439 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 17:05:45.470 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:05:45.470 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 17:05:45.782 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2019-01-13 17:05:46.388 -05:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"Jsd8sd7Sd6sdnsdf8sdf6jKJdsf784f45sf7SDf98sdfSdfnsdfjsdf7sdf8s7dfsdf","ClientName":"AngularPassword","RedirectUri":"http://localhost:4200/index.html","AllowedRedirectUris":["https://dev.kazo.ca/ng/","https://dev.kazo.ca/ng","https://dev.kazo.ca/","https://dev.kazo.ca","https://dev.kazo.ca/ng/index.html","http://localhost:4200/index.html"],"SubjectId":"61ece361-db42-4159-88eb-c4dc6fadc408","ResponseType":"id_token token","ResponseMode":"fragment","GrantType":"implicit","RequestedScopes":"openid profile GoogleSmartHome","State":"A3AcMVOdUhzKeNeKyl60AaFus3YTZ3F2rA9t7Erk","UiLocales":null,"Nonce":"A3AcMVOdUhzKeNeKyl60AaFus3YTZ3F2rA9t7Erk","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"8bd418550894990ebe0b429e6a12c1cd","Raw":{"response_type":"id_token token","client_id":"Jsd8sd7Sd6sdnsdf8sdf6jKJdsf784f45sf7SDf98sdfSdfnsdfjsdf7sdf8s7dfsdf","state":"A3AcMVOdUhzKeNeKyl60AaFus3YTZ3F2rA9t7Erk","redirect_uri":"http://localhost:4200/index.html","scope":"openid profile GoogleSmartHome","nonce":"A3AcMVOdUhzKeNeKyl60AaFus3YTZ3F2rA9t7Erk"},"$type":"AuthorizeRequestValidationLog"}
+2019-01-13 17:05:46.601 -05:00 [INF] {"ClientId":"Jsd8sd7Sd6sdnsdf8sdf6jKJdsf784f45sf7SDf98sdfSdfnsdfjsdf7sdf8s7dfsdf","ClientName":"AngularPassword","RedirectUri":"http://localhost:4200/index.html","Endpoint":"Authorize","SubjectId":"61ece361-db42-4159-88eb-c4dc6fadc408","Scopes":"openid profile GoogleSmartHome","GrantType":"implicit","Tokens":[{"TokenType":"id_token","TokenValue":"****PJgA","$type":"Token"},{"TokenType":"access_token","TokenValue":"****YBHg","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HLJPK895O2BS:00000009","TimeStamp":"2019-01-13T22:05:46.0000000Z","ProcessId":6360,"LocalIpAddress":"127.0.0.1:20774","RemoteIpAddress":"192.168.1.1","$type":"TokenIssuedSuccessEvent"}
+2019-01-13 17:05:46.604 -05:00 [INF] Authorize endpoint response
+{"SubjectId":"61ece361-db42-4159-88eb-c4dc6fadc408","ClientId":"Jsd8sd7Sd6sdnsdf8sdf6jKJdsf784f45sf7SDf98sdfSdfnsdfjsdf7sdf8s7dfsdf","RedirectUri":"http://localhost:4200/index.html","State":"A3AcMVOdUhzKeNeKyl60AaFus3YTZ3F2rA9t7Erk","Scope":"openid profile GoogleSmartHome","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2019-01-13 17:05:48.364 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:05:48.364 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 17:05:48.413 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:05:48.414 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 17:06:47.984 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:06:47.985 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 17:06:48.109 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:06:48.110 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 17:08:27.429 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:08:27.430 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 17:08:27.551 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:08:27.551 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 17:17:45.961 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:17:45.962 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 17:17:46.009 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:17:46.009 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 17:18:00.454 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:18:00.455 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 17:18:00.550 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:18:00.551 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 17:18:00.603 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2019-01-13 17:18:01.095 -05:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"Jsd8sd7Sd6sdnsdf8sdf6jKJdsf784f45sf7SDf98sdfSdfnsdfjsdf7sdf8s7dfsdf","ClientName":"AngularPassword","RedirectUri":"http://localhost:4200/index.html","AllowedRedirectUris":["https://dev.kazo.ca/ng/","https://dev.kazo.ca/ng","https://dev.kazo.ca/","https://dev.kazo.ca","https://dev.kazo.ca/ng/index.html","http://localhost:4200/index.html"],"SubjectId":"61ece361-db42-4159-88eb-c4dc6fadc408","ResponseType":"id_token token","ResponseMode":"fragment","GrantType":"implicit","RequestedScopes":"openid profile GoogleSmartHome","State":"YVw0NJ5hWKyeE5MDbVrDSN9RVEPbTZu8n4a1bZNk","UiLocales":null,"Nonce":"YVw0NJ5hWKyeE5MDbVrDSN9RVEPbTZu8n4a1bZNk","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"8bd418550894990ebe0b429e6a12c1cd","Raw":{"response_type":"id_token token","client_id":"Jsd8sd7Sd6sdnsdf8sdf6jKJdsf784f45sf7SDf98sdfSdfnsdfjsdf7sdf8s7dfsdf","state":"YVw0NJ5hWKyeE5MDbVrDSN9RVEPbTZu8n4a1bZNk","redirect_uri":"http://localhost:4200/index.html","scope":"openid profile GoogleSmartHome","nonce":"YVw0NJ5hWKyeE5MDbVrDSN9RVEPbTZu8n4a1bZNk"},"$type":"AuthorizeRequestValidationLog"}
+2019-01-13 17:18:01.123 -05:00 [INF] {"ClientId":"Jsd8sd7Sd6sdnsdf8sdf6jKJdsf784f45sf7SDf98sdfSdfnsdfjsdf7sdf8s7dfsdf","ClientName":"AngularPassword","RedirectUri":"http://localhost:4200/index.html","Endpoint":"Authorize","SubjectId":"61ece361-db42-4159-88eb-c4dc6fadc408","Scopes":"openid profile GoogleSmartHome","GrantType":"implicit","Tokens":[{"TokenType":"id_token","TokenValue":"****-_Rw","$type":"Token"},{"TokenType":"access_token","TokenValue":"****CqSQ","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HLJPK895O2BU:00000009","TimeStamp":"2019-01-13T22:18:01.0000000Z","ProcessId":6360,"LocalIpAddress":"127.0.0.1:20774","RemoteIpAddress":"192.168.1.1","$type":"TokenIssuedSuccessEvent"}
+2019-01-13 17:18:01.123 -05:00 [INF] Authorize endpoint response
+{"SubjectId":"61ece361-db42-4159-88eb-c4dc6fadc408","ClientId":"Jsd8sd7Sd6sdnsdf8sdf6jKJdsf784f45sf7SDf98sdfSdfnsdfjsdf7sdf8s7dfsdf","RedirectUri":"http://localhost:4200/index.html","State":"YVw0NJ5hWKyeE5MDbVrDSN9RVEPbTZu8n4a1bZNk","Scope":"openid profile GoogleSmartHome","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2019-01-13 17:18:02.903 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:18:02.903 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 17:18:03.048 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:18:03.049 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 17:24:40.906 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:24:40.907 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 17:24:40.999 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:24:41.000 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 17:24:43.374 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:24:43.374 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 17:24:43.397 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:24:43.397 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 17:24:43.577 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2019-01-13 17:24:43.901 -05:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"Jsd8sd7Sd6sdnsdf8sdf6jKJdsf784f45sf7SDf98sdfSdfnsdfjsdf7sdf8s7dfsdf","ClientName":"AngularPassword","RedirectUri":"http://localhost:4200/index.html","AllowedRedirectUris":["https://dev.kazo.ca/ng/","https://dev.kazo.ca/ng","https://dev.kazo.ca/","https://dev.kazo.ca","https://dev.kazo.ca/ng/index.html","http://localhost:4200/index.html"],"SubjectId":"61ece361-db42-4159-88eb-c4dc6fadc408","ResponseType":"id_token token","ResponseMode":"fragment","GrantType":"implicit","RequestedScopes":"openid profile GoogleSmartHome","State":"aGy9qV9ObFOK1f1S46gjDfEkU8NRrbK92XHsxPjm","UiLocales":null,"Nonce":"aGy9qV9ObFOK1f1S46gjDfEkU8NRrbK92XHsxPjm","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"8bd418550894990ebe0b429e6a12c1cd","Raw":{"response_type":"id_token token","client_id":"Jsd8sd7Sd6sdnsdf8sdf6jKJdsf784f45sf7SDf98sdfSdfnsdfjsdf7sdf8s7dfsdf","state":"aGy9qV9ObFOK1f1S46gjDfEkU8NRrbK92XHsxPjm","redirect_uri":"http://localhost:4200/index.html","scope":"openid profile GoogleSmartHome","nonce":"aGy9qV9ObFOK1f1S46gjDfEkU8NRrbK92XHsxPjm"},"$type":"AuthorizeRequestValidationLog"}
+2019-01-13 17:24:43.938 -05:00 [INF] {"ClientId":"Jsd8sd7Sd6sdnsdf8sdf6jKJdsf784f45sf7SDf98sdfSdfnsdfjsdf7sdf8s7dfsdf","ClientName":"AngularPassword","RedirectUri":"http://localhost:4200/index.html","Endpoint":"Authorize","SubjectId":"61ece361-db42-4159-88eb-c4dc6fadc408","Scopes":"openid profile GoogleSmartHome","GrantType":"implicit","Tokens":[{"TokenType":"id_token","TokenValue":"****zTdw","$type":"Token"},{"TokenType":"access_token","TokenValue":"****EMqA","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HLJPK895O2BV:00000007","TimeStamp":"2019-01-13T22:24:43.0000000Z","ProcessId":6360,"LocalIpAddress":"127.0.0.1:20774","RemoteIpAddress":"192.168.1.1","$type":"TokenIssuedSuccessEvent"}
+2019-01-13 17:24:43.939 -05:00 [INF] Authorize endpoint response
+{"SubjectId":"61ece361-db42-4159-88eb-c4dc6fadc408","ClientId":"Jsd8sd7Sd6sdnsdf8sdf6jKJdsf784f45sf7SDf98sdfSdfnsdfjsdf7sdf8s7dfsdf","RedirectUri":"http://localhost:4200/index.html","State":"aGy9qV9ObFOK1f1S46gjDfEkU8NRrbK92XHsxPjm","Scope":"openid profile GoogleSmartHome","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2019-01-13 17:24:46.638 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:24:46.638 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 17:24:46.832 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:24:46.832 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 17:25:04.742 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:25:04.742 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 17:25:04.847 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:25:04.847 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 17:25:12.722 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:25:12.724 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 17:25:12.836 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:25:12.836 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 17:25:41.280 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:25:41.280 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 17:25:41.394 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:25:41.395 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 17:26:03.680 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:26:03.680 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 17:26:03.841 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:26:03.841 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 17:26:21.397 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:26:21.398 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 17:26:21.488 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:26:21.489 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 17:34:11.765 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:34:11.766 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 17:34:11.818 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:34:11.818 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 17:35:45.311 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:35:45.311 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 17:35:45.409 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:35:45.410 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 17:35:47.684 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:35:47.685 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 17:35:47.709 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:35:47.710 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 17:35:47.843 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2019-01-13 17:35:48.202 -05:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"Jsd8sd7Sd6sdnsdf8sdf6jKJdsf784f45sf7SDf98sdfSdfnsdfjsdf7sdf8s7dfsdf","ClientName":"AngularPassword","RedirectUri":"http://localhost:4200/index.html","AllowedRedirectUris":["https://dev.kazo.ca/ng/","https://dev.kazo.ca/ng","https://dev.kazo.ca/","https://dev.kazo.ca","https://dev.kazo.ca/ng/index.html","http://localhost:4200/index.html"],"SubjectId":"61ece361-db42-4159-88eb-c4dc6fadc408","ResponseType":"id_token token","ResponseMode":"fragment","GrantType":"implicit","RequestedScopes":"openid profile GoogleSmartHome","State":"79L6FiIXHNYGWoAdomtkw700gfe54I51T2FV43pi","UiLocales":null,"Nonce":"79L6FiIXHNYGWoAdomtkw700gfe54I51T2FV43pi","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"8bd418550894990ebe0b429e6a12c1cd","Raw":{"response_type":"id_token token","client_id":"Jsd8sd7Sd6sdnsdf8sdf6jKJdsf784f45sf7SDf98sdfSdfnsdfjsdf7sdf8s7dfsdf","state":"79L6FiIXHNYGWoAdomtkw700gfe54I51T2FV43pi","redirect_uri":"http://localhost:4200/index.html","scope":"openid profile GoogleSmartHome","nonce":"79L6FiIXHNYGWoAdomtkw700gfe54I51T2FV43pi"},"$type":"AuthorizeRequestValidationLog"}
+2019-01-13 17:35:48.238 -05:00 [INF] {"ClientId":"Jsd8sd7Sd6sdnsdf8sdf6jKJdsf784f45sf7SDf98sdfSdfnsdfjsdf7sdf8s7dfsdf","ClientName":"AngularPassword","RedirectUri":"http://localhost:4200/index.html","Endpoint":"Authorize","SubjectId":"61ece361-db42-4159-88eb-c4dc6fadc408","Scopes":"openid profile GoogleSmartHome","GrantType":"implicit","Tokens":[{"TokenType":"id_token","TokenValue":"****hrAg","$type":"Token"},{"TokenType":"access_token","TokenValue":"****b1FA","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HLJPK895O2C1:00000007","TimeStamp":"2019-01-13T22:35:48.0000000Z","ProcessId":6360,"LocalIpAddress":"127.0.0.1:20774","RemoteIpAddress":"192.168.1.1","$type":"TokenIssuedSuccessEvent"}
+2019-01-13 17:35:48.238 -05:00 [INF] Authorize endpoint response
+{"SubjectId":"61ece361-db42-4159-88eb-c4dc6fadc408","ClientId":"Jsd8sd7Sd6sdnsdf8sdf6jKJdsf784f45sf7SDf98sdfSdfnsdfjsdf7sdf8s7dfsdf","RedirectUri":"http://localhost:4200/index.html","State":"79L6FiIXHNYGWoAdomtkw700gfe54I51T2FV43pi","Scope":"openid profile GoogleSmartHome","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2019-01-13 17:35:49.717 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:35:49.718 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 17:35:49.843 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 17:35:49.843 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 18:45:04.617 -05:00 [INF] Starting IdentityServer4 version 2.3.2.0
+2019-01-13 18:45:04.765 -05:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-01-13 18:45:05.555 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 18:45:05.656 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 18:45:06.526 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 18:45:06.528 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 18:45:09.077 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 18:45:09.077 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 18:45:09.104 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 18:45:09.105 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 18:45:09.533 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2019-01-13 18:45:10.202 -05:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"Jsd8sd7Sd6sdnsdf8sdf6jKJdsf784f45sf7SDf98sdfSdfnsdfjsdf7sdf8s7dfsdf","ClientName":"AngularPassword","RedirectUri":"http://localhost:4200/index.html","AllowedRedirectUris":["https://dev.kazo.ca/ng/","https://dev.kazo.ca/ng","https://dev.kazo.ca/","https://dev.kazo.ca","https://dev.kazo.ca/ng/index.html","http://localhost:4200/index.html"],"SubjectId":"61ece361-db42-4159-88eb-c4dc6fadc408","ResponseType":"id_token token","ResponseMode":"fragment","GrantType":"implicit","RequestedScopes":"openid profile GoogleSmartHome","State":"PAbLysWheL1h5oGzPPoNSEklF17Jrlt0sCY601R0","UiLocales":null,"Nonce":"PAbLysWheL1h5oGzPPoNSEklF17Jrlt0sCY601R0","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"8bd418550894990ebe0b429e6a12c1cd","Raw":{"response_type":"id_token token","client_id":"Jsd8sd7Sd6sdnsdf8sdf6jKJdsf784f45sf7SDf98sdfSdfnsdfjsdf7sdf8s7dfsdf","state":"PAbLysWheL1h5oGzPPoNSEklF17Jrlt0sCY601R0","redirect_uri":"http://localhost:4200/index.html","scope":"openid profile GoogleSmartHome","nonce":"PAbLysWheL1h5oGzPPoNSEklF17Jrlt0sCY601R0"},"$type":"AuthorizeRequestValidationLog"}
+2019-01-13 18:45:10.451 -05:00 [INF] {"ClientId":"Jsd8sd7Sd6sdnsdf8sdf6jKJdsf784f45sf7SDf98sdfSdfnsdfjsdf7sdf8s7dfsdf","ClientName":"AngularPassword","RedirectUri":"http://localhost:4200/index.html","Endpoint":"Authorize","SubjectId":"61ece361-db42-4159-88eb-c4dc6fadc408","Scopes":"openid profile GoogleSmartHome","GrantType":"implicit","Tokens":[{"TokenType":"id_token","TokenValue":"****tX3A","$type":"Token"},{"TokenType":"access_token","TokenValue":"****3jeg","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HLJPM4I9B262:00000005","TimeStamp":"2019-01-13T23:45:10.0000000Z","ProcessId":18932,"LocalIpAddress":"127.0.0.1:2407","RemoteIpAddress":"192.168.1.1","$type":"TokenIssuedSuccessEvent"}
+2019-01-13 18:45:10.453 -05:00 [INF] Authorize endpoint response
+{"SubjectId":"61ece361-db42-4159-88eb-c4dc6fadc408","ClientId":"Jsd8sd7Sd6sdnsdf8sdf6jKJdsf784f45sf7SDf98sdfSdfnsdfjsdf7sdf8s7dfsdf","RedirectUri":"http://localhost:4200/index.html","State":"PAbLysWheL1h5oGzPPoNSEklF17Jrlt0sCY601R0","Scope":"openid profile GoogleSmartHome","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2019-01-13 18:45:11.938 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 18:45:11.939 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 18:45:12.018 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 18:45:12.019 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 19:12:36.742 -05:00 [INF] Starting IdentityServer4 version 2.3.2.0
+2019-01-13 19:12:36.950 -05:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-01-13 19:12:37.906 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 19:12:38.006 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 19:12:38.731 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 19:12:38.732 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 19:22:32.631 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 19:22:32.632 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 19:22:32.726 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 19:22:32.726 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 23:02:12.521 -05:00 [INF] Starting IdentityServer4 version 2.3.2.0
+2019-01-13 23:02:12.859 -05:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-01-13 23:02:14.149 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 23:02:14.238 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 23:02:14.983 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 23:02:14.985 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 23:03:52.374 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 23:03:52.375 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 23:03:52.528 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 23:03:52.529 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 23:22:12.420 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 23:22:12.421 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 23:22:12.517 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 23:22:12.518 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 23:22:33.358 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 23:22:33.358 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 23:22:33.463 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 23:22:33.463 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 23:24:10.315 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 23:24:10.315 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 23:24:10.464 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 23:24:10.464 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 23:28:37.778 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 23:28:37.779 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 23:28:37.849 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 23:28:37.849 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 23:30:34.821 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 23:30:34.821 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 23:30:34.941 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 23:30:34.941 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 23:30:41.151 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 23:30:41.151 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 23:30:41.166 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 23:30:41.166 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 23:30:41.477 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2019-01-13 23:30:41.954 -05:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"Jsd8sd7Sd6sdnsdf8sdf6jKJdsf784f45sf7SDf98sdfSdfnsdfjsdf7sdf8s7dfsdf","ClientName":"AngularPassword","RedirectUri":"http://localhost:4200/index.html","AllowedRedirectUris":["https://dev.kazo.ca/ng/","https://dev.kazo.ca/ng","https://dev.kazo.ca/","https://dev.kazo.ca","https://dev.kazo.ca/ng/index.html","http://localhost:4200/index.html"],"SubjectId":"61ece361-db42-4159-88eb-c4dc6fadc408","ResponseType":"id_token token","ResponseMode":"fragment","GrantType":"implicit","RequestedScopes":"openid profile GoogleSmartHome","State":"WGHCQb72eJNOelpJmoeCBMLNUg0aqD9CxJTJ0pdq","UiLocales":null,"Nonce":"WGHCQb72eJNOelpJmoeCBMLNUg0aqD9CxJTJ0pdq","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"8bd418550894990ebe0b429e6a12c1cd","Raw":{"response_type":"id_token token","client_id":"Jsd8sd7Sd6sdnsdf8sdf6jKJdsf784f45sf7SDf98sdfSdfnsdfjsdf7sdf8s7dfsdf","state":"WGHCQb72eJNOelpJmoeCBMLNUg0aqD9CxJTJ0pdq","redirect_uri":"http://localhost:4200/index.html","scope":"openid profile GoogleSmartHome","nonce":"WGHCQb72eJNOelpJmoeCBMLNUg0aqD9CxJTJ0pdq"},"$type":"AuthorizeRequestValidationLog"}
+2019-01-13 23:30:42.269 -05:00 [INF] {"ClientId":"Jsd8sd7Sd6sdnsdf8sdf6jKJdsf784f45sf7SDf98sdfSdfnsdfjsdf7sdf8s7dfsdf","ClientName":"AngularPassword","RedirectUri":"http://localhost:4200/index.html","Endpoint":"Authorize","SubjectId":"61ece361-db42-4159-88eb-c4dc6fadc408","Scopes":"openid profile GoogleSmartHome","GrantType":"implicit","Tokens":[{"TokenType":"id_token","TokenValue":"****gJtA","$type":"Token"},{"TokenType":"access_token","TokenValue":"****wWJg","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HLJPQK8AINNN:00000005","TimeStamp":"2019-01-14T04:30:42.0000000Z","ProcessId":9892,"LocalIpAddress":"127.0.0.1:8165","RemoteIpAddress":"192.168.1.1","$type":"TokenIssuedSuccessEvent"}
+2019-01-13 23:30:42.271 -05:00 [INF] Authorize endpoint response
+{"SubjectId":"61ece361-db42-4159-88eb-c4dc6fadc408","ClientId":"Jsd8sd7Sd6sdnsdf8sdf6jKJdsf784f45sf7SDf98sdfSdfnsdfjsdf7sdf8s7dfsdf","RedirectUri":"http://localhost:4200/index.html","State":"WGHCQb72eJNOelpJmoeCBMLNUg0aqD9CxJTJ0pdq","Scope":"openid profile GoogleSmartHome","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2019-01-13 23:30:43.679 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 23:30:43.681 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 23:30:43.726 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 23:30:43.727 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 23:33:43.115 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 23:33:43.116 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 23:33:43.195 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 23:33:43.195 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 23:34:08.547 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 23:34:08.548 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 23:34:08.643 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 23:34:08.644 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 23:36:58.120 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 23:36:58.121 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 23:36:58.213 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 23:36:58.213 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 23:37:33.831 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 23:37:33.831 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 23:37:33.920 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 23:37:33.920 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 23:37:36.445 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 23:37:36.445 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 23:37:36.467 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 23:37:36.468 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 23:37:36.540 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2019-01-13 23:37:36.749 -05:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"Jsd8sd7Sd6sdnsdf8sdf6jKJdsf784f45sf7SDf98sdfSdfnsdfjsdf7sdf8s7dfsdf","ClientName":"AngularPassword","RedirectUri":"http://localhost:4200/index.html","AllowedRedirectUris":["https://dev.kazo.ca/ng/","https://dev.kazo.ca/ng","https://dev.kazo.ca/","https://dev.kazo.ca","https://dev.kazo.ca/ng/index.html","http://localhost:4200/index.html"],"SubjectId":"61ece361-db42-4159-88eb-c4dc6fadc408","ResponseType":"id_token token","ResponseMode":"fragment","GrantType":"implicit","RequestedScopes":"openid profile GoogleSmartHome","State":"xD7oJrRvA8qsC5i4S1yMvPGopTG35cvK4SUPXJ06","UiLocales":null,"Nonce":"xD7oJrRvA8qsC5i4S1yMvPGopTG35cvK4SUPXJ06","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"8bd418550894990ebe0b429e6a12c1cd","Raw":{"response_type":"id_token token","client_id":"Jsd8sd7Sd6sdnsdf8sdf6jKJdsf784f45sf7SDf98sdfSdfnsdfjsdf7sdf8s7dfsdf","state":"xD7oJrRvA8qsC5i4S1yMvPGopTG35cvK4SUPXJ06","redirect_uri":"http://localhost:4200/index.html","scope":"openid profile GoogleSmartHome","nonce":"xD7oJrRvA8qsC5i4S1yMvPGopTG35cvK4SUPXJ06"},"$type":"AuthorizeRequestValidationLog"}
+2019-01-13 23:37:36.777 -05:00 [INF] {"ClientId":"Jsd8sd7Sd6sdnsdf8sdf6jKJdsf784f45sf7SDf98sdfSdfnsdfjsdf7sdf8s7dfsdf","ClientName":"AngularPassword","RedirectUri":"http://localhost:4200/index.html","Endpoint":"Authorize","SubjectId":"61ece361-db42-4159-88eb-c4dc6fadc408","Scopes":"openid profile GoogleSmartHome","GrantType":"implicit","Tokens":[{"TokenType":"id_token","TokenValue":"****CmqA","$type":"Token"},{"TokenType":"access_token","TokenValue":"****AYAQ","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HLJPQK8AINNP:0000000B","TimeStamp":"2019-01-14T04:37:36.0000000Z","ProcessId":9892,"LocalIpAddress":"127.0.0.1:8165","RemoteIpAddress":"192.168.1.1","$type":"TokenIssuedSuccessEvent"}
+2019-01-13 23:37:36.777 -05:00 [INF] Authorize endpoint response
+{"SubjectId":"61ece361-db42-4159-88eb-c4dc6fadc408","ClientId":"Jsd8sd7Sd6sdnsdf8sdf6jKJdsf784f45sf7SDf98sdfSdfnsdfjsdf7sdf8s7dfsdf","RedirectUri":"http://localhost:4200/index.html","State":"xD7oJrRvA8qsC5i4S1yMvPGopTG35cvK4SUPXJ06","Scope":"openid profile GoogleSmartHome","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2019-01-13 23:37:38.012 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 23:37:38.013 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 23:37:38.057 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 23:37:38.058 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 23:38:42.471 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 23:38:42.472 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 23:38:42.566 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 23:38:42.567 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 23:39:09.024 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 23:39:09.024 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 23:39:09.133 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 23:39:09.134 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-13 23:39:59.818 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 23:39:59.819 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-13 23:39:59.934 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-13 23:39:59.934 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-15 01:57:37.931 -05:00 [INF] Starting IdentityServer4 version 2.3.2.0
+2019-01-15 01:57:38.245 -05:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-01-15 01:57:39.463 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-15 01:57:39.559 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-15 01:57:40.310 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-15 01:57:40.312 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-15 02:00:06.320 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-15 02:00:06.320 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-15 02:00:06.362 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-15 02:00:06.363 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-15 02:01:41.686 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-15 02:01:41.687 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-15 02:01:41.732 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-15 02:01:41.732 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-15 02:03:39.876 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-15 02:03:39.877 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-15 02:03:39.949 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-15 02:03:39.949 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-15 02:04:38.313 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-15 02:04:38.313 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-15 02:04:38.359 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-15 02:04:38.359 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-15 02:08:21.487 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-15 02:08:21.487 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-15 02:08:21.519 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-15 02:08:21.519 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-15 02:08:34.708 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-15 02:08:34.709 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-15 02:08:34.776 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-15 02:08:34.776 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-15 02:22:49.415 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-15 02:22:49.415 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-15 02:22:49.447 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-15 02:22:49.447 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-15 02:28:32.650 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-15 02:28:32.650 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-15 02:28:32.709 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-15 02:28:32.709 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-15 02:38:20.592 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-15 02:38:20.593 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-15 02:38:20.622 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-15 02:38:20.622 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-15 02:42:23.471 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-15 02:42:23.472 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-15 02:42:23.519 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-15 02:42:23.519 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-15 02:47:05.452 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-15 02:47:05.452 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-15 02:47:05.490 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-15 02:47:05.490 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-15 02:47:39.364 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-15 02:47:39.365 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-15 02:47:39.410 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-15 02:47:39.411 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-15 02:48:06.354 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-15 02:48:06.354 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-15 02:48:06.395 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-15 02:48:06.395 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-15 02:49:47.622 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-15 02:49:47.623 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-15 02:49:47.674 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-15 02:49:47.675 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-15 02:55:33.465 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-15 02:55:33.465 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-15 02:55:33.498 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-15 02:55:33.498 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-01-15 02:55:46.378 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-15 02:55:46.378 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-01-15 02:55:46.437 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-01-15 02:55:46.438 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks

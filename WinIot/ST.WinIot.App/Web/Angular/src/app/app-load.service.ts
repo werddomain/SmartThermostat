@@ -10,10 +10,10 @@ export class AppLoadService {
         //Doc source : https://www.intertech.com/Blog/angular-4-tutorial-run-code-during-app-initialization/
     }
     loadSettings(): Promise<any> {
-        console.log("loadSetting fired")
+        
         this.global.AuthConfig = this.authConfig;
-        debug;
-        console.log("AuthConfig Service", this.authConfig);
+        
+        
         const promise = this.configService.getAuth().toPromise().then(o => {
             var openIdConfig = o.authServer + "/.well-known/openid-configuration";
             
@@ -47,6 +47,17 @@ export class AppLoadService {
 
         }).catch(raison => {
             console.error("Load settings failed", raison);
+            this.oauthService.configure(this.global.AuthConfig);
+            this.oauthService.setStorage(sessionStorage);
+            this.global.ApiConfig = {
+                apiServer: "https://dev.kazo.ca/API",
+                authServer: "https://dev.kazo.ca/Auth",
+                websiteName: "Kazo",
+                websiteShortName: "Kazo",
+                clientId: this.global.AuthConfig.clientId,
+                scope: this.global.AuthConfig.scope
+            };
+            return this.oauthService.loadDiscoveryDocument();//"https://dev.kazo.ca/auth/.well-known/openid-configuration"
             });
         return promise;
     }

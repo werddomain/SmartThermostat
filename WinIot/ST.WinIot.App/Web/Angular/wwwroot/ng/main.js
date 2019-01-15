@@ -18,8 +18,6 @@ var map = {
 	],
 	"./bs-component/bs-component.module": [
 		"./src/app/layout/bs-component/bs-component.module.ts",
-		"default~bs-component-bs-component-module~dashboard-dashboard-module~layout-layout-module",
-		"common",
 		"bs-component-bs-component-module"
 	],
 	"./bs-element/bs-element.module": [
@@ -34,7 +32,6 @@ var map = {
 	],
 	"./dashboard/dashboard.module": [
 		"./src/app/layout/dashboard/dashboard.module.ts",
-		"default~bs-component-bs-component-module~dashboard-dashboard-module~layout-layout-module",
 		"common",
 		"dashboard-dashboard-module"
 	],
@@ -48,10 +45,12 @@ var map = {
 		"common",
 		"grid-grid-module"
 	],
+	"./homepage/homepage.module": [
+		"./src/app/layout/homepage/homepage.module.ts",
+		"homepage-homepage-module"
+	],
 	"./layout/layout.module": [
 		"./src/app/layout/layout.module.ts",
-		"default~bs-component-bs-component-module~dashboard-dashboard-module~layout-layout-module",
-		"common",
 		"layout-layout-module"
 	],
 	"./login/login.module": [
@@ -117,12 +116,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _global_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./global.service */ "./src/app/global.service.ts");
 /* harmony import */ var rxjs_add_operator_toPromise__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs/add/operator/toPromise */ "./node_modules/rxjs-compat/_esm5/add/operator/toPromise.js");
 /* harmony import */ var rxjs_add_operator_toPromise__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(rxjs_add_operator_toPromise__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! util */ "./node_modules/util/util.js");
-/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(util__WEBPACK_IMPORTED_MODULE_6__);
 
 
  //https://dev.to/ped4enko/how-to-build-an-angular-app-with-authentication-in-30-minutes-506k
-
 
 
 
@@ -136,10 +132,7 @@ var AppLoadService = /** @class */ (function () {
     }
     AppLoadService.prototype.loadSettings = function () {
         var _this = this;
-        console.log("loadSetting fired");
         this.global.AuthConfig = this.authConfig;
-        util__WEBPACK_IMPORTED_MODULE_6__["debug"];
-        console.log("AuthConfig Service", this.authConfig);
         var promise = this.configService.getAuth().toPromise().then(function (o) {
             var openIdConfig = o.authServer + "/.well-known/openid-configuration";
             _this.global.ApiConfig = o;
@@ -164,6 +157,17 @@ var AppLoadService = /** @class */ (function () {
             return _this.oauthService.loadDiscoveryDocument(); //"https://dev.kazo.ca/auth/.well-known/openid-configuration"
         }).catch(function (raison) {
             console.error("Load settings failed", raison);
+            _this.oauthService.configure(_this.global.AuthConfig);
+            _this.oauthService.setStorage(sessionStorage);
+            _this.global.ApiConfig = {
+                apiServer: "https://dev.kazo.ca/API",
+                authServer: "https://dev.kazo.ca/Auth",
+                websiteName: "Kazo",
+                websiteShortName: "Kazo",
+                clientId: _this.global.AuthConfig.clientId,
+                scope: _this.global.AuthConfig.scope
+            };
+            return _this.oauthService.loadDiscoveryDocument(); //"https://dev.kazo.ca/auth/.well-known/openid-configuration"
         });
         return promise;
     };
@@ -318,6 +322,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shared_services_AngularConfig_service__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./shared/services/AngularConfig.service */ "./src/app/shared/services/AngularConfig.service.ts");
 /* harmony import */ var _shared_Interceptors_jwt_interceptor_service__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./shared/Interceptors/jwt-interceptor.service */ "./src/app/shared/Interceptors/jwt-interceptor.service.ts");
 /* harmony import */ var _app_load_service__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./app-load.service */ "./src/app/app-load.service.ts");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
+/* harmony import */ var _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @fortawesome/angular-fontawesome */ "./node_modules/@fortawesome/angular-fontawesome/fesm5/angular-fontawesome.js");
+/* harmony import */ var _fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @fortawesome/fontawesome-svg-core */ "./node_modules/@fortawesome/fontawesome-svg-core/index.es.js");
+/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
+/* harmony import */ var _fortawesome_free_regular_svg_icons__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @fortawesome/free-regular-svg-icons */ "./node_modules/@fortawesome/free-regular-svg-icons/index.es.js");
 
 
 
@@ -336,6 +345,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
+
+
+_fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_20__["library"].add(_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_21__["fas"], _fortawesome_free_regular_svg_icons__WEBPACK_IMPORTED_MODULE_22__["far"]);
 // AoT requires an exported function for factories
 var createTranslateLoader = function (http) {
     /* for development
@@ -358,6 +373,8 @@ function load_settings(appLoadService) {
 }
 var AppModule = /** @class */ (function () {
     function AppModule() {
+        //https://github.com/FortAwesome/angular-fontawesome
+        _fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_20__["library"].add(_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_21__["fas"], _fortawesome_free_regular_svg_icons__WEBPACK_IMPORTED_MODULE_22__["far"]);
     }
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["NgModule"])({
@@ -368,6 +385,8 @@ var AppModule = /** @class */ (function () {
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_5__["BrowserAnimationsModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_12__["FormsModule"],
+                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_18__["NgbModule"],
+                _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_19__["FontAwesomeModule"],
                 _ngx_translate_core__WEBPACK_IMPORTED_MODULE_6__["TranslateModule"].forRoot({
                     loader: {
                         provide: _ngx_translate_core__WEBPACK_IMPORTED_MODULE_6__["TranslateLoader"],
@@ -392,7 +411,8 @@ var AppModule = /** @class */ (function () {
                 { provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HTTP_INTERCEPTORS"], useClass: _shared_Interceptors_jwt_interceptor_service__WEBPACK_IMPORTED_MODULE_16__["JwtInterceptor"], multi: true }
             ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"]]
-        })
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
     ], AppModule);
     return AppModule;
 }());
@@ -574,7 +594,7 @@ __webpack_require__.r(__webpack_exports__);
 /*!*********************************!*\
   !*** ./src/app/shared/index.ts ***!
   \*********************************/
-/*! exports provided: SharedPipesModule, KazoAuthWrapper, PageHeaderModule, StatModule, AuthGuard */
+/*! exports provided: SharedPipesModule, KazoAuthWrapper, PageHeaderModule, StatModule, BreadCrumbModule, AuthGuard */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -583,6 +603,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PageHeaderModule", function() { return _modules__WEBPACK_IMPORTED_MODULE_0__["PageHeaderModule"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "StatModule", function() { return _modules__WEBPACK_IMPORTED_MODULE_0__["StatModule"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BreadCrumbModule", function() { return _modules__WEBPACK_IMPORTED_MODULE_0__["BreadCrumbModule"]; });
 
 /* harmony import */ var _pipes_shared_pipes_module__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pipes/shared-pipes.module */ "./src/app/shared/pipes/shared-pipes.module.ts");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SharedPipesModule", function() { return _pipes_shared_pipes_module__WEBPACK_IMPORTED_MODULE_1__["SharedPipesModule"]; });
@@ -601,11 +623,119 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/app/shared/modules/bread-crumb/bread-crumb.component.html":
+/*!***********************************************************************!*\
+  !*** ./src/app/shared/modules/bread-crumb/bread-crumb.component.html ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n        <h2 class=\"page-header\">\r\n            {{heading}}\r\n        </h2>\r\n        <ol class=\"breadcrumb\" *ngFor=\"let item of items\">\r\n            <li class=\"breadcrumb-item\" [class.active]=\"item.active\">\r\n                <i class=\"fa {{item.icon}}\"></i> <a href=\"Javascript:void(0)\" [routerLink]=\"item.route ? [item.route] : []\"> {{item.name}}</a>\r\n            </li>\r\n            <!--<li class=\"breadcrumb-item active\"><i class=\"fa {{icon}}\"></i> {{heading}}</li>-->\r\n        </ol>\r\n    </div>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/shared/modules/bread-crumb/bread-crumb.component.less":
+/*!***********************************************************************!*\
+  !*** ./src/app/shared/modules/bread-crumb/bread-crumb.component.less ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3NoYXJlZC9tb2R1bGVzL2JyZWFkLWNydW1iL2JyZWFkLWNydW1iLmNvbXBvbmVudC5sZXNzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/shared/modules/bread-crumb/bread-crumb.component.ts":
+/*!*********************************************************************!*\
+  !*** ./src/app/shared/modules/bread-crumb/bread-crumb.component.ts ***!
+  \*********************************************************************/
+/*! exports provided: BreadCrumbComponent, BreadCrumbItem */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BreadCrumbComponent", function() { return BreadCrumbComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BreadCrumbItem", function() { return BreadCrumbItem; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var BreadCrumbComponent = /** @class */ (function () {
+    function BreadCrumbComponent() {
+    }
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], BreadCrumbComponent.prototype, "heading", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Array)
+    ], BreadCrumbComponent.prototype, "items", void 0);
+    BreadCrumbComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-bread-crumb',
+            template: __webpack_require__(/*! ./bread-crumb.component.html */ "./src/app/shared/modules/bread-crumb/bread-crumb.component.html"),
+            styles: [__webpack_require__(/*! ./bread-crumb.component.less */ "./src/app/shared/modules/bread-crumb/bread-crumb.component.less")]
+        })
+        /** bread-crumb component*/
+        ,
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], BreadCrumbComponent);
+    return BreadCrumbComponent;
+}());
+
+var BreadCrumbItem = /** @class */ (function () {
+    function BreadCrumbItem() {
+    }
+    return BreadCrumbItem;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/modules/bread-crumb/bread-crumb.module.ts":
+/*!******************************************************************!*\
+  !*** ./src/app/shared/modules/bread-crumb/bread-crumb.module.ts ***!
+  \******************************************************************/
+/*! exports provided: BreadCrumbModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BreadCrumbModule", function() { return BreadCrumbModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _bread_crumb_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./bread-crumb.component */ "./src/app/shared/modules/bread-crumb/bread-crumb.component.ts");
+
+
+
+
+
+var BreadCrumbModule = /** @class */ (function () {
+    function BreadCrumbModule() {
+    }
+    BreadCrumbModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+            imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"]],
+            declarations: [_bread_crumb_component__WEBPACK_IMPORTED_MODULE_4__["BreadCrumbComponent"]],
+            exports: [_bread_crumb_component__WEBPACK_IMPORTED_MODULE_4__["BreadCrumbComponent"]]
+        })
+    ], BreadCrumbModule);
+    return BreadCrumbModule;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/shared/modules/index.ts":
 /*!*****************************************!*\
   !*** ./src/app/shared/modules/index.ts ***!
   \*****************************************/
-/*! exports provided: PageHeaderModule, StatModule */
+/*! exports provided: PageHeaderModule, StatModule, BreadCrumbModule */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -615,6 +745,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony import */ var _stat_stat_module__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./stat/stat.module */ "./src/app/shared/modules/stat/stat.module.ts");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "StatModule", function() { return _stat_stat_module__WEBPACK_IMPORTED_MODULE_1__["StatModule"]; });
+
+/* harmony import */ var _bread_crumb_bread_crumb_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./bread-crumb/bread-crumb.module */ "./src/app/shared/modules/bread-crumb/bread-crumb.module.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BreadCrumbModule", function() { return _bread_crumb_bread_crumb_module__WEBPACK_IMPORTED_MODULE_2__["BreadCrumbModule"]; });
+
 
 
 

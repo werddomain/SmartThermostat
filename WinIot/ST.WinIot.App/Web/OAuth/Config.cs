@@ -67,6 +67,7 @@ namespace ST.Web.OAuth
 					ClientId = Configuration["AngularConfig:AuthClientId"],
 					AllowAccessTokensViaBrowser = true,
 					RedirectUris = {
+						"http://localhost:4200/index.html", //angular ng serv
 						Config.Urls.UiUrl,
 						$"{Config.Urls.UiUrl}/",
 						$"{Config.Urls.UiUrl}/ng",

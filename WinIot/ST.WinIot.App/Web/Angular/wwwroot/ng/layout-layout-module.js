@@ -252,7 +252,8 @@ var routes = [
         path: '',
         component: _layout_component__WEBPACK_IMPORTED_MODULE_3__["LayoutComponent"],
         children: [
-            { path: '', redirectTo: 'dashboard', pathMatch: 'prefix' },
+            { path: '', redirectTo: 'homepage', pathMatch: 'prefix' },
+            { path: 'homepage', loadChildren: './homepage/homepage.module#homepageModule' },
             { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' },
             { path: 'charts', loadChildren: './charts/charts.module#ChartsModule' },
             { path: 'tables', loadChildren: './tables/tables.module#TablesModule' },
