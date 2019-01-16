@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Pipe, PipeTransform } from '@angular/core';
 import { SetupService } from "../setup.service"
 import { Home, Piece, PieceTypeEnum } from '@app/shared/classes'
 @Component({
@@ -8,6 +8,14 @@ import { Home, Piece, PieceTypeEnum } from '@app/shared/classes'
 })
 export class homeComponent implements OnInit {
     constructor(private setupService: SetupService) {}
+    home: Home;
+    currentPiece: Piece;
+    pieces: Array<Piece>;
+    piecesTypes: Array<SelectItem>;
+    isInEdit: boolean = false;
+    getPieceTypeName(type: PieceTypeEnum): string {
+        return PieceTypeEnum[type].replace("_", " ");
+    }
 
     ngOnInit() {
         this.setupService.ActivateBreadCrumb({
@@ -16,5 +24,73 @@ export class homeComponent implements OnInit {
             name: "Home",
             route: "/setup/home"
         });
+        if (this.setupService.CurrentHome != null)
+            this.home = this.setupService.CurrentHome;
+
+        if (this.setupService.Pieces != null && this.pieces.length > 0)
+            this.pieces = this.setupService.Pieces;
+        this.piecesTypes = this.getEnumValues();
+    }
+    cleanCurrentPeice() {
+        this.currentPiece = this.clonePiece(this.currentPiece);
+        this.currentPiece.name = "";
+        this.currentPiece.pieceId = "";
+    }
+    addPeice() {
+        this.pieces.push(this.currentPiece);
+        this.cleanCurrentPeice();
+    }
+    savePeice() {
+        this.isInEdit = false;
+        this.cleanCurrentPeice();
+    }
+    editPeice(index: number) {
+        this.isInEdit = true;
+        this.currentPiece = this.pieces[index];
+    }
+    removePeice(index: number) {
+        this.pieces.splice(index);
+    }
+    private clonePiece(item: Piece): Piece {
+        return {
+            floor: item.floor,
+            name: item.name,
+            type: item.type,
+            homeId: item.homeId
+            
+        };
+    }
+    private getEnumValues(): Array<SelectItem> {
+        let keys = new Array<SelectItem>();
+        for (var enumMember in PieceTypeEnum) {
+            var isValueProperty = parseInt(enumMember, 10) >= 0
+            if (isValueProperty) {
+                keys.push(<SelectItem>{ value: parseInt(enumMember), name: (<string>PieceTypeEnum[enumMember]).replace("_", " ") });
+                // Uncomment if you want log
+                // console.log("enum member: ", value[enumMember]);
+            }
+        }
+        return keys;
+    }
+}
+export interface SelectItem {
+    value: number;
+    name: string;
+}
+@Pipe({
+    name: 'enumToArray'
+})
+export class EnumToArrayPipe implements PipeTransform {
+    transform(value, args: string[]): any {
+        let keys = [];
+        for (var enumMember in value) {
+            var isValueProperty = parseInt(enumMember, 10) >= 0
+            if (isValueProperty) {
+                keys.push(<SelectItem>{ value: parseInt(enumMember), name: (<string>value[enumMember]).replace("_", " ") });
+                // Uncomment if you want log
+                // console.log("enum member: ", value[enumMember]);
+            }
+        }
+        return keys;
     }
 }

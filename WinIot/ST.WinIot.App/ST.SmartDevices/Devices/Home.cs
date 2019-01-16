@@ -8,9 +8,9 @@ namespace ST.SmartDevices.Devices
     [ApiModel]
     public class Home : IOwned
     {
-        public Guid HomeId { get; set; }
+        public Guid? HomeId { get; set; }
 
-        [Required]
+        
         public string UserId { get; set; }
 
         [Required]

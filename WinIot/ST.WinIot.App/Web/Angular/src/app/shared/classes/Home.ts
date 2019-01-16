@@ -6,14 +6,14 @@
 import { Piece } from './Piece';
 
     export interface Home {
-        homeId: string;
-        userId: string;
-        name: string;
-        fullAddress: string;
-        city: string;
-        state: string;
-        country: string;
-        hubs: Hub[];
-        pieces: Piece[];
+        homeId?: string;
+        userId?: string;
+        name/*Required*/: string;
+        fullAddress/*Required*/: string;
+        city/*Required*/: string;
+        state/*Required*/: string;
+        country/*Required*/: string;
+        hubs?: Hub[];
+        pieces?: Piece[];
     }
     

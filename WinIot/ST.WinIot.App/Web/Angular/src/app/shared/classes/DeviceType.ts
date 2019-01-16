@@ -5,9 +5,9 @@
     import { DeviceTrait } from './DeviceTrait';
 
     export interface DeviceType {
-        deviceTypeId: string;
-        displayName: string;
-        description: string;
-        recommendedTraits: DeviceTrait[];
+        deviceTypeId?: string;
+        displayName?: string;
+        description?: string;
+        recommendedTraits?: DeviceTrait[];
     }
     

@@ -13,15 +13,15 @@ ${
     {
         var type = property.Type;
         var required = property.Attributes?.Any(o=>o.Name == "Required");
-
-        if (!type.IsNullable || (required.HasValue && required.Value))
-        {
-            return  $"";
-        }
-        else
-        {
-            return  $"?";
-        }
+        var isRequired = (required.HasValue && required.Value);
+        if (!isRequired && type.IsNullable)
+            return "?";
+       
+        if (isRequired || type.IsGuid || (type.IsPrimitive && type.name != "string"))
+            return "/*Required*/";
+            
+       
+        return  $"?";
     }
 
     // Get the non primitive paramaters so we can create the Imports at the
