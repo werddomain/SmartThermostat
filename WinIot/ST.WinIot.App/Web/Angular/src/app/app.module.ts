@@ -10,7 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthGuard, KazoAuthWrapper } from './shared';
 import { MatIconModule } from '@angular/material/icon';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { OAuthService, OAuthModule, UrlHelperService, OAuthLogger, AuthConfig } from 'angular-oauth2-oidc';
 import { GlobalService } from "./global.service";
 import { AngularService } from "./shared/services/AngularConfig.service"
@@ -33,6 +33,7 @@ export const createTranslateLoader = (http: HttpClient) => {
   ); */
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 };
+//This value is only used if we use ng serve. Else we override this when we call the Angular mvc Api 'config/GetAuth'
 const authConfig: AuthConfig = {
     issuer: "https://dev.kazo.ca/auth",
     clientId: "Jsd8sd7Sd6sdnsdf8sdf6jKJdsf784f45sf7SDf98sdfSdfnsdfjsdf7sdf8s7dfsdf",
@@ -51,6 +52,7 @@ export function load_settings(appLoadService: AppLoadService) {
     BrowserAnimationsModule,
     HttpClientModule,
       FormsModule,
+      ReactiveFormsModule,
       NgbModule,
       FontAwesomeModule,
     TranslateModule.forRoot({

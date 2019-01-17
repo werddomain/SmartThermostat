@@ -47,7 +47,7 @@ var homepageRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>Test </h1>\r\n<i class=\"fab fa-acquisitions-incorporated\"></i>\r\n"
+module.exports = "\r\n<app-bread-crumb [heading]=\"'test'\" [items]=\"breadCrumbItems\"></app-bread-crumb>\r\n"
 
 /***/ }),
 
@@ -78,6 +78,20 @@ __webpack_require__.r(__webpack_exports__);
 
 var homepageComponent = /** @class */ (function () {
     function homepageComponent() {
+        this.breadCrumbItems = [
+            {
+                name: "home",
+                active: false,
+                icon: "fa-home",
+                route: "/home"
+            },
+            {
+                name: "current",
+                active: true,
+                icon: "fa-anchor",
+                route: null
+            }
+        ];
     }
     homepageComponent.prototype.ngOnInit = function () { };
     homepageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([

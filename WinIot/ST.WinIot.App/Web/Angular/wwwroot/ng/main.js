@@ -45,6 +45,11 @@ var map = {
 		"common",
 		"grid-grid-module"
 	],
+	"./home/home.module": [
+		"./src/app/layout/setup/home/home.module.ts",
+		"common",
+		"home-home-module"
+	],
 	"./homepage/homepage.module": [
 		"./src/app/layout/homepage/homepage.module.ts",
 		"homepage-homepage-module"
@@ -65,6 +70,11 @@ var map = {
 	"./server-error/server-error.module": [
 		"./src/app/server-error/server-error.module.ts",
 		"server-error-server-error-module"
+	],
+	"./setup/setup.module": [
+		"./src/app/layout/setup/setup.module.ts",
+		"common",
+		"setup-setup-module"
 	],
 	"./signup/signup.module": [
 		"./src/app/signup/signup.module.ts",
@@ -630,7 +640,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n        <h2 class=\"page-header\">\r\n            {{heading}}\r\n        </h2>\r\n        <ol class=\"breadcrumb\" *ngFor=\"let item of items\">\r\n            <li class=\"breadcrumb-item\" [class.active]=\"item.active\">\r\n                <i class=\"fa {{item.icon}}\"></i> <a href=\"Javascript:void(0)\" [routerLink]=\"item.route ? [item.route] : []\"> {{item.name}}</a>\r\n            </li>\r\n            <!--<li class=\"breadcrumb-item active\"><i class=\"fa {{icon}}\"></i> {{heading}}</li>-->\r\n        </ol>\r\n    </div>\r\n</div>\r\n"
+module.exports = "<div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n        <h2 class=\"page-header\">\r\n            {{heading}}\r\n        </h2>\r\n        <ol class=\"breadcrumb\" >\r\n            <li class=\"breadcrumb-item\" *ngFor=\"let item of items\" [class.active]=\"item.active\">\r\n                <i class=\"fa {{item.icon}}\"></i> <a href=\"Javascript:void(0)\" [routerLink]=\"item.route ? [item.route] : []\"> {{item.name}}</a>\r\n            </li>\r\n            <!--<li class=\"breadcrumb-item active\"><i class=\"fa {{icon}}\"></i> {{heading}}</li>-->\r\n        </ol>\r\n    </div>\r\n</div>\r\n"
 
 /***/ }),
 

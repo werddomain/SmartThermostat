@@ -1,5 +1,58 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["common"],{
 
+/***/ "./src/app/layout/setup/setup.service.ts":
+/*!***********************************************!*\
+  !*** ./src/app/layout/setup/setup.service.ts ***!
+  \***********************************************/
+/*! exports provided: SetupService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SetupService", function() { return SetupService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var SetupService = /** @class */ (function () {
+    function SetupService() {
+        this.fireBreadCrumbItemChanged = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+    }
+    SetupService.prototype.SetBreadCrumb = function (newValue) {
+        this.breadCrumbs = newValue;
+        this.fireBreadCrumbItemChanged.emit(newValue);
+    };
+    SetupService.prototype.GetBreadCrumbs = function () { return this.breadCrumbs; };
+    SetupService.prototype.ActivateBreadCrumb = function (item) {
+        var allredyAdded = false;
+        if (this.breadCrumbs)
+            for (var i = 0; i < this.breadCrumbs.length; i++) {
+                if (this.breadCrumbs[i].name == item.name) {
+                    allredyAdded = true;
+                    this.breadCrumbs[i].active = true;
+                }
+                else
+                    this.breadCrumbs[i].active = false;
+            }
+        if (!allredyAdded)
+            this.breadCrumbs.push(item);
+        this.fireBreadCrumbItemChanged.emit(this.breadCrumbs);
+    };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])
+    ], SetupService.prototype, "fireBreadCrumbItemChanged", void 0);
+    SetupService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], SetupService);
+    return SetupService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/router.animations.ts":
 /*!**************************************!*\
   !*** ./src/app/router.animations.ts ***!

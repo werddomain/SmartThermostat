@@ -7,7 +7,23 @@ import { Home, Piece, PieceTypeEnum } from '@app/shared/classes'
     styleUrls: ['./home.component.less']
 })
 export class homeComponent implements OnInit {
-    constructor(private setupService: SetupService) {}
+    constructor(private setupService: SetupService) {
+        this.currentPiece = {
+            floor: 1,
+            homeId: "",
+            name: "",
+            type: PieceTypeEnum.Living_Room
+        };
+        this.home = {
+            city: "",
+            country: "",
+            fullAddress: "",
+            homeId: "",
+            name: "",
+            state: ""
+        };
+
+    }
     home: Home;
     currentPiece: Piece;
     pieces: Array<Piece>;
@@ -26,9 +42,12 @@ export class homeComponent implements OnInit {
         });
         if (this.setupService.CurrentHome != null)
             this.home = this.setupService.CurrentHome;
-
+        
         if (this.setupService.Pieces != null && this.pieces.length > 0)
             this.pieces = this.setupService.Pieces;
+        this.pieces = new Array<Piece>();
+        
+
         this.piecesTypes = this.getEnumValues();
     }
     cleanCurrentPeice() {
@@ -61,13 +80,20 @@ export class homeComponent implements OnInit {
         };
     }
     private getEnumValues(): Array<SelectItem> {
+        /* Enums are listed like this in the object:
+         * 0: "EnumName0"
+         * 1: "EnumName1"
+         * "EnumName0": 0
+         * "EnumName1": 1
+         * */
         let keys = new Array<SelectItem>();
         for (var enumMember in PieceTypeEnum) {
+            //So we get only the integer one
             var isValueProperty = parseInt(enumMember, 10) >= 0
             if (isValueProperty) {
+                //Then we get the corresponding name by PieceTypeEnum[enumMember]
                 keys.push(<SelectItem>{ value: parseInt(enumMember), name: (<string>PieceTypeEnum[enumMember]).replace("_", " ") });
-                // Uncomment if you want log
-                // console.log("enum member: ", value[enumMember]);
+                
             }
         }
         return keys;
