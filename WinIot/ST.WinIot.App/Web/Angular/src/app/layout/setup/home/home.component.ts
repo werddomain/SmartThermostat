@@ -1,12 +1,15 @@
 import { Component, OnInit, Pipe, PipeTransform } from '@angular/core';
 import { SetupService } from "../setup.service"
 import { Home, Piece, PieceTypeEnum } from '@app/shared/classes'
+import { FormControl, FormGroup, Validators } from "@angular/forms";
+
 @Component({
     selector: 'app-home',
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.less']
 })
 export class homeComponent implements OnInit {
+   
     constructor(private setupService: SetupService) {
         this.currentPiece = {
             floor: 1,
@@ -22,7 +25,7 @@ export class homeComponent implements OnInit {
             name: "",
             state: ""
         };
-
+        
     }
     home: Home;
     currentPiece: Piece;
@@ -34,10 +37,11 @@ export class homeComponent implements OnInit {
     }
 
     ngOnInit() {
+        this.setupService.setHeadling("Home and Pieces");
         this.setupService.ActivateBreadCrumb({
             active: true,
             icon: "fa-home",
-            name: "Home",
+            name: "Home and Pieces",
             route: "/setup/home"
         });
         if (this.setupService.CurrentHome != null)
@@ -68,7 +72,11 @@ export class homeComponent implements OnInit {
         this.currentPiece = this.pieces[index];
     }
     removePeice(index: number) {
-        this.pieces.splice(index);
+        this.pieces.splice(index, 1);
+    }
+    EndMessage: string;
+    Next() {
+        
     }
     private clonePiece(item: Piece): Piece {
         return {

@@ -5,9 +5,13 @@
     import { DeviceTrait } from './DeviceTrait';
 
     export interface DeviceType {
+        /**  [Type:string] */
         deviceTypeId?: string;
+        /**  [Type:string] */
         displayName?: string;
+        /**  [Type:string] */
         description?: string;
+        /**  [Type:DeviceTrait[]] */
         recommendedTraits?: DeviceTrait[];
     }
     

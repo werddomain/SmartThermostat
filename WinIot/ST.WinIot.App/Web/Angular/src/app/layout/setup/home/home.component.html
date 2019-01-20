@@ -2,6 +2,7 @@
 
 <div class="row">
     <div class="col-md-12">
+
         <!-- ######## Home Card #########-->
         <div class="card m-5">
             <div class="card-header">
@@ -22,6 +23,19 @@
                             </div>
                         </div>
                     </div>
+                    <div *ngIf="home.name.invalid && (home.name.dirty || home.name.touched)"
+                         class="alert alert-danger">
+
+                        <div *ngIf="home.name.errors.required">
+                            Home Name is required.
+                        </div>
+                        <div *ngIf="name.errors.minlength">
+                            Name must be at least 4 characters long.
+                        </div>
+                        <div *ngIf="name.errors.forbiddenName">
+                            Name cannot be Bob.
+                        </div>
+                    </div>
                     <div class="form-group">
                         <label for="fullAddress" class="control-label col-xs-4">Address</label>
                         <div class="col-xs-8">
@@ -32,18 +46,18 @@
                                     </div>
                                 </div>
 
-                                <input [(ngModel)]="home.fullAddress" id="fullAddress" name="fullAddress" placeholder="123 MyStreat, city, state country " required="required" type="text" class="form-control">
+                                <input [(ngModel)]="home.fullAddress" id="fullAddress" name="fullAddress" placeholder="123 MyStreet, city, state country " required="required" type="text" class="form-control">
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="city" class="control-label col-xs-4">city</label>
+                        <label for="city" class="control-label col-xs-4">City</label>
                         <div class="col-xs-8">
                             <input [(ngModel)]="home.city" id="city" name="city" type="text" class="form-control" required="required">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="state" class="control-label col-xs-4">state</label>
+                        <label for="state" class="control-label col-xs-4">State</label>
                         <div class="col-xs-8">
                             <input [(ngModel)]="home.state" id="state" name="state" type="text" class="form-control" required="required">
                         </div>
@@ -131,6 +145,10 @@
             </div>
         </div>
         <!-- ######## /Peices Card #########-->
+        <div *ngIf="EndMessage" class="alert alert-danger" role="alert">
+            {{EndMessage}}
+        </div>
+        <button class="btn btn-lg btn-success" type="button" (click)="Next()">Next <i class="fa fa-forward"></i></button>
     </div>
 </div>
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone } from '@angular/core';
 import { SetupService } from "./setup.service"
 import { BreadCrumbItem } from '../../shared/modules/bread-crumb/bread-crumb.component';
 
@@ -8,17 +8,26 @@ import { BreadCrumbItem } from '../../shared/modules/bread-crumb/bread-crumb.com
     styleUrls: ['./setup.component.less']
 })
 export class setupComponent implements OnInit {
-    constructor(private setupService: SetupService) {
-        
+    constructor(private setupService: SetupService, private zone: NgZone) {
+        this.setupService.fireBreadCrumbItemChanged.subscribe(o => {
+           
+                this.BreadCrumbs = o;
+                console.log('breadCrumb recived on Setup', o);
+        });
+        this.setupService.fireHeadlingChanged.subscribe(o => {
+            this.heading = o;
+        });
     }
     public BreadCrumbs: BreadCrumbItem[]
+    public heading: string;
+
     ngOnInit() {
-        this.setupService.fireBreadCrumbItemChanged.subscribe(o => { this.BreadCrumbs = o; });
-        this.setupService.SetBreadCrumb([{
+        this.BreadCrumbs = [{
             active: false,
             icon: "fa-cogs",
             name: "Setup",
             route: "/setup"
-        }]);
+        }];
+        this.setupService.SetBreadCrumb(this.BreadCrumbs);
     }
 }

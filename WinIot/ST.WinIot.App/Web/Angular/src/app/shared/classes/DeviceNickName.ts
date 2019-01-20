@@ -4,8 +4,11 @@
     // More info: http://frhagn.github.io/Typewriter/
     
     export interface DeviceNickName {
+        /**  [Type:Guid] */
         deviceNickNameId/*Required*/: string;
+        /**  [Type:Guid] */
         deviceId/*Required*/: string;
+        /**  [Type:string] */
         nickName?: string;
     }
     

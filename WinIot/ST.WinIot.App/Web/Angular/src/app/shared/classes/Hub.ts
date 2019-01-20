@@ -7,13 +7,21 @@ import { Device } from './Device';
 import { Relay } from './Relay';
 
     export interface Hub {
+        /** Db Key [Type:Guid] */
         hubId/*Required*/: string;
+        /** UserId Guid. Will be overwrited on Insert and Update by the current userid [Type:string] */
         userId/*Required*/: string;
+        /**  [Type:Guid] */
         homeId/*Required*/: string;
+        /** The hardware the hub is hosted on. Usually a Rapsberry Pie [Zero, 2 or 3] [Type:string] */
         hardware?: string;
+        /** The Piece the hub is setup in. [Type:Guid] */
         pieceId/*Required*/: string;
+        /**  [Type:Piece] */
         piece?: Piece;
+        /** Devices controlled by this Hub. It will give you devices in connected relays to. [Type:Device[]] */
         devices?: Device[];
+        /** Relays connected to this hub. [Type:Relay[]] */
         relays?: Relay[];
     }
     

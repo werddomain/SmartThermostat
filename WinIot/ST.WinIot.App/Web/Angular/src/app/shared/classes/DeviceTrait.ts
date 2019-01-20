@@ -4,8 +4,11 @@
     // More info: http://frhagn.github.io/Typewriter/
     
     export interface DeviceTrait {
+        /**  [Type:string] */
         deviceTraitId?: string;
+        /**  [Type:string] */
         displayName?: string;
+        /**  [Type:string] */
         description?: string;
     }
     

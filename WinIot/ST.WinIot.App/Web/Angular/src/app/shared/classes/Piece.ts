@@ -6,12 +6,19 @@
 import { PieceTypeEnum } from './PieceTypeEnum';
 
     export interface Piece {
+        /** Db Key [Type:Guid] */
         pieceId?: string;
+        /**  [Type:Guid] */
         homeId/*Required*/: string;
+        /**  [Type:Home] */
         home?: Home;
+        /** UserId Guid. Will be overwrited on Insert and Update by the current userid [Type:string] */
         userId?: string;
+        /** Piece name given to Voice Assistant to help you to setup devices [Type:string] */
         name/*Required*/: string;
+        /** Piece type given to voice assistant to suggest new activities and scenes [Type:PieceTypeEnum] */
         type/*Required*/: PieceTypeEnum;
+        /** Used by temperature controller to help to build a mesh of the temperature in the home [Type:number] */
         floor/*Required*/: number;
     }
     

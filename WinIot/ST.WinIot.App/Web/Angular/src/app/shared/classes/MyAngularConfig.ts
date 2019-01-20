@@ -4,11 +4,17 @@
     // More info: http://frhagn.github.io/Typewriter/
     
     export interface MyAngularConfig {
+        /**  [Type:string] */
         clientId?: string;
+        /**  [Type:string] */
         authServer?: string;
+        /**  [Type:string] */
         scope?: string;
+        /**  [Type:string] */
         apiServer?: string;
+        /**  [Type:string] */
         websiteName?: string;
+        /**  [Type:string] */
         websiteShortName?: string;
     }
     

@@ -4,9 +4,13 @@
     // More info: http://frhagn.github.io/Typewriter/
     
     export interface GoogleUser {
+        /**  [Type:Guid] */
         googleUserId/*Required*/: string;
+        /**  [Type:string] */
         userId?: string;
+        /**  [Type:boolean] */
         active/*Required*/: boolean;
+        /**  [Type:Date] */
         activationDate/*Required*/: Date;
     }
     

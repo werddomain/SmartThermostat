@@ -29,7 +29,9 @@ export class LoginComponent implements OnInit {
     password: string;
     loginFailed: boolean;
     webSiteName: string;
-    ngOnInit() { }
+    ngOnInit() {
+        this.loginOnAuthWebsite();
+    }
     loginOnAuthWebsite() {
         this.oauthService.loadDiscoveryDocument().then(() => {
             

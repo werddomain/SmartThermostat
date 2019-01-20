@@ -5,23 +5,27 @@
     import { DeviceType } from './DeviceType';
 import { DeviceTrait } from './DeviceTrait';
 import { DeviceNickName } from './DeviceNickName';
-import { Hub } from './Hub';
-import { Relay } from './Relay';
-import { Piece } from './Piece';
 
     export interface Device {
+        /** Db Key [Type:Guid] */
         deviceId/*Required*/: string;
+        /** UserId Guid. Will be overwrited on Insert and Update by the current userid [Type:string] */
         userId?: string;
+        /** If this device use an arduino as a relay to comunicate with the hub, this is the arduino RelayId [Type:Guid] */
         relayId?: string;
+        /** The Hub, usually the RaspberryPie [Type:Guid] */
         hubId/*Required*/: string;
+        /** The piece this device is in. [Type:Guid] */
         pieceId/*Required*/: string;
+        /** The device Name. It will be the name used by Vocal Assistant to. [Type:string] */
         name/*Required*/: string;
+        /** This is the number inside the arduino responsable to control the device. It will be set automaticly. Dont change this id. [Type:number] */
         arduinoId/*Required*/: number;
+        /** The google Device Type [Type:DeviceType] */
         deviceType?: DeviceType;
+        /** The google device capability (Traits) [Type:DeviceTrait[]] */
         traits?: DeviceTrait[];
+        /** Others names given to Vocal Assistant to call this device [Type:DeviceNickName[]] */
         nickNames?: DeviceNickName[];
-        hub?: Hub;
-        relay?: Relay;
-        piece?: Piece;
     }
     

@@ -17,11 +17,8 @@ import { AngularService } from "./shared/services/AngularConfig.service"
 import { JwtInterceptor } from "./shared/Interceptors/jwt-interceptor.service"
 import { AppLoadService } from "./app-load.service"
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { fas } from '@fortawesome/free-solid-svg-icons';
-import { far } from '@fortawesome/free-regular-svg-icons';
-library.add(fas, far);
+import { NgBootstrapFormValidationModule } from 'ng-bootstrap-form-validation';
+
 
 // AoT requires an exported function for factories
 export const createTranslateLoader = (http: HttpClient) => {
@@ -54,7 +51,7 @@ export function load_settings(appLoadService: AppLoadService) {
       FormsModule,
       ReactiveFormsModule,
       NgbModule,
-      FontAwesomeModule,
+      NgBootstrapFormValidationModule.forRoot(),
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -82,7 +79,6 @@ export function load_settings(appLoadService: AppLoadService) {
 })
 export class AppModule {
     constructor() {
-        //https://github.com/FortAwesome/angular-fontawesome
-        library.add(fas, far);
+       
     }
 }

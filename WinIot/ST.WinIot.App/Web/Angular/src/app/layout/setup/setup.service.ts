@@ -4,6 +4,7 @@ import { Home, Piece, PieceTypeEnum, Hub } from '@app/shared/classes'
 @Injectable()
 export class SetupService {
     @Output() fireBreadCrumbItemChanged: EventEmitter<Array<BreadCrumbItem>> = new EventEmitter();
+    @Output() fireHeadlingChanged: EventEmitter<string> = new EventEmitter();
     constructor() {
 
     }
@@ -15,11 +16,16 @@ export class SetupService {
     //for page /setup/hub
     public Hub: Hub;
 
+    public Heading: string;
+
     public SetBreadCrumb(newValue: Array<BreadCrumbItem>) {
         this.breadCrumbs = newValue;
         this.fireBreadCrumbItemChanged.emit(newValue);
     }
-
+    public setHeadling(headling: string) {
+        this.Heading = headling;
+        this.fireHeadlingChanged.emit(headling);
+    }
     private breadCrumbs: Array<BreadCrumbItem>;
     public GetBreadCrumbs(): Array<BreadCrumbItem> { return this.breadCrumbs; }
     public ActivateBreadCrumb(item: BreadCrumbItem) {
@@ -35,6 +41,7 @@ export class SetupService {
             }
         if (!allredyAdded)
             this.breadCrumbs.push(item);
+        console.log('ActivateBreadCrumb', this.breadCrumbs);
         this.fireBreadCrumbItemChanged.emit(this.breadCrumbs);
     }
 }
