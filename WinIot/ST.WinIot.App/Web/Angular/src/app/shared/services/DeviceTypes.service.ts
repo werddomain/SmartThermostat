@@ -8,10 +8,9 @@
 //*************************DO NOT MODIFY**************************
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http'; 
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/do';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/operator/map';
+import { Observable } from 'rxjs/Rx'
+import { IApiError } from "./IApiError"
+
 //ST.Web.API
 import { DeviceType } from '../classes/DeviceType';
 import { GlobalService } from "../../global.service";
@@ -34,6 +33,10 @@ export class DeviceTypesService {
         if (error.error) {
             customError = error.status === 400 ? error.error : error.statusText
         }
-        return Observable.throw(customError || 'Server error');
+        let apiError: IApiError = {
+            customText: customError || 'Server error',
+            httpError: error
+        }
+        return Observable.throw(apiError);
     }
 }

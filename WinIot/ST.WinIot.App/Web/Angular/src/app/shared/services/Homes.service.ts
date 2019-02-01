@@ -1,4 +1,4 @@
-﻿
+
 
 //*************************DO NOT MODIFY**************************
 //
@@ -8,13 +8,11 @@
 //*************************DO NOT MODIFY**************************
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http'; 
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/do';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/operator/map';
+import { Observable } from 'rxjs/Rx'
 //ST.Web.API
 import { Home } from '../classes/Home';
 import { GlobalService } from "../../global.service";
+import {IApiError } from "./IApiError"
 //Remote Call
 @Injectable()
 export class HomesService {
@@ -62,6 +60,13 @@ export class HomesService {
         if (error.error) {
             customError = error.status === 400 ? error.error : error.statusText
         }
-        return Observable.throw(customError || 'Server error');
+        if (error.status == 404)
+            customError = "Not Found";
+
+        let apiError: IApiError = {
+            customText: customError || 'Server error',
+            httpError: error
+        }
+        return Observable.throw(apiError);
     }
 }

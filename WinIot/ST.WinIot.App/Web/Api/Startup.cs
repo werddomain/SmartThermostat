@@ -35,8 +35,8 @@ namespace ST.Web.API
                 .AddAuthorization()
                 .AddApiExplorer()
                 .AddJsonFormatters();
-                
 
+			services.AddCors();
             //https://github.com/RSuter/NSwag/wiki/AspNetCore-Middleware
             
             services.AddSwaggerDocument(c => {
@@ -66,6 +66,14 @@ namespace ST.Web.API
 
         public void Configure(IApplicationBuilder app)
         {
+			app.UseCors(builder =>
+			{
+				builder.AllowAnyHeader();
+				builder.AllowAnyMethod();
+				builder.AllowAnyOrigin();
+				builder.SetIsOriginAllowedToAllowWildcardSubdomains();
+
+			});
             app.UseWebSockets();
             app.UseAuthentication();
             app.UseSwagger(c => {

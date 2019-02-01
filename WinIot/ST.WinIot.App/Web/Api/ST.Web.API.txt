@@ -39,3 +39,26 @@ System.ArgumentException: The OpenAPI/Swagger document 'v1' registered multiple 
 2019-01-10 01:11:03.747 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
 2019-01-10 01:11:18.377 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
 2019-01-10 23:06:19.345 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-01-20 16:24:00.612 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-01-20 17:11:38.809 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-01-20 17:16:07.803 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-01-20 17:17:14.566 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-01-20 17:17:48.078 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-01-20 17:19:34.413 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-01-20 17:22:15.237 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-01-20 17:34:57.831 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-01-20 17:36:05.905 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-01-20 17:36:58.770 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-01-20 17:38:42.703 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-01-20 18:57:11.694 -05:00 [INF] Successfully validated the token.
+2019-01-20 18:57:11.722 -05:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2019-01-20 18:59:39.352 -05:00 [INF] Successfully validated the token.
+2019-01-20 18:59:39.352 -05:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2019-01-20 19:01:52.352 -05:00 [INF] Successfully validated the token.
+2019-01-20 19:01:52.352 -05:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2019-01-20 19:04:05.517 -05:00 [INF] Successfully validated the token.
+2019-01-20 19:04:05.517 -05:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2019-01-20 19:04:05.771 -05:00 [INF] Successfully validated the token.
+2019-01-20 19:04:05.771 -05:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2019-01-20 19:07:03.187 -05:00 [INF] Successfully validated the token.
+2019-01-20 19:07:03.187 -05:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.

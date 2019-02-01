@@ -6,12 +6,14 @@ export class SetupService {
     @Output() fireBreadCrumbItemChanged: EventEmitter<Array<BreadCrumbItem>> = new EventEmitter();
     @Output() fireHeadlingChanged: EventEmitter<string> = new EventEmitter();
     constructor() {
-
+        this.breadCrumbs = new Array<BreadCrumbItem>();
     }
 
     //For Page /setup/home
     public CurrentHome: Home;
     public Pieces: Array<Piece>;
+    public homeSaved: boolean
+    public piecesSaved: boolean;
 
     //for page /setup/hub
     public Hub: Hub;

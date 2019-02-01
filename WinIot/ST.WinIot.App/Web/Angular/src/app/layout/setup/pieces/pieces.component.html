@@ -1,0 +1,76 @@
+<div class="row">
+    <div class="col-md-12">
+
+       
+        <!-- ######## Peices Card #########-->
+        <div class="card m-5">
+            <div class="card-header">
+                Pieces
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group row">
+                        <label for="peiceName" class="col-4 col-form-label">Name</label>
+                        <div class="col-8">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <i class="fa fa-codepen"></i>
+                                    </div>
+                                </div>
+
+                                <input id="peiceName" name="peiceName" [(ngModel)]="currentPiece.name" placeholder="Living Room" type="text" class="form-control here" required="required" maxlength="30">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="pieceFloor" class="col-4 col-form-label">Floor</label>
+                        <div class="col-8">
+                            <input id="pieceFloor" [(ngModel)]="currentPiece.floor" name="pieceFloor" placeholder="1" type="number" class="form-control here" aria-describedby="pieceFloorHelpBlock" required="required">
+                            <span id="pieceFloorHelpBlock" class="form-text text-muted">0 = basement, 1 = 1st floor</span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="peiceType" class="col-4 col-form-label">Piece Type</label>
+                        <div class="col-8">
+                            <select [(ngModel)]="currentPiece.type" name="peiceType" id="peiceType" class="form-control" required>
+                                <option *ngFor="let item of piecesTypes" value="{{item.value}}">{{item.name}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="offset-4 col-8">
+                            <button class="btn btn-success" type="button" *ngIf="!isInEdit" (click)="addPeice()"><i class="fa fa-plus"></i> Add</button>
+                            <button class="btn btn-primary" type="button" *ngIf="isInEdit" (click)="savePeice()"><i class="fa fa-save"></i> Save</button>
+                        </div>
+                    </div>
+                </form>
+
+
+
+
+            </div>
+            <div class="card-body">
+                <div class="list-group list-group-flush">
+
+                    <div *ngFor="let item of pieces; let i = index" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">{{item.name}}</h5>
+                            <small class="text-muted">{{getPieceTypeName(item.type)}}</small>
+                        </div>
+                        <p class="mb-1">
+                            <button type="button" (click)="editPeice(i)" class="btn btn-primary"><i class=" fa fa-pencil"></i> Edit</button>
+                            <button type="button" (click)="removePeice(i)" class="btn btn-danger"><i class="fa fa-trash"></i> Remove</button>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ######## /Peices Card #########-->
+        <div *ngIf="EndMessage" class="alert alert-danger" role="alert">
+            {{EndMessage}}
+        </div>
+        <button *nfIf="canSave" class="btn btn-lg btn-success" type="button" (click)="Next()">Next <i class="fa fa-forward"></i></button>
+    </div>
+</div>

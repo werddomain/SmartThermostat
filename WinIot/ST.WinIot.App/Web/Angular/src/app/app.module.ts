@@ -13,7 +13,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { OAuthService, OAuthModule, UrlHelperService, OAuthLogger, AuthConfig } from 'angular-oauth2-oidc';
 import { GlobalService } from "./global.service";
-import { AngularService } from "./shared/services/AngularConfig.service"
+
+import { ServicesModule } from './shared/services/services.module'
 import { JwtInterceptor } from "./shared/Interceptors/jwt-interceptor.service"
 import { AppLoadService } from "./app-load.service"
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -60,12 +61,12 @@ export function load_settings(appLoadService: AppLoadService) {
       }
     }),
     AppRoutingModule,
-    OAuthModule.forRoot()
+      OAuthModule.forRoot(),
+      ServicesModule.forRoot()
   ],
   declarations: [AppComponent],
     providers: [
         GlobalService,
-        AngularService,
         AuthGuard,
         KazoAuthWrapper,
         { provide: AuthConfig, useValue: authConfig },

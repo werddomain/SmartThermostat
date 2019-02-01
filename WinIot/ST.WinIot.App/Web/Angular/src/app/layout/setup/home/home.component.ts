@@ -1,8 +1,10 @@
 import { Component, OnInit, Pipe, PipeTransform } from '@angular/core';
+import { Router } from '@angular/router';
 import { SetupService } from "../setup.service"
 import { Home, Piece, PieceTypeEnum } from '@app/shared/classes'
 import { FormControl, FormGroup, Validators } from "@angular/forms";
-
+import { HomesService } from '@app/shared/services/Homes.service'
+import { Observable } from 'rxjs';
 @Component({
     selector: 'app-home',
     templateUrl: './home.component.html',
@@ -10,13 +12,8 @@ import { FormControl, FormGroup, Validators } from "@angular/forms";
 })
 export class homeComponent implements OnInit {
    
-    constructor(private setupService: SetupService) {
-        this.currentPiece = {
-            floor: 1,
-            homeId: "",
-            name: "",
-            type: PieceTypeEnum.Living_Room
-        };
+    constructor(private router: Router, private setupService: SetupService, private homesService: HomesService ) {
+        
         this.home = {
             city: "",
             country: "",
@@ -28,103 +25,69 @@ export class homeComponent implements OnInit {
         
     }
     home: Home;
-    currentPiece: Piece;
-    pieces: Array<Piece>;
-    piecesTypes: Array<SelectItem>;
-    isInEdit: boolean = false;
-    getPieceTypeName(type: PieceTypeEnum): string {
-        return PieceTypeEnum[type].replace("_", " ");
-    }
+    
+
 
     ngOnInit() {
-        this.setupService.setHeadling("Home and Pieces");
+        console.log("home.ngOnInit()");
+        this.setupService.setHeadling("Home");
         this.setupService.ActivateBreadCrumb({
             active: true,
             icon: "fa-home",
-            name: "Home and Pieces",
+            name: "Home",
             route: "/setup/home"
         });
-        if (this.setupService.CurrentHome != null)
+        if (this.setupService.CurrentHome != null) {
             this.home = this.setupService.CurrentHome;
+        }
+        else
+        {
+            this.homesService.getHomes().subscribe(home => {
+                if (home != null && home.length > 0) {
+                    this.setupService.CurrentHome = home[0];
+                    this.home = home[0];
+                    this.setupService.homeSaved = true;
+                }
+            });
+        }
         
-        if (this.setupService.Pieces != null && this.pieces.length > 0)
-            this.pieces = this.setupService.Pieces;
-        this.pieces = new Array<Piece>();
         
 
-        this.piecesTypes = this.getEnumValues();
-    }
-    cleanCurrentPeice() {
-        this.currentPiece = this.clonePiece(this.currentPiece);
-        this.currentPiece.name = "";
-        this.currentPiece.pieceId = "";
-    }
-    addPeice() {
-        this.pieces.push(this.currentPiece);
-        this.cleanCurrentPeice();
-    }
-    savePeice() {
-        this.isInEdit = false;
-        this.cleanCurrentPeice();
-    }
-    editPeice(index: number) {
-        this.isInEdit = true;
-        this.currentPiece = this.pieces[index];
-    }
-    removePeice(index: number) {
-        this.pieces.splice(index, 1);
-    }
-    EndMessage: string;
-    Next() {
         
     }
-    private clonePiece(item: Piece): Piece {
-        return {
-            floor: item.floor,
-            name: item.name,
-            type: item.type,
-            homeId: item.homeId
-            
-        };
+    
+    EndMessage: string;
+    private ServiceError(error: any) {
+        this.EndMessage = error;
     }
-    private getEnumValues(): Array<SelectItem> {
-        /* Enums are listed like this in the object:
-         * 0: "EnumName0"
-         * 1: "EnumName1"
-         * "EnumName0": 0
-         * "EnumName1": 1
-         * */
-        let keys = new Array<SelectItem>();
-        for (var enumMember in PieceTypeEnum) {
-            //So we get only the integer one
-            var isValueProperty = parseInt(enumMember, 10) >= 0
-            if (isValueProperty) {
-                //Then we get the corresponding name by PieceTypeEnum[enumMember]
-                keys.push(<SelectItem>{ value: parseInt(enumMember), name: (<string>PieceTypeEnum[enumMember]).replace("_", " ") });
-                
-            }
-        }
-        return keys;
+    private ServiceSaved(home: Home) {
+        this.home = home;
+        this.setupService.CurrentHome = home;
+        this.setupService.homeSaved = true;
+        this.router.navigate(['/setup/pieces']);
     }
-}
-export interface SelectItem {
-    value: number;
-    name: string;
-}
-@Pipe({
-    name: 'enumToArray'
-})
-export class EnumToArrayPipe implements PipeTransform {
-    transform(value, args: string[]): any {
-        let keys = [];
-        for (var enumMember in value) {
-            var isValueProperty = parseInt(enumMember, 10) >= 0
-            if (isValueProperty) {
-                keys.push(<SelectItem>{ value: parseInt(enumMember), name: (<string>value[enumMember]).replace("_", " ") });
-                // Uncomment if you want log
-                // console.log("enum member: ", value[enumMember]);
-            }
-        }
-        return keys;
+    Next() {
+        
+        if (this.setupService.homeSaved)
+            this.homesService.putHome(this.home.homeId, this.home).subscribe(
+                () => {
+                    //Completed
+                    this.ServiceSaved(this.home);
+                },
+                error => {
+                    this.ServiceError(error);
+                },
+            );
+        else
+            this.homesService.postHome(this.home).subscribe(
+                (home) => {
+                    this.ServiceSaved(home);
+                },
+                error => {
+                    this.ServiceError(error);
+                });
+
     }
+   
 }
+
