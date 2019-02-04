@@ -27,10 +27,11 @@ namespace ST.WinIot.App
     /// </summary>
     sealed partial class App : Application
     {
+		public static Connections.Auth Auth { get; private set; }
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
-        /// </summary>
+        /// </summary> 
         public static MainPageVM MainPageVM { get; set; }
         public static MainPage MainPage { get; set; }
         public App()
@@ -39,7 +40,8 @@ namespace ST.WinIot.App
             AppCenter.Start("3ceefaeb-05d3-48ee-9a44-c11c93462cdf", typeof(Analytics));
             this.Suspending += OnSuspending;
             this.UnhandledException += App_UnhandledException;
-           
+			Auth = new Connections.Auth();
+
             
         }
 

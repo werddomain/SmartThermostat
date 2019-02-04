@@ -123,6 +123,7 @@
     <Compile Include="Connections\API.cs" />
     <Compile Include="Connections\Auth.cs" />
     <Compile Include="Connections\Identity\SystemBrowser.cs" />
+    <Compile Include="Connections\Identity\Tokens.cs" />
     <Compile Include="Connections\Identity\WabBrowser.cs" />
     <Compile Include="Controls\Dth22Display.xaml.cs">
       <DependentUpon>Dth22Display.xaml</DependentUpon>
@@ -135,6 +136,7 @@
     <Compile Include="Extensions\ListExtension.cs" />
     <Compile Include="Extensions\ReflectionExtensions.cs" />
     <Compile Include="Extensions\StringExtension.cs" />
+    <Compile Include="Helpers\Settings.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
