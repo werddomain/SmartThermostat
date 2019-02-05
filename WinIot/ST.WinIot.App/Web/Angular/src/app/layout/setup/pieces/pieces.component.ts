@@ -100,20 +100,20 @@ export interface SelectItem {
     value: number;
     name: string;
 }
-@Pipe({
-    name: 'enumToArray'
-})
-export class EnumToArrayPipe implements PipeTransform {
-    transform(value, args: string[]): any {
-        let keys = [];
-        for (var enumMember in value) {
-            var isValueProperty = parseInt(enumMember, 10) >= 0
-            if (isValueProperty) {
-                keys.push(<SelectItem>{ value: parseInt(enumMember), name: (<string>value[enumMember]).replace("_", " ") });
-                // Uncomment if you want log
-                // console.log("enum member: ", value[enumMember]);
-            }
-        }
-        return keys;
-    }
-}
+//@Pipe({
+//    name: 'enumToArray'
+//})
+//export class EnumToArrayPipe implements PipeTransform {
+//    transform(value, args: string[]): any {
+//        let keys = [];
+//        for (var enumMember in value) {
+//            var isValueProperty = parseInt(enumMember, 10) >= 0
+//            if (isValueProperty) {
+//                keys.push(<SelectItem>{ value: parseInt(enumMember), name: (<string>value[enumMember]).replace("_", " ") });
+//                // Uncomment if you want log
+//                // console.log("enum member: ", value[enumMember]);
+//            }
+//        }
+//        return keys;
+//    }
+//}

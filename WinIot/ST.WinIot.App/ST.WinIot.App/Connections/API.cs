@@ -8,5 +8,7 @@ namespace ST.WinIot.App.Connections
 {
 	public class API
 	{
+
+
 	}
 }

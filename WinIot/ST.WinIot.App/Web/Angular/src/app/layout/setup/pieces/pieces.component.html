@@ -71,6 +71,6 @@
         <div *ngIf="EndMessage" class="alert alert-danger" role="alert">
             {{EndMessage}}
         </div>
-        <button *nfIf="canSave" class="btn btn-lg btn-success" type="button" (click)="Next()">Next <i class="fa fa-forward"></i></button>
+        <button *ngIf="canSave" class="btn btn-lg btn-success" type="button" (click)="Next()">Next <i class="fa fa-forward"></i></button>
     </div>
 </div>
