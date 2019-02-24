@@ -2120,3 +2120,12 @@ Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updatin
 2019-01-20 19:07:02.399 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
 2019-01-20 19:07:02.492 -05:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
 2019-01-20 19:07:02.493 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-02-20 23:50:44.864 -05:00 [INF] Starting IdentityServer4 version 2.3.2.0
+2019-02-20 23:50:45.486 -05:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-02-20 23:51:07.562 -05:00 [WRN] Failed to determine the https port for redirect.
+2019-02-22 22:05:04.943 -05:00 [WRN] Using an in-memory repository. Keys will not be persisted to storage.
+2019-02-22 22:05:04.964 -05:00 [WRN] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+2019-02-22 22:05:05.001 -05:00 [WRN] No XML encryptor configured. Key "bc7a2536-3247-4072-a94c-645d2ce15a41" may be persisted to storage in unencrypted form.
+2019-02-22 22:05:05.184 -05:00 [INF] Starting IdentityServer4 version 2.3.2.0
+2019-02-22 22:05:05.494 -05:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-02-22 22:05:21.248 -05:00 [WRN] Failed to determine the https port for redirect.

@@ -11,6 +11,7 @@ using Serilog.Events;
 using Serilog.Sinks.SystemConsole.Themes;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
+using System.IO;
 
 namespace ST.Web.API
 {
@@ -53,7 +54,9 @@ namespace ST.Web.API
                 builder.ClearProviders();
                 builder.AddSerilog();
             })
-                .UseStartup<Startup>()
+			.UseContentRoot(Directory.GetCurrentDirectory())
+			.UseIISIntegration()
+				.UseStartup<Startup>()
                 .Build();
     }
 }

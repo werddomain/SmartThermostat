@@ -6,6 +6,12 @@
     <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
     <TypeScriptCompilerBlocked>true</TypeScriptCompilerBlocked>
     <PostBuildEvent>ng build --aot</PostBuildEvent>
+    <UserSecretsId>14503236-b069-4a78-96cd-e2c61ba11583</UserSecretsId>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Prefer32Bit>true</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
 
   <ItemGroup>
