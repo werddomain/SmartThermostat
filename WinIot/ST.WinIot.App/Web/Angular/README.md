@@ -13,6 +13,9 @@ Data comme from [Web.API](https://github.com/werddomain/SmartThermostat/tree/mas
 |[Typewriter](http://frhagn.github.io/Typewriter/)  | All model and Api calls are auto-generated when modified |
 |[NpmTaskRunner](https://github.com/madskristensen/NpmTaskRunner) | This alow us to build Angular before building the .net core project|
 
+## Angular Installation
+1) Install Node.js
+2) Install Angular : `npm install -g @angular/cli`
 
 
 ## Development server

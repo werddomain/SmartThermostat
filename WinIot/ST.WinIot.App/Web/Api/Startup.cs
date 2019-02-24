@@ -40,7 +40,8 @@ namespace ST.Web.API
             //https://github.com/RSuter/NSwag/wiki/AspNetCore-Middleware
             
             services.AddSwaggerDocument(c => {
-                
+				//c.DocumentName = $"{Config.General.WebsiteShortName}API";
+				c.Description = "Api to access Smart devices";
             });
             services.AddAuthentication("Bearer")
                 .AddIdentityServerAuthentication(options =>
@@ -77,13 +78,16 @@ namespace ST.Web.API
             app.UseWebSockets();
             app.UseAuthentication();
             app.UseSwagger(c => {
+				// Don't know how to change Swagger title. It's now at 'My Title'
                 //c.Path = "/{documentName}/swagger.json";
             });
             
             app.UseSwaggerUi3(settings =>
             {
-                //settings.EnableTryItOut = true;
-                settings.ServerUrl = Config.Urls.ApiUrl;
+				//settings.EnableTryItOut = true;
+				//settings.GeneratorSettings.Title = "My API";
+				//settings.GeneratorSettings.Description = "API functionalities.";
+				settings.ServerUrl = Config.Urls.ApiUrl;
                 settings.TransformToExternalPath = (internalUiRoute, request) =>
                 {
                     if (internalUiRoute.StartsWith("/") == true && internalUiRoute.StartsWith(request.PathBase) == false)

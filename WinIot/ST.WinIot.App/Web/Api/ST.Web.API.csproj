@@ -5,6 +5,11 @@
     <UserSecretsId>347c84b6-513a-48fc-9161-435f25fb7e84</UserSecretsId>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+
   <ItemGroup>
     <Compile Remove="GoogleSmartHomeModel\**" />
     <Content Remove="GoogleSmartHomeModel\**" />

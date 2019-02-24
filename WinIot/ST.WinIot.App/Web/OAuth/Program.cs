@@ -54,7 +54,8 @@ namespace ST.Web.OAuth
                     builder.ClearProviders();
                     builder.AddSerilog();
                 })
-                .UseStartup<Startup>()
+			.UseIISIntegration()
+				.UseStartup<Startup>()
                 .Build();
     }
 }

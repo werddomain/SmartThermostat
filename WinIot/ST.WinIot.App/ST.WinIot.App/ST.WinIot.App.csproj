@@ -141,6 +141,48 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPageVM.cs" />
+    <Compile Include="My Title\DefaultModel.cs" />
+    <Compile Include="My Title\DefaultModelExtensions.cs" />
+    <Compile Include="My Title\Devices.cs" />
+    <Compile Include="My Title\DevicesExtensions.cs" />
+    <Compile Include="My Title\DeviceTraits.cs" />
+    <Compile Include="My Title\DeviceTraitsExtensions.cs" />
+    <Compile Include="My Title\DeviceTypes.cs" />
+    <Compile Include="My Title\DeviceTypesExtensions.cs" />
+    <Compile Include="My Title\Homes.cs" />
+    <Compile Include="My Title\HomesExtensions.cs" />
+    <Compile Include="My Title\Hubs.cs" />
+    <Compile Include="My Title\HubsExtensions.cs" />
+    <Compile Include="My Title\IDefaultModel.cs" />
+    <Compile Include="My Title\Identity.cs" />
+    <Compile Include="My Title\IdentityExtensions.cs" />
+    <Compile Include="My Title\IDevices.cs" />
+    <Compile Include="My Title\IDeviceTraits.cs" />
+    <Compile Include="My Title\IDeviceTypes.cs" />
+    <Compile Include="My Title\IHomes.cs" />
+    <Compile Include="My Title\IHubs.cs" />
+    <Compile Include="My Title\IIdentity.cs" />
+    <Compile Include="My Title\IMyTitle.cs" />
+    <Compile Include="My Title\IPieces.cs" />
+    <Compile Include="My Title\IRelays.cs" />
+    <Compile Include="My Title\ISmartHome.cs" />
+    <Compile Include="My Title\Models\Device.cs" />
+    <Compile Include="My Title\Models\DeviceNickName.cs" />
+    <Compile Include="My Title\Models\DeviceTrait.cs" />
+    <Compile Include="My Title\Models\DeviceType.cs" />
+    <Compile Include="My Title\Models\GoogleRequest.cs" />
+    <Compile Include="My Title\Models\Home.cs" />
+    <Compile Include="My Title\Models\Hub.cs" />
+    <Compile Include="My Title\Models\Input.cs" />
+    <Compile Include="My Title\Models\Piece.cs" />
+    <Compile Include="My Title\Models\Relay.cs" />
+    <Compile Include="My Title\MyTitle.cs" />
+    <Compile Include="My Title\Pieces.cs" />
+    <Compile Include="My Title\PiecesExtensions.cs" />
+    <Compile Include="My Title\Relays.cs" />
+    <Compile Include="My Title\RelaysExtensions.cs" />
+    <Compile Include="My Title\SmartHome.cs" />
+    <Compile Include="My Title\SmartHomeExtensions.cs" />
     <Compile Include="Pages\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
@@ -219,6 +261,9 @@
     </PackageReference>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.2</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Rest.ClientRuntime">
+      <Version>2.3.2</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.Toolkit.Uwp">
       <Version>5.0.0</Version>
