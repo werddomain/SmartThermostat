@@ -275,6 +275,7 @@ namespace ST.WinIot.App
         /// </summary>
         private void Initialize()
         {
+			
             this.DefaultModel = new DefaultModel(this);
             this.Identity = new Identity(this);
             this.SmartHome = new SmartHome(this);
@@ -285,7 +286,7 @@ namespace ST.WinIot.App
             this.Hubs = new Hubs(this);
             this.Pieces = new Pieces(this);
             this.Relays = new Relays(this);
-            this.BaseUri = new Uri("https://dev.kazo.ca/API");
+            this.BaseUri = new Uri(ST.Web.Config.Urls.ApiUrl);
             SerializationSettings = new JsonSerializerSettings
             {
                 Formatting = Formatting.Indented,
