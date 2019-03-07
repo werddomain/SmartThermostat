@@ -22,7 +22,7 @@ namespace ST.WinIot.App
     /// <summary>
     /// Devices operations.
     /// </summary>
-    public partial class Devices : IServiceOperations<MyTitle>, IDevices
+    public partial class Devices : IServiceOperations<ApiContract>, IDevices
     {
         /// <summary>
         /// Initializes a new instance of the Devices class.
@@ -30,7 +30,7 @@ namespace ST.WinIot.App
         /// <param name='client'>
         /// Reference to the service client.
         /// </param>
-        public Devices(MyTitle client)
+        public Devices(ApiContract client)
         {
             if (client == null) 
             {
@@ -42,7 +42,7 @@ namespace ST.WinIot.App
         /// <summary>
         /// Gets a reference to the MyTitle
         /// </summary>
-        public MyTitle Client { get; private set; }
+        public ApiContract Client { get; private set; }
 
         /// <param name='customHeaders'>
         /// Headers that will be added to request.

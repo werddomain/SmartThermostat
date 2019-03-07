@@ -22,7 +22,7 @@ namespace ST.WinIot.App
     /// <summary>
     /// Hubs operations.
     /// </summary>
-    public partial class Hubs : IServiceOperations<MyTitle>, IHubs
+    public partial class Hubs : IServiceOperations<ApiContract>, IHubs
     {
         /// <summary>
         /// Initializes a new instance of the Hubs class.
@@ -30,7 +30,7 @@ namespace ST.WinIot.App
         /// <param name='client'>
         /// Reference to the service client.
         /// </param>
-        public Hubs(MyTitle client)
+        public Hubs(ApiContract client)
         {
             if (client == null) 
             {
@@ -42,7 +42,7 @@ namespace ST.WinIot.App
         /// <summary>
         /// Gets a reference to the MyTitle
         /// </summary>
-        public MyTitle Client { get; private set; }
+        public ApiContract Client { get; private set; }
 
         /// <param name='customHeaders'>
         /// Headers that will be added to request.

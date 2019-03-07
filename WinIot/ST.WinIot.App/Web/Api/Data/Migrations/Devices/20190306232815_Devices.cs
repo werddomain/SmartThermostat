@@ -39,7 +39,7 @@ namespace ST.Web.API.Data.Migrations.Devices
                 columns: table => new
                 {
                     HomeId = table.Column<Guid>(nullable: false),
-                    UserId = table.Column<string>(nullable: false),
+                    UserId = table.Column<string>(nullable: true),
                     Name = table.Column<string>(nullable: false),
                     FullAddress = table.Column<string>(nullable: false),
                     City = table.Column<string>(nullable: false),
@@ -57,7 +57,7 @@ namespace ST.Web.API.Data.Migrations.Devices
                 {
                     PieceId = table.Column<Guid>(nullable: false),
                     HomeId = table.Column<Guid>(nullable: false),
-                    UserId = table.Column<string>(nullable: false),
+                    UserId = table.Column<string>(nullable: true),
                     Name = table.Column<string>(nullable: false),
                     Type = table.Column<int>(nullable: false),
                     Floor = table.Column<int>(nullable: false)

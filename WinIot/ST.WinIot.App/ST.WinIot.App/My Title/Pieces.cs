@@ -22,7 +22,7 @@ namespace ST.WinIot.App
     /// <summary>
     /// Pieces operations.
     /// </summary>
-    public partial class Pieces : IServiceOperations<MyTitle>, IPieces
+    public partial class Pieces : IServiceOperations<ApiContract>, IPieces
     {
         /// <summary>
         /// Initializes a new instance of the Pieces class.
@@ -30,7 +30,7 @@ namespace ST.WinIot.App
         /// <param name='client'>
         /// Reference to the service client.
         /// </param>
-        public Pieces(MyTitle client)
+        public Pieces(ApiContract client)
         {
             if (client == null) 
             {
@@ -42,7 +42,7 @@ namespace ST.WinIot.App
         /// <summary>
         /// Gets a reference to the MyTitle
         /// </summary>
-        public MyTitle Client { get; private set; }
+        public ApiContract Client { get; private set; }
 
         /// <param name='customHeaders'>
         /// Headers that will be added to request.

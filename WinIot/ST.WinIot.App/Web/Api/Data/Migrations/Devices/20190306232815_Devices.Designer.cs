@@ -10,7 +10,7 @@ using ST.Web.API.Data;
 namespace ST.Web.API.Data.Migrations.Devices
 {
     [DbContext(typeof(DeviceDataContext))]
-    [Migration("20190102022506_Devices")]
+    [Migration("20190306232815_Devices")]
     partial class Devices
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -125,7 +125,7 @@ namespace ST.Web.API.Data.Migrations.Devices
 
             modelBuilder.Entity("ST.SmartDevices.Devices.Home", b =>
                 {
-                    b.Property<Guid>("HomeId")
+                    b.Property<Guid?>("HomeId")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("City")
@@ -143,8 +143,7 @@ namespace ST.Web.API.Data.Migrations.Devices
                     b.Property<string>("State")
                         .IsRequired();
 
-                    b.Property<string>("UserId")
-                        .IsRequired();
+                    b.Property<string>("UserId");
 
                     b.HasKey("HomeId");
 
@@ -176,7 +175,7 @@ namespace ST.Web.API.Data.Migrations.Devices
 
             modelBuilder.Entity("ST.SmartDevices.Devices.Piece", b =>
                 {
-                    b.Property<Guid>("PieceId")
+                    b.Property<Guid?>("PieceId")
                         .ValueGeneratedOnAdd();
 
                     b.Property<int>("Floor");
@@ -188,8 +187,7 @@ namespace ST.Web.API.Data.Migrations.Devices
 
                     b.Property<int>("Type");
 
-                    b.Property<string>("UserId")
-                        .IsRequired();
+                    b.Property<string>("UserId");
 
                     b.HasKey("PieceId");
 

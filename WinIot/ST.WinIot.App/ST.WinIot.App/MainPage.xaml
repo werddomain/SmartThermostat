@@ -8,23 +8,64 @@
     xmlns:vm="using:ST.WinIot.App"
     xmlns:pages="using:ST.WinIot.App.Pages"
     xmlns:controls="using:ST.WinIot.App.Controls"
+    xmlns:fa="using:FontAwesome.UWP"
+    
     mc:Ignorable="d"
     Background="Black">
     <Page.DataContext>
         <vm:MainPageVM />
     </Page.DataContext>
     <Grid>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="LeftMenu">
+                <VisualStateGroup.Transitions>
+                    <VisualTransition GeneratedDuration="00:00:00.5000000">
+                        <VisualTransition.GeneratedEasingFunction>
+                            <BackEase EasingMode="EaseOut" Amplitude="0.5"/>
+                        </VisualTransition.GeneratedEasingFunction>
+                    </VisualTransition>
+                </VisualStateGroup.Transitions>
+                <VisualState x:Name="LeftMenuClose"/>
+                <VisualState x:Name="LeftMenuOpen">
+                    <VisualState.Setters>
+                        <Setter Target="LeftMenuContainer.(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Value="250"/>
+                        <Setter Target="LeftMenuOverlay.(UIElement.Opacity)" Value="0.7"/>
+                        
+                    </VisualState.Setters>
+
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="66"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="49"/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
-        <StackPanel Orientation="Horizontal" Spacing="10">
-            <Button Content="Home" Command="{Binding NavigateCmd}" CommandParameter="Pages/HomePage"/>
-            <Button Content="Test" Command="{Binding NavigateCmd}" CommandParameter="Pages/TestPage"/>
-        </StackPanel>
+        <StackPanel Orientation="Horizontal" Spacing="10" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Grid.Column="1"/>
         <!--<controls:RadialMeter Value="{Binding EnvironementSensor.Humidity}"/>
         <controls:RadialMeter Value="{Binding EnvironementSensor.Temperature}" Grid.Column="1"/>-->
-        <Frame x:Name="MainFrame" Grid.Row="1" x:FieldModifier="Public"/>
+        <Frame x:Name="MainFrame" Grid.Row="1" x:FieldModifier="Public" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"/>
+        <Grid x:Name="LeftMenuOverlay" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Visibility="Visible" Background="#FF343434" Opacity="0">
+            <Rectangle HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Tapped="Rectangle_Tapped" Fill="Transparent"></Rectangle>
+        </Grid>
+        <Grid x:Name="LeftMenuContainer" Margin="-250,0,0,0" Background="#FF171313" Grid.Row="1" HorizontalAlignment="Left" Width="250" BorderBrush="#FF747070" BorderThickness="2,2,2,2" Padding="5,5,5,5" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Stretch">
+            <Grid.RenderTransform>
+                <CompositeTransform/>
+            </Grid.RenderTransform>
+
+            <ScrollViewer Width="236" HorizontalAlignment="Left">
+                <StackPanel Orientation="Vertical" Spacing="10">
+                    <Button Content="Home" Command="{Binding NavigateCmd}" CommandParameter="Pages/HomePage"/>
+                    <Button Content="Test" Command="{Binding NavigateCmd}" CommandParameter="Pages/TestPage"/>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+        <Button x:Name="button" VerticalAlignment="Stretch" HorizontalAlignment="Center" Margin="0,0,0,0" Click="Button_Click">
+            <fa:FontAwesome Icon="Bars" FontSize="40" VerticalAlignment="Stretch"/>
+        </Button>
         <!--<controls:Dth22Display Margin="0,0,76,128" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>-->
 
 

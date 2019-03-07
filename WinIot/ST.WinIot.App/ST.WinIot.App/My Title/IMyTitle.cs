@@ -15,7 +15,7 @@ namespace ST.WinIot.App
 
     /// <summary>
     /// </summary>
-    public partial interface IMyTitle : IDisposable
+    public partial interface IApiContract : IDisposable
     {
         /// <summary>
         /// The base URI of the service.

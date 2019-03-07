@@ -19,6 +19,7 @@ namespace ST.WinIot.App.Connections
 	{
 		HttpClient _client;
 		OidcClient _oidcClient;
+		Tokens _token;
 
 		IdentityModel.OidcClient.Results.UserInfoResult _userInfo;
 		public delegate void UserInfoChangedDelegate(Auth sender, IdentityModel.OidcClient.Results.UserInfoResult UserInfo);
@@ -37,13 +38,15 @@ namespace ST.WinIot.App.Connections
 
 
 
-
+		public Tokens Token { get => _token; }
 		public HttpClient Client { get => _client; }
 		public async Task<AuthResult> LoginOrReconnect()
 		{
 			var r = await reconnect();
 			if (!r.Succes)
 				r = await login();
+			
+
 			return new AuthResult
 			{
 				Succes = r.Succes,
@@ -56,6 +59,7 @@ namespace ST.WinIot.App.Connections
 				await _oidcClient.LogoutAsync(new LogoutRequest());
 			_oidcClient = null;
 			UserInfo = null;
+			_token = null;
 
 		}
 
@@ -95,6 +99,7 @@ namespace ST.WinIot.App.Connections
 				CreatedAt = DateTime.Now,
 				RefreshToken = result.RefreshToken
 			};
+			_token = r.LoginResult;
 			Helpers.Settings.AuthInfos = r.LoginResult;
 
 			return r;
@@ -121,6 +126,8 @@ namespace ST.WinIot.App.Connections
 				r.Succes = false;
 				return r;
 			}
+
+			_token = r.LoginResult;
 			_oidcClient = client;
 			UserInfo = await client.GetUserInfoAsync(result.AccessToken);
 

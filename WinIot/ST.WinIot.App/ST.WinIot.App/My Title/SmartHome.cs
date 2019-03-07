@@ -22,7 +22,7 @@ namespace ST.WinIot.App
     /// <summary>
     /// SmartHome operations.
     /// </summary>
-    public partial class SmartHome : IServiceOperations<MyTitle>, ISmartHome
+    public partial class SmartHome : IServiceOperations<ApiContract>, ISmartHome
     {
         /// <summary>
         /// Initializes a new instance of the SmartHome class.
@@ -30,7 +30,7 @@ namespace ST.WinIot.App
         /// <param name='client'>
         /// Reference to the service client.
         /// </param>
-        public SmartHome(MyTitle client)
+        public SmartHome(ApiContract client)
         {
             if (client == null) 
             {
@@ -42,7 +42,7 @@ namespace ST.WinIot.App
         /// <summary>
         /// Gets a reference to the MyTitle
         /// </summary>
-        public MyTitle Client { get; private set; }
+        public ApiContract Client { get; private set; }
 
         /// <param name='customHeaders'>
         /// Headers that will be added to request.

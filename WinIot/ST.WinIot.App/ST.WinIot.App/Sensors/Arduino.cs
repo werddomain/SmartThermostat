@@ -183,8 +183,8 @@ namespace ST.WinIot.App.Sensors
 
         public void Dispose()
         {
-            _periodicTimer.Dispose();
-            _device.Dispose();
+            _periodicTimer?.Dispose();
+            _device?.Dispose();
             Disposed = true;
 
         }

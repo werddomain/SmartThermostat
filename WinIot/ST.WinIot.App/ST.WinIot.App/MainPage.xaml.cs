@@ -33,5 +33,24 @@ namespace ST.WinIot.App
         {
             App.MainPageVM.Navigate(typeof(Pages.HomePage));
         }
+        public bool IsLeftMenuOpen { get; private set; }
+        public void OpenLeftMenu(bool Open) {
+            this.LeftMenuOverlay.Visibility = Open ? Visibility.Visible : Visibility.Collapsed;
+            if (Open)
+                VisualStateManager.GoToState(this, "LeftMenuOpen", true);
+            else
+                VisualStateManager.GoToState(this, "LeftMenuClose", true);
+            IsLeftMenuOpen = Open;
+        }
+        //Menu Button Click
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            OpenLeftMenu(!IsLeftMenuOpen);
+        }
+
+        private void Rectangle_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            OpenLeftMenu(false);
+        }
     }
 }

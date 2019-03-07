@@ -22,7 +22,7 @@ namespace ST.WinIot.App
     /// <summary>
     /// Relays operations.
     /// </summary>
-    public partial class Relays : IServiceOperations<MyTitle>, IRelays
+    public partial class Relays : IServiceOperations<ApiContract>, IRelays
     {
         /// <summary>
         /// Initializes a new instance of the Relays class.
@@ -30,7 +30,7 @@ namespace ST.WinIot.App
         /// <param name='client'>
         /// Reference to the service client.
         /// </param>
-        public Relays(MyTitle client)
+        public Relays(ApiContract client)
         {
             if (client == null) 
             {
@@ -42,7 +42,7 @@ namespace ST.WinIot.App
         /// <summary>
         /// Gets a reference to the MyTitle
         /// </summary>
-        public MyTitle Client { get; private set; }
+        public ApiContract Client { get; private set; }
 
         /// <param name='customHeaders'>
         /// Headers that will be added to request.

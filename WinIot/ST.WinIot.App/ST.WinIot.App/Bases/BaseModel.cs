@@ -85,6 +85,8 @@ namespace ST.WinIot.App
         }
         public void Navigate(Type type)
         {
+            if (App.MainPage.IsLeftMenuOpen)
+                App.MainPage.OpenLeftMenu(false);
             App.MainPage.MainFrame.Navigate(type);
 
         }

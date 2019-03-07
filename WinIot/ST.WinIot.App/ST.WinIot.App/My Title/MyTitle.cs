@@ -20,7 +20,7 @@ namespace ST.WinIot.App
     using Newtonsoft.Json;
     using Models;
 
-    public partial class MyTitle : ServiceClient<MyTitle>, IMyTitle
+    public partial class ApiContract : ServiceClient<ApiContract>, IApiContract
     {
         /// <summary>
         /// The base URI of the service.
@@ -98,7 +98,7 @@ namespace ST.WinIot.App
         /// <param name='handlers'>
         /// Optional. The delegating handlers to add to the http client pipeline.
         /// </param>
-        protected MyTitle(params DelegatingHandler[] handlers) : base(handlers)
+        protected ApiContract(params DelegatingHandler[] handlers) : base(handlers)
         {
             this.Initialize();
         }
@@ -112,7 +112,7 @@ namespace ST.WinIot.App
         /// <param name='handlers'>
         /// Optional. The delegating handlers to add to the http client pipeline.
         /// </param>
-        protected MyTitle(HttpClientHandler rootHandler, params DelegatingHandler[] handlers) : base(rootHandler, handlers)
+        protected ApiContract(HttpClientHandler rootHandler, params DelegatingHandler[] handlers) : base(rootHandler, handlers)
         {
             this.Initialize();
         }
@@ -126,7 +126,7 @@ namespace ST.WinIot.App
         /// <param name='handlers'>
         /// Optional. The delegating handlers to add to the http client pipeline.
         /// </param>
-        protected MyTitle(Uri baseUri, params DelegatingHandler[] handlers) : this(handlers)
+        protected ApiContract(Uri baseUri, params DelegatingHandler[] handlers) : this(handlers)
         {
             if (baseUri == null)
             {
@@ -147,7 +147,7 @@ namespace ST.WinIot.App
         /// <param name='handlers'>
         /// Optional. The delegating handlers to add to the http client pipeline.
         /// </param>
-        protected MyTitle(Uri baseUri, HttpClientHandler rootHandler, params DelegatingHandler[] handlers) : this(rootHandler, handlers)
+        protected ApiContract(Uri baseUri, HttpClientHandler rootHandler, params DelegatingHandler[] handlers) : this(rootHandler, handlers)
         {
             if (baseUri == null)
             {
@@ -165,7 +165,7 @@ namespace ST.WinIot.App
         /// <param name='handlers'>
         /// Optional. The delegating handlers to add to the http client pipeline.
         /// </param>
-        public MyTitle(ServiceClientCredentials credentials, params DelegatingHandler[] handlers) : this(handlers)
+        public ApiContract(ServiceClientCredentials credentials, params DelegatingHandler[] handlers) : this(handlers)
         {
             if (credentials == null)
             {
@@ -190,7 +190,7 @@ namespace ST.WinIot.App
         /// <param name='handlers'>
         /// Optional. The delegating handlers to add to the http client pipeline.
         /// </param>
-        public MyTitle(ServiceClientCredentials credentials, HttpClientHandler rootHandler, params DelegatingHandler[] handlers) : this(rootHandler, handlers)
+        public ApiContract(ServiceClientCredentials credentials, HttpClientHandler rootHandler, params DelegatingHandler[] handlers) : this(rootHandler, handlers)
         {
             if (credentials == null)
             {
@@ -215,7 +215,7 @@ namespace ST.WinIot.App
         /// <param name='handlers'>
         /// Optional. The delegating handlers to add to the http client pipeline.
         /// </param>
-        public MyTitle(Uri baseUri, ServiceClientCredentials credentials, params DelegatingHandler[] handlers) : this(handlers)
+        public ApiContract(Uri baseUri, ServiceClientCredentials credentials, params DelegatingHandler[] handlers) : this(handlers)
         {
             if (baseUri == null)
             {
@@ -248,7 +248,7 @@ namespace ST.WinIot.App
         /// <param name='handlers'>
         /// Optional. The delegating handlers to add to the http client pipeline.
         /// </param>
-        public MyTitle(Uri baseUri, ServiceClientCredentials credentials, HttpClientHandler rootHandler, params DelegatingHandler[] handlers) : this(rootHandler, handlers)
+        public ApiContract(Uri baseUri, ServiceClientCredentials credentials, HttpClientHandler rootHandler, params DelegatingHandler[] handlers) : this(rootHandler, handlers)
         {
             if (baseUri == null)
             {

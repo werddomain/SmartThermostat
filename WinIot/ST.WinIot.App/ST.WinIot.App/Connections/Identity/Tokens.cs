@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ST.WinIot.App.Connections.Identity
 {
-	class Tokens
+	public class Tokens
 	{
 		public string AccesToken { get; set; }
 		public string RefreshToken { get; set; }

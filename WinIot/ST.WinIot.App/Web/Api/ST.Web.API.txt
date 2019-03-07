@@ -157,3 +157,97 @@ System.ArgumentException: The OpenAPI/Swagger document 'v1' registered multiple 
 2019-02-24 15:23:11.928 -05:00 [WRN] No XML encryptor configured. Key "d6402be0-5a51-4326-93d9-855524d1ded6" may be persisted to storage in unencrypted form.
 2019-02-24 15:23:12.356 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
 2019-02-24 15:23:12.885 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-02-24 22:37:42.026 -05:00 [WRN] Using an in-memory repository. Keys will not be persisted to storage.
+2019-02-24 22:37:42.049 -05:00 [WRN] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+2019-02-24 22:37:42.062 -05:00 [WRN] No XML encryptor configured. Key "1fbf99ac-06d4-4e2a-9a91-90f87c140104" may be persisted to storage in unencrypted form.
+2019-02-24 22:37:42.397 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-02-25 19:38:02.524 -05:00 [WRN] Using an in-memory repository. Keys will not be persisted to storage.
+2019-02-25 19:38:02.593 -05:00 [WRN] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+2019-02-25 19:38:02.633 -05:00 [WRN] No XML encryptor configured. Key "942edeea-8401-45c0-86b8-bd76f83d3a0c" may be persisted to storage in unencrypted form.
+2019-02-25 19:38:03.331 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-02-25 19:38:03.370 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-02-26 10:46:24.213 -05:00 [WRN] Using an in-memory repository. Keys will not be persisted to storage.
+2019-02-26 10:46:24.237 -05:00 [WRN] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+2019-02-26 10:46:24.251 -05:00 [WRN] No XML encryptor configured. Key "84cf0f62-87b1-4dee-a642-b43e3143ec0c" may be persisted to storage in unencrypted form.
+2019-02-26 10:46:24.719 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-02-26 10:46:24.743 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-02-27 10:04:37.525 -05:00 [WRN] Using an in-memory repository. Keys will not be persisted to storage.
+2019-02-27 10:04:37.558 -05:00 [WRN] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+2019-02-27 10:04:37.588 -05:00 [WRN] No XML encryptor configured. Key "a749686d-ff69-43c1-aa3f-485b1320ab20" may be persisted to storage in unencrypted form.
+2019-02-27 10:04:38.048 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-02-27 10:04:38.076 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-02-27 10:04:38.610 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-02-27 13:13:20.826 -05:00 [WRN] Using an in-memory repository. Keys will not be persisted to storage.
+2019-02-27 13:13:20.876 -05:00 [WRN] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+2019-02-27 13:13:20.906 -05:00 [WRN] No XML encryptor configured. Key "a829291b-0f0b-4fba-9f1c-bbde8c20b4df" may be persisted to storage in unencrypted form.
+2019-02-27 13:13:21.948 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-02-27 13:13:22.708 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-02-27 13:13:22.728 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-02-27 13:13:23.411 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-03-05 20:28:29.482 -05:00 [WRN] Using an in-memory repository. Keys will not be persisted to storage.
+2019-03-05 20:28:29.552 -05:00 [WRN] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+2019-03-05 20:28:29.606 -05:00 [WRN] No XML encryptor configured. Key "db71666d-b00a-408a-af20-bc3537361534" may be persisted to storage in unencrypted form.
+2019-03-05 20:28:30.423 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-03-05 20:28:30.469 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-03-05 20:28:30.660 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-03-05 20:28:30.689 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-03-05 20:28:30.870 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-03-05 20:28:31.989 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-03-05 20:28:32.044 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-03-05 20:29:11.326 -05:00 [WRN] Using an in-memory repository. Keys will not be persisted to storage.
+2019-03-05 20:29:11.383 -05:00 [WRN] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+2019-03-05 20:29:11.445 -05:00 [WRN] No XML encryptor configured. Key "3020e44e-d030-43fc-b18f-870f7927a7f9" may be persisted to storage in unencrypted form.
+2019-03-05 20:29:18.878 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-03-05 20:29:19.829 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-03-05 20:29:26.541 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-03-05 20:29:26.700 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-03-05 20:29:26.715 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-03-05 20:29:27.232 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-03-06 00:18:27.264 -05:00 [WRN] Using an in-memory repository. Keys will not be persisted to storage.
+2019-03-06 00:18:27.301 -05:00 [WRN] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+2019-03-06 00:18:27.330 -05:00 [WRN] No XML encryptor configured. Key "37d5bed2-d52f-4cab-b612-0cc2bf4b50b8" may be persisted to storage in unencrypted form.
+2019-03-06 00:18:39.619 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-03-06 00:18:40.069 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-03-06 18:30:43.468 -05:00 [WRN] Using an in-memory repository. Keys will not be persisted to storage.
+2019-03-06 18:30:43.495 -05:00 [WRN] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+2019-03-06 18:30:43.515 -05:00 [WRN] No XML encryptor configured. Key "76b6408a-bd7c-4b10-92d4-b6847cde7a0d" may be persisted to storage in unencrypted form.
+2019-03-06 18:30:43.826 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-03-06 18:30:43.976 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-03-06 18:30:43.995 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-03-06 18:30:44.399 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-03-06 22:56:38.755 -05:00 [WRN] Using an in-memory repository. Keys will not be persisted to storage.
+2019-03-06 22:56:38.812 -05:00 [WRN] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+2019-03-06 22:56:38.885 -05:00 [WRN] No XML encryptor configured. Key "4e8dcf86-0eda-4ce6-80db-ff42d5cf382e" may be persisted to storage in unencrypted form.
+2019-03-06 22:56:40.484 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-03-06 22:56:40.806 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-03-06 22:56:40.823 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-03-06 22:56:42.176 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-03-07 01:31:09.437 -05:00 [WRN] Using an in-memory repository. Keys will not be persisted to storage.
+2019-03-07 01:31:09.521 -05:00 [WRN] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+2019-03-07 01:31:09.572 -05:00 [WRN] No XML encryptor configured. Key "35b9279b-60e1-46ac-a6e9-349a8cc99f83" may be persisted to storage in unencrypted form.
+2019-03-07 01:31:10.791 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-03-07 01:31:10.846 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-03-07 01:31:11.526 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-03-07 01:31:32.820 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-03-07 01:31:44.717 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-03-07 01:31:44.783 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-03-07 01:31:44.801 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-03-07 01:31:45.551 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-03-07 01:44:35.151 -05:00 [WRN] Using an in-memory repository. Keys will not be persisted to storage.
+2019-03-07 01:44:35.189 -05:00 [WRN] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+2019-03-07 01:44:35.229 -05:00 [WRN] No XML encryptor configured. Key "f4f3e6dc-b09d-4489-a84b-2b96ab0ba2d5" may be persisted to storage in unencrypted form.
+2019-03-07 01:44:48.255 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-03-07 01:44:48.587 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-03-07 01:44:48.612 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-03-07 01:44:49.518 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-03-07 01:54:43.074 -05:00 [WRN] Using an in-memory repository. Keys will not be persisted to storage.
+2019-03-07 01:54:43.163 -05:00 [WRN] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+2019-03-07 01:54:43.190 -05:00 [WRN] No XML encryptor configured. Key "d6d7f1d4-2ce9-41fc-9927-03a5901269a9" may be persisted to storage in unencrypted form.
+2019-03-07 01:54:43.830 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-03-07 01:54:43.874 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-03-07 01:54:44.863 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-03-07 11:23:44.038 -05:00 [WRN] Using an in-memory repository. Keys will not be persisted to storage.
+2019-03-07 11:23:44.061 -05:00 [WRN] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+2019-03-07 11:23:44.075 -05:00 [WRN] No XML encryptor configured. Key "a642339a-dc73-4cc4-b6e4-a78a8776bc45" may be persisted to storage in unencrypted form.
+2019-03-07 11:23:44.337 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-03-07 11:23:44.357 -05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.

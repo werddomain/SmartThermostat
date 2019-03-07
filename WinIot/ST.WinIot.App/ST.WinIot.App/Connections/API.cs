@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Rest;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -15,6 +16,23 @@ namespace ST.WinIot.App.Connections
 		public API(Auth auth)
 		{
 			_auth = auth;
+			loadContract();
+			_auth.UserInfoChanged += (sender, userinfo) =>
+			{
+				loadContract();
+			};
+		}
+		void loadContract()
+		{
+			if (_auth.Token != null)
+			{
+				var cred = new TokenCredentials(_auth.Token.AccesToken);
+				contract = new ApiContract(cred);
+			}
+			else
+			{
+				contract = null;
+			}
 		}
 		public Task<ApiResponse<T>> Get<T>(System.Threading.CancellationToken ct, string url, Dictionary<string, string> param)
 		{
@@ -146,6 +164,14 @@ namespace ST.WinIot.App.Connections
 				r.Result = default(T);
 				return r;
 			}
+
+		}
+
+		private ApiContract contract;
+
+		public ApiContract Contract
+		{
+			get { return contract; }
 
 		}
 

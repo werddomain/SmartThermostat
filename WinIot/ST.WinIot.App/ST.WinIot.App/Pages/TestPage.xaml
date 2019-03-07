@@ -10,6 +10,6 @@
 
     <Grid>
         <TextBlock Text="TestPage"/>
-
+        <TextBox Height="30" Width="200"></TextBox>
     </Grid>
 </Page>
