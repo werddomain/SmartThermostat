@@ -1,6 +1,8 @@
 ﻿using GalaSoft.MvvmLight.Command;
+
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +13,9 @@ namespace ST.WinIot.App
     {
         public MainPageVM() {
             //EnvironementSensor = new Sensors.Arduino();
+            MainTopMenuButtons = new ObservableCollection<Models.TopMenuButtonModel>();
             App.MainPageVM = this;
+           
             Arduino = new Sensors.Arduino();
         }
         public Sensors.Arduino Arduino { get; set; }
@@ -44,6 +48,12 @@ namespace ST.WinIot.App
         #endregion
 
 
+        private ObservableCollection<Models.TopMenuButtonModel> pMainTopMenuButtons;
+        public ObservableCollection<Models.TopMenuButtonModel> MainTopMenuButtons
+        {
+            get { return pMainTopMenuButtons; }
+            set { pMainTopMenuButtons = value; RaisePropertyChange("MainTopMenuButtons"); }
+        }
         //public Sensors.Arduino EnvironementSensor { get; set; }
     }
 }

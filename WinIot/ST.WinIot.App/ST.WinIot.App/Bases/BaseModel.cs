@@ -2,6 +2,7 @@
 using Microsoft.IoT.Lightning.Providers;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
@@ -16,9 +17,17 @@ namespace ST.WinIot.App
     public abstract class BaseModel: DependencyObject, INotifyPropertyChanged
     {
         public BaseModel() {
-            CreateNavigateRelayCmd(); 
+            CreateNavigateRelayCmd();
+            if (TopMenu != null)
+                TopMenu.Clear();
         }
-
+        internal ObservableCollection<Models.TopMenuButtonModel> TopMenu {
+            get {
+                if (App.MainPageVM != null)
+                    return App.MainPageVM.MainTopMenuButtons;
+                return null;
+            }
+        }
         internal void InitGPIO() {
             if (!InDesing)
             {

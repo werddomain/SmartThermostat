@@ -10,6 +10,7 @@ namespace ST.WinIot.App.Pages
     {
         public HomePageVM() {
             Arduino = App.MainPageVM.Arduino;
+            
         }
 
         public Sensors.Arduino Arduino { get; set; }

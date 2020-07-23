@@ -2155,3 +2155,21 @@ Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updatin
 2019-03-07 01:44:57.989 -05:00 [INF] Starting IdentityServer4 version 2.3.2.0
 2019-03-07 01:44:58.119 -05:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
 2019-03-07 01:44:58.731 -05:00 [WRN] Failed to determine the https port for redirect.
+2019-04-27 14:30:01.392 -04:00 [WRN] Using an in-memory repository. Keys will not be persisted to storage.
+2019-04-27 14:30:01.426 -04:00 [WRN] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+2019-04-27 14:30:01.445 -04:00 [WRN] No XML encryptor configured. Key "939eb4c3-405b-4080-bb82-80c2861846ac" may be persisted to storage in unencrypted form.
+2019-04-27 14:30:01.504 -04:00 [INF] Starting IdentityServer4 version 2.3.2.0
+2019-04-27 14:30:01.700 -04:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-04-27 14:30:02.024 -04:00 [WRN] Failed to determine the https port for redirect.
+2019-05-03 05:39:10.885 -04:00 [WRN] Using an in-memory repository. Keys will not be persisted to storage.
+2019-05-03 05:39:10.905 -04:00 [WRN] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+2019-05-03 05:39:10.917 -04:00 [WRN] No XML encryptor configured. Key "6289515e-582d-41fa-be6c-6534f630bacb" may be persisted to storage in unencrypted form.
+2019-05-03 05:39:10.954 -04:00 [INF] Starting IdentityServer4 version 2.3.2.0
+2019-05-03 05:39:11.084 -04:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-05-03 05:39:11.360 -04:00 [WRN] Failed to determine the https port for redirect.
+2019-06-11 23:56:45.232 -04:00 [WRN] Using an in-memory repository. Keys will not be persisted to storage.
+2019-06-11 23:56:45.256 -04:00 [WRN] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+2019-06-11 23:56:45.267 -04:00 [WRN] No XML encryptor configured. Key "dd42ad0d-2435-467c-870f-8de48a6f35dd" may be persisted to storage in unencrypted form.
+2019-06-11 23:56:45.305 -04:00 [INF] Starting IdentityServer4 version 2.3.2.0
+2019-06-11 23:56:45.451 -04:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-06-11 23:56:45.714 -04:00 [WRN] Failed to determine the https port for redirect.

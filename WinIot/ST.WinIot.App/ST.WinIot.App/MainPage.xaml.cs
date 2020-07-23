@@ -27,6 +27,7 @@ namespace ST.WinIot.App
             this.InitializeComponent();
             App.MainPage = this;
             this.Loaded += MainPage_Loaded;
+           
         }
 
         private void MainPage_Loaded(object sender, RoutedEventArgs e)

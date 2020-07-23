@@ -30,9 +30,7 @@
                     <VisualState.Setters>
                         <Setter Target="LeftMenuContainer.(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Value="250"/>
                         <Setter Target="LeftMenuOverlay.(UIElement.Opacity)" Value="0.7"/>
-                        
                     </VisualState.Setters>
-
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
@@ -47,8 +45,24 @@
         <StackPanel Orientation="Horizontal" Spacing="10" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Grid.Column="1"/>
         <!--<controls:RadialMeter Value="{Binding EnvironementSensor.Humidity}"/>
         <controls:RadialMeter Value="{Binding EnvironementSensor.Temperature}" Grid.Column="1"/>-->
-        <Frame x:Name="MainFrame" Grid.Row="1" x:FieldModifier="Public" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"/>
-        <Grid x:Name="LeftMenuOverlay" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Visibility="Visible" Background="#FF343434" Opacity="0">
+        <Frame x:Name="MainFrame" Grid.Row="1" x:FieldModifier="Public" Grid.Column="2" Grid.ColumnSpan="1" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"/>
+        <ListView ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Auto"
+    ScrollViewer.HorizontalScrollMode="Enabled"                  
+    ScrollViewer.VerticalScrollMode="Disabled"
+    ItemsSource="{Binding MainTopMenuButtons}" Grid.Column="1">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Background="Transparent" Orientation="Horizontal" />
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <controls:TopMenuButton ButtonIcon="{Binding Icon}" ButtonText="{Binding Text}" Command="{Binding Command}" CommandParameter="{Binding Parameter}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Grid x:Name="LeftMenuOverlay" Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Visibility="Visible" Background="#FF343434" Opacity="0" Grid.RowSpan="2" d:IsHidden="True">
             <Rectangle HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Tapped="Rectangle_Tapped" Fill="Transparent"></Rectangle>
         </Grid>
         <Grid x:Name="LeftMenuContainer" Margin="-250,0,0,0" Background="#FF171313" Grid.Row="1" HorizontalAlignment="Left" Width="250" BorderBrush="#FF747070" BorderThickness="2,2,2,2" Padding="5,5,5,5" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Stretch">
@@ -58,7 +72,38 @@
 
             <ScrollViewer Width="236" HorizontalAlignment="Left">
                 <StackPanel Orientation="Vertical" Spacing="10">
-                    <Button Content="Home" Command="{Binding NavigateCmd}" CommandParameter="Pages/HomePage"/>
+                    <controls:MainMenuButton ButtonIcon="Home" ButtonText="Home" CommandParameter="Pages/HomePage" Command="{Binding NavigateCmd}" />
+                    <controls:MainMenuButton ButtonIcon="Thermometer" ButtonText="Set Temperature" CommandParameter="Pages/Termostat" Command="{Binding NavigateCmd}"/>
+                    <controls:MainMenuButton ButtonIcon="Magic" ButtonText="Scenes" CommandParameter="Pages/Scenes" Command="{Binding NavigateCmd}" />
+                    <controls:MainMenuButton ButtonIcon="Server" ButtonText="Devices" CommandParameter="Pages/Devices" Command="{Binding NavigateCmd}" />
+                    <controls:MainMenuButton ButtonIcon="Cog" ButtonText="Settings" CommandParameter="Pages/Settings" Command="{Binding NavigateCmd}" />
+                    <controls:MainMenuButton ButtonIcon="QuestionCircleOutline" ButtonText="Infos" CommandParameter="Pages/Settings" Command="{Binding NavigateCmd}" />
+
+                    <!--PowerButton-->
+                    <Button HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                        <Button.Content>
+                            <Grid HorizontalAlignment="Stretch">
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Spacing="5">
+                                    <fa:FontAwesome Icon="PowerOff"/>
+                                    <TextBlock Text="Power" FontSize="20"/>
+                                </StackPanel>
+                                <fa:FontAwesome Icon="CaretRight" HorizontalAlignment="Right" />
+                            </Grid>
+                        </Button.Content>
+                        <Button.Flyout>
+                            <MenuFlyout Placement="Right">
+                                <MenuFlyoutItem Text="Restart" Command="{Binding RestartCmd}"/>
+                                <MenuFlyoutItem Text="Shutdown" Command="{Binding ShutdownCmd}"/>
+                                
+                            </MenuFlyout>
+                        </Button.Flyout>
+                    </Button>
+                    <!--<Button Command="{Binding NavigateCmd}" CommandParameter="Pages/HomePage">
+                        <StackPanel Orientation="Horizontal">
+                            <fa:FontAwesome Icon="Home"/>
+                            <TextBlock Text="Home"/>
+                        </StackPanel>
+                    </Button>-->
                     <Button Content="Test" Command="{Binding NavigateCmd}" CommandParameter="Pages/TestPage"/>
                 </StackPanel>
             </ScrollViewer>

@@ -129,6 +129,12 @@
       <DependentUpon>Dth22Display.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\Dth22DisplayVM.cs" />
+    <Compile Include="Controls\TopMenuButton.xaml.cs">
+      <DependentUpon>TopMenuButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MainMenuButton.xaml.cs">
+      <DependentUpon>MainMenuButton.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\RadialMeter.xaml.cs">
       <DependentUpon>RadialMeter.xaml</DependentUpon>
     </Compile>
@@ -141,6 +147,7 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPageVM.cs" />
+    <Compile Include="Models\TopMenuButtonModel.cs" />
     <Compile Include="My Title\DefaultModel.cs" />
     <Compile Include="My Title\DefaultModelExtensions.cs" />
     <Compile Include="My Title\Devices.cs" />
@@ -187,9 +194,17 @@
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\HomePageVM.cs" />
+    <Compile Include="Pages\Termostat.xaml.cs">
+      <DependentUpon>Termostat.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TermostatVM.cs" />
     <Compile Include="Pages\TestPage.xaml.cs">
       <DependentUpon>TestPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\TestPageVM.cs" />
+    <Compile Include="Processor\MyWebServer.cs" />
+    <Compile Include="Processor\SensorsLinks.cs" />
+    <Compile Include="Processor\Termostat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sensors\Arduino.cs" />
   </ItemGroup>
@@ -226,6 +241,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls\TopMenuButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\MainMenuButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\RadialMeter.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -235,6 +258,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Pages\HomePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Termostat.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
